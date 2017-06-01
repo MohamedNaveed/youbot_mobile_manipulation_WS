@@ -1,0 +1,8 @@
+prefix=/home/ros/catkin_ws/devel
+
+Name: object_gestalt_segmentation
+Description: Description of object_gestalt_segmentation
+Version: 0.0.0
+Cflags: -I/home/ros/catkin_ws/src/v4r_ros_wrappers/object_gestalt_segmentation/include
+Libs: -L/home/ros/catkin_ws/devel/lib 
+Requires: cv_bridge pcl_conversions pcl_ros sensor_msgs std_msgs tf tf2 segmentation_srv_definitions

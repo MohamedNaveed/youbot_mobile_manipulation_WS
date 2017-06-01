@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/ros/catkin_ws/src/ork/src/ork_renderer/include/object_recognition_renderer/renderer.h
+string
+-
+opencv2/core/core.hpp
+-
+
+/home/ros/catkin_ws/src/ork/src/ork_renderer/include/object_recognition_renderer/renderer2d.h
+string
+-
+renderer.h
+/home/ros/catkin_ws/src/ork/src/ork_renderer/include/object_recognition_renderer/renderer.h
+
+/home/ros/catkin_ws/src/ork/src/ork_renderer/src/renderer2d.cpp
+iostream
+-
+object_recognition_renderer/renderer2d.h
+-
+opencv2/calib3d/calib3d.hpp
+-
+opencv2/highgui/highgui.hpp
+-
+opencv2/imgproc/imgproc.hpp
+-
+

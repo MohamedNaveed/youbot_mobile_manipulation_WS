@@ -1,0 +1,8 @@
+prefix=/home/ros/catkin_ws/devel
+
+Name: segmentation
+Description: Description of segmentation
+Version: 0.1.4
+Cflags: -I/home/ros/catkin_ws/src/v4r_ros_wrappers/segmentation/include
+Libs: -L/home/ros/catkin_ws/devel/lib 
+Requires: roscpp rospy segmentation_srv_definitions cv_bridge sensor_msgs image_transport pcl_conversions

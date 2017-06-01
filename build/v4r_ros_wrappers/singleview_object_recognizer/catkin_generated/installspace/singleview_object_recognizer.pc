@@ -1,0 +1,8 @@
+prefix=/home/ros/catkin_ws/install
+
+Name: singleview_object_recognizer
+Description: Description of singleview_object_recognizer
+Version: 0.1.4
+Cflags: -I/home/ros/catkin_ws/install/include
+Libs: -L/home/ros/catkin_ws/install/lib 
+Requires: roscpp rospy recognition_srv_definitions pcl_conversions

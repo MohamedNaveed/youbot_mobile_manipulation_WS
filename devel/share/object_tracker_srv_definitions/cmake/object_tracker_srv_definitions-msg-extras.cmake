@@ -1,0 +1,2 @@
+set(object_tracker_srv_definitions_MESSAGE_FILES "")
+set(object_tracker_srv_definitions_SERVICE_FILES "/home/ros/catkin_ws/src/v4r_ros_wrappers/object_tracker_srv_definitions/srv/start_tracker.srv;/home/ros/catkin_ws/src/v4r_ros_wrappers/object_tracker_srv_definitions/srv/stop_tracker.srv;/home/ros/catkin_ws/src/v4r_ros_wrappers/object_tracker_srv_definitions/srv/cleanup.srv;/home/ros/catkin_ws/src/v4r_ros_wrappers/object_tracker_srv_definitions/srv/change_tracking_model.srv;/home/ros/catkin_ws/src/v4r_ros_wrappers/object_tracker_srv_definitions/srv/detect_and_track.srv")

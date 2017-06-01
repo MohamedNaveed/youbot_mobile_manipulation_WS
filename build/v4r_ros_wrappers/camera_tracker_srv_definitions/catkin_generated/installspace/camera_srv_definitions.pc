@@ -1,0 +1,8 @@
+prefix=/home/ros/catkin_ws/install
+
+Name: camera_srv_definitions
+Description: Description of camera_srv_definitions
+Version: 0.1.4
+Cflags: -I/home/ros/catkin_ws/install/include
+Libs: -L/home/ros/catkin_ws/install/lib 
+Requires: 

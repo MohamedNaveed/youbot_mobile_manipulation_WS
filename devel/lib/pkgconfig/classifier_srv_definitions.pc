@@ -1,0 +1,8 @@
+prefix=/home/ros/catkin_ws/devel
+
+Name: classifier_srv_definitions
+Description: Description of classifier_srv_definitions
+Version: 0.1.4
+Cflags: -I/home/ros/catkin_ws/devel/include
+Libs: -L/home/ros/catkin_ws/devel/lib 
+Requires: 

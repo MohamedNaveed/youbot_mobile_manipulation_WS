@@ -1,0 +1,8 @@
+prefix=/home/ros/catkin_ws/install
+
+Name: segmentation
+Description: Description of segmentation
+Version: 0.1.4
+Cflags: -I/home/ros/catkin_ws/install/include
+Libs: -L/home/ros/catkin_ws/install/lib 
+Requires: roscpp rospy segmentation_srv_definitions cv_bridge sensor_msgs image_transport pcl_conversions

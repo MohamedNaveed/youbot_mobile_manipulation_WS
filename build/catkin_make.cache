@@ -1,0 +1,2 @@
+capture:iai_kinect2/iai_kinect2:iai_kinect2/kinect2_bridge:iai_kinect2/kinect2_calibration:iai_kinect2/kinect2_registration:iai_kinect2/kinect2_viewer:linemod:object_recognition_core:object_recognition_msgs:object_recognition_ros:object_recognition_ros_visualization:ork_renderer:ork_tutorials:reconstruction:ros_to_cv_v2
+-DCATKIN_DEVEL_PREFIX=/home/ros/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/ros/catkin_ws/install -G Unix Makefiles

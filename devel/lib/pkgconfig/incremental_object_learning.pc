@@ -1,0 +1,8 @@
+prefix=/home/ros/catkin_ws/devel
+
+Name: incremental_object_learning
+Description: Description of incremental_object_learning
+Version: 0.1.4
+Cflags: 
+Libs: -L/home/ros/catkin_ws/devel/lib 
+Requires: roscpp rospy tf incremental_object_learning_srv_definitions

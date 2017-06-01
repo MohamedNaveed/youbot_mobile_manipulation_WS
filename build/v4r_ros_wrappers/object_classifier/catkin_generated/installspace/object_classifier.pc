@@ -1,0 +1,8 @@
+prefix=/home/ros/catkin_ws/install
+
+Name: object_classifier
+Description: Description of object_classifier
+Version: 0.1.4
+Cflags: -I/home/ros/catkin_ws/install/include
+Libs: -L/home/ros/catkin_ws/install/lib 
+Requires: classifier_srv_definitions pcl_conversions

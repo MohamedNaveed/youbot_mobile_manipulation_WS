@@ -1,0 +1,8 @@
+prefix=/home/ros/catkin_ws/devel
+
+Name: object_tracker
+Description: Description of object_tracker
+Version: 0.1.4
+Cflags: -I/home/ros/catkin_ws/src/v4r_ros_wrappers/object_tracker/include
+Libs: -L/home/ros/catkin_ws/devel/lib 
+Requires: roscpp rospy object_tracker_srv_definitions tf2

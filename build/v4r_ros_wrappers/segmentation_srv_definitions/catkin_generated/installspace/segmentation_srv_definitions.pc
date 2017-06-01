@@ -1,0 +1,8 @@
+prefix=/home/ros/catkin_ws/install
+
+Name: segmentation_srv_definitions
+Description: Description of segmentation_srv_definitions
+Version: 0.1.4
+Cflags: -I/home/ros/catkin_ws/install/include
+Libs: -L/home/ros/catkin_ws/install/lib 
+Requires: 

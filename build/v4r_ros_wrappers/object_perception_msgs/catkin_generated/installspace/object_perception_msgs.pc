@@ -1,0 +1,8 @@
+prefix=/home/ros/catkin_ws/install
+
+Name: object_perception_msgs
+Description: Description of object_perception_msgs
+Version: 0.1.4
+Cflags: -I/home/ros/catkin_ws/install/include
+Libs: -L/home/ros/catkin_ws/install/lib 
+Requires: 

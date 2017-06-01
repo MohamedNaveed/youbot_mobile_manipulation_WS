@@ -1,0 +1,8 @@
+prefix=/home/ros/catkin_ws/devel
+
+Name: ros_to_cv_v2
+Description: Description of ros_to_cv_v2
+Version: 0.0.0
+Cflags: -I/home/ros/catkin_ws/devel/include
+Libs: -L/home/ros/catkin_ws/devel/lib 
+Requires: 
