@@ -100,7 +100,7 @@ iostream
 iostream
 -
 
-/home/ros/catkin_ws/src/youbot_ik/src/YouBot_publisher.h
+/home/ros/catkin_ws/src/youbot_ik/src/YouBot_publisher_gazebo.h
 iostream
 -
 
@@ -129,8 +129,8 @@ math.h
 -
 Math_other.h
 /home/ros/catkin_ws/src/youbot_ik/src/Math_other.h
-YouBot_publisher.h
-/home/ros/catkin_ws/src/youbot_ik/src/YouBot_publisher.h
+YouBot_publisher_gazebo.h
+/home/ros/catkin_ws/src/youbot_ik/src/YouBot_publisher_gazebo.h
 YouBot_odom_subscriber.h
 /home/ros/catkin_ws/src/youbot_ik/src/YouBot_odom_subscriber.h
 Obj_pose_subs.h

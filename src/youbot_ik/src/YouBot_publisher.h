@@ -41,9 +41,9 @@ brics_actuator::JointPositions createGripperPositionCommand(double newPosition) 
 	joint.unit = boost::units::to_string(boost::units::si::meter); // = "m"
 	joint.value = newPosition;
 	joint.joint_uri = "gripper_finger_joint_l";
-	msg.positions.push_back(joint);		
+	msg.positions.push_back(joint);
 	joint.joint_uri = "gripper_finger_joint_r";
-	msg.positions.push_back(joint);		
+	msg.positions.push_back(joint);
 
 	return msg;
 }
@@ -63,7 +63,7 @@ void movePlatform(double x_vel,double y_vel, double yaw_vel) {
 // move arm
 void moveArm (double th1,double th2,double th3,double th4,double th5) {
 	brics_actuator::JointPositions msg;
-	
+
 	std::vector<double> jointvalues(5);
 
 	th1=rf(0.0100692+((th1+rad(169))*5.8300708)/(rad(338)));
@@ -78,7 +78,7 @@ void moveArm (double th1,double th2,double th3,double th4,double th5) {
 	jointvalues[2] = th3;
 	jointvalues[3] = th4;
 	jointvalues[4] = th5;
-	
+
 	msg = createArmPositionCommand(jointvalues);
 	armPublisher.publish(msg);
 	//ros::Duration(1).sleep();
@@ -87,7 +87,7 @@ void moveArm (double th1,double th2,double th3,double th4,double th5) {
 // open and close gripper
 void open_gripper() {
 	brics_actuator::JointPositions msg;
-	
+
 	// open gripper
 	msg = createGripperPositionCommand(0.011);
 	gripperPublisher.publish(msg);
@@ -96,7 +96,7 @@ void open_gripper() {
 
 void close_gripper() {
 	brics_actuator::JointPositions msg;
-	
+
 	// close gripper
 	msg = createGripperPositionCommand(0);
 	gripperPublisher.publish(msg);
@@ -110,6 +110,6 @@ void youbot_publisher()
 	platformPublisher = n.advertise<geometry_msgs::Twist>("cmd_vel", 1);
 	armPublisher = n.advertise<brics_actuator::JointPositions>("arm_1/arm_controller/position_command", 1);
 	gripperPublisher = n.advertise<brics_actuator::JointPositions>("arm_1/gripper_controller/position_command", 1);
-
+	cout<<"youbot publisher called..."<<endl;
 	sleep(1);
 }

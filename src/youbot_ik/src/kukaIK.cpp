@@ -17,9 +17,9 @@ using namespace Eigen;//eigen namespace
 #include <math.h> // for mathematical operations
 #include "Math_other.h"//self-defined mathemetical functions
 
-#include "YouBot_publisher.h"//uncomment it while publishing data to youbot and comment it while publishing data to gazebo
+//#include "YouBot_publisher.h"//uncomment it while publishing data to youbot and comment it while publishing data to gazebo
 //#include "YouBopositionublisher_gazebo.h"//uncomment it while publishing data to gazebo and comment it while publishing data to youbot
-
+#include "YouBot_publisher_gazebo.h"//uncomment it while simulating  on gazebo and comment while running bot
 #include "YouBot_odom_subscriber.h"//subscribe to odometry data
 #include "Obj_pose_subs.h"//subscriber to object pose
 
@@ -55,7 +55,7 @@ int main(int argc, char **argv) {
 		ros::Duration(1).sleep();
 	moveArm(rad(0), rad(-64), rad(145), rad(-101), rad(3));
 	ros::Duration(3).sleep();
-
+	cout<<"initial parameters set..."<<endl;
 	obj_position=get_pose_cylinder();
 
 
@@ -79,6 +79,7 @@ int main(int argc, char **argv) {
 		time_y=abs(y_g/0.05);
 		step_y=time_y*200;
 
+		cout<<"moving base..."<<endl;
 		move_base_ml(time_y, step_y, 0, y_g, 0);
 		ros::Duration(0.5).sleep();
 
@@ -131,6 +132,7 @@ int main(int argc, char **argv) {
 		open_gripper();
 		ros::Duration(1).sleep();
 
+		cout<<"moving youbot manipulator..."<<endl;
 		move_manip_js(time_m, step_m, 0, 30, beta, 300, th1, th5);//move arm to goal in desired time
 		ros::Duration(1).sleep();
 

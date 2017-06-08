@@ -15,7 +15,7 @@ youbot_ik/CMakeFiles/kukaIK.dir/src/kukaIK.cpp.o
  /home/ros/catkin_ws/src/youbot_ik/src/Traj_gen_func.h
  /home/ros/catkin_ws/src/youbot_ik/src/Transform.h
  /home/ros/catkin_ws/src/youbot_ik/src/YouBot_odom_subscriber.h
- /home/ros/catkin_ws/src/youbot_ik/src/YouBot_publisher.h
+ /home/ros/catkin_ws/src/youbot_ik/src/YouBot_publisher_gazebo.h
  /home/ros/catkin_ws/src/youbot_ik/src/kukaIK.cpp
  /opt/ros/indigo/include/XmlRpcDecl.h
  /opt/ros/indigo/include/XmlRpcValue.h
