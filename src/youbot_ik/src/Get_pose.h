@@ -3,7 +3,8 @@
 using namespace std;
 double rate=0.1;//rate at which data is being published
 
-Vector3d get_pose_cylinder(){
+Vector3d get_pose_cylinder()
+{
 	cout<<"searching object..."<<endl;
 
 	//string obj="9547923ecae03571d31e993c2b000b7c";//object ID in couch db
@@ -49,7 +50,7 @@ Vector3d get_pose_cylinder(){
 	cout<<"z coordinate: "<<pose_lin_z<<endl;
 
 	Vector3d position=Vector3d::Zero();
-	position<<pose_lin_x, pose_lin_y, pose_lin_z;
+	position<<pose_lin_x, pose_lin_y, pose_lin_z;//give value here to check
 	cout<<"pose subscription done..."<<endl;
 	return position;
 }

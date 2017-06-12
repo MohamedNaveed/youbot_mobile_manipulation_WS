@@ -21,10 +21,10 @@ class confg//
     void store_goal(double x_zg, double beta, double row2);//To store last goal data
     VectorXd prev_goal();//To get last goal data
 
-    void set_goal(int r3, double z, double b, double r2);//To set new goal    
+    void set_goal(int r3, double z, double b, double r2);//To set new goal
 
  	protected:
-    //l2,l3,l4: Length of link2, link3 and link4 respectively  
+    //l2,l3,l4: Length of link2, link3 and link4 respectively
     static double l2;
     static double l3;
     static double l4;
@@ -37,7 +37,7 @@ double confg::l4=195.1;
 int confg::row3=0;
 double confg::zg=738.26-245;
 double confg::beta=1.5708;
-double confg::row2=-28+28; 
+double confg::row2=-28+28;
 
 double confg::JA1=rad(0);
 double confg::JA2=rad(0);
@@ -67,13 +67,14 @@ cout<<"configuring youbot..."<<endl;
 
 void confg::set_goal(int r3, double z, double b, double r2)
 {
-    row3=r3; 
+    row3=r3;
     zg=z,
     beta=b,
-    row2=r2;  
+    row2=r2;
 
-    zg=zg-245;
+    //zg=-215;//-245;
     row2=row2+28;
+		cout<<"pho2 at set goal : "<<row2<<endl;
 }
 
 void confg::store_JA(double p_th1, double p_th2, double p_th3, double p_th4, double p_th5)

@@ -136,6 +136,7 @@ include_directories(
 # add_executable(youbot_ik_node src/youbot_ik_node.cpp)
 add_executable(kukaIK src/kukaIK.cpp)
 add_executable(manip_teleop src/manip_teleop.cpp)
+add_executable(test_ik src/test_ik.cpp)
 #add_executable(Check_gazebo src/Check_gazebo.cpp)
 
 ## Add cmake target dependencies of the executable
@@ -148,7 +149,7 @@ add_executable(manip_teleop src/manip_teleop.cpp)
 # )
 target_link_libraries(kukaIK ${catkin_LIBRARIES})
 target_link_libraries(manip_teleop ${catkin_LIBRARIES})
-
+target_link_libraries(test_ik ${catkin_LIBRARIES})
 #target_link_libraries(Check_gazebo ${catkin_LIBRARIES})
 
 #############

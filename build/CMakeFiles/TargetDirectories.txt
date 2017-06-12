@@ -132,6 +132,7 @@
 /home/ros/catkin_ws/build/object_recognition_msgs/CMakeFiles/std_msgs_generate_messages_cpp.dir
 /home/ros/catkin_ws/build/object_recognition_msgs/CMakeFiles/std_msgs_generate_messages_lisp.dir
 /home/ros/catkin_ws/build/object_recognition_msgs/CMakeFiles/std_msgs_generate_messages_py.dir
+/home/ros/catkin_ws/build/youbot_ik/CMakeFiles/test_ik.dir
 /home/ros/catkin_ws/build/CMakeFiles/tests.dir
 /home/ros/catkin_ws/build/iai_kinect2/kinect2_bridge/CMakeFiles/tf2_msgs_generate_messages_cpp.dir
 /home/ros/catkin_ws/build/iai_kinect2/kinect2_bridge/CMakeFiles/tf2_msgs_generate_messages_lisp.dir

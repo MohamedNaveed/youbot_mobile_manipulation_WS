@@ -6,7 +6,7 @@ project(youbot_ik)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
   actionlib
-  control_msgs  
+  control_msgs
   roscpp
   rospy
   std_msgs
@@ -118,6 +118,7 @@ catkin_package(
 # include_directories(include)
 include_directories(
   ${catkin_INCLUDE_DIRS}
+  ${Eigen_INCLUDE_DIRS}
 )
 
 ## Declare a C++ library
@@ -133,8 +134,9 @@ include_directories(
 
 ## Declare a C++ executable
 # add_executable(youbot_ik_node src/youbot_ik_node.cpp)
-add_executable(KukaIK src/kukaIK.cpp)
+add_executable(kukaIK src/kukaIK.cpp)
 add_executable(manip_teleop src/manip_teleop.cpp)
+add_executable(test_ik src/test_ik.cpp)
 #add_executable(Check_gazebo src/Check_gazebo.cpp)
 
 ## Add cmake target dependencies of the executable

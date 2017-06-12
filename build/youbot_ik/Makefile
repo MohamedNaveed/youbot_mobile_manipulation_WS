@@ -219,6 +219,20 @@ manip_teleop/fast:
 	cd /home/ros/catkin_ws/build && $(MAKE) -f youbot_ik/CMakeFiles/manip_teleop.dir/build.make youbot_ik/CMakeFiles/manip_teleop.dir/build
 .PHONY : manip_teleop/fast
 
+# Convenience name for target.
+youbot_ik/CMakeFiles/test_ik.dir/rule:
+	cd /home/ros/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 youbot_ik/CMakeFiles/test_ik.dir/rule
+.PHONY : youbot_ik/CMakeFiles/test_ik.dir/rule
+
+# Convenience name for target.
+test_ik: youbot_ik/CMakeFiles/test_ik.dir/rule
+.PHONY : test_ik
+
+# fast build rule for target.
+test_ik/fast:
+	cd /home/ros/catkin_ws/build && $(MAKE) -f youbot_ik/CMakeFiles/test_ik.dir/build.make youbot_ik/CMakeFiles/test_ik.dir/build
+.PHONY : test_ik/fast
+
 src/kukaIK.o: src/kukaIK.cpp.o
 .PHONY : src/kukaIK.o
 
@@ -267,6 +281,30 @@ src/manip_teleop.cpp.s:
 	cd /home/ros/catkin_ws/build && $(MAKE) -f youbot_ik/CMakeFiles/manip_teleop.dir/build.make youbot_ik/CMakeFiles/manip_teleop.dir/src/manip_teleop.cpp.s
 .PHONY : src/manip_teleop.cpp.s
 
+src/test_ik.o: src/test_ik.cpp.o
+.PHONY : src/test_ik.o
+
+# target to build an object file
+src/test_ik.cpp.o:
+	cd /home/ros/catkin_ws/build && $(MAKE) -f youbot_ik/CMakeFiles/test_ik.dir/build.make youbot_ik/CMakeFiles/test_ik.dir/src/test_ik.cpp.o
+.PHONY : src/test_ik.cpp.o
+
+src/test_ik.i: src/test_ik.cpp.i
+.PHONY : src/test_ik.i
+
+# target to preprocess a source file
+src/test_ik.cpp.i:
+	cd /home/ros/catkin_ws/build && $(MAKE) -f youbot_ik/CMakeFiles/test_ik.dir/build.make youbot_ik/CMakeFiles/test_ik.dir/src/test_ik.cpp.i
+.PHONY : src/test_ik.cpp.i
+
+src/test_ik.s: src/test_ik.cpp.s
+.PHONY : src/test_ik.s
+
+# target to generate assembly for a file
+src/test_ik.cpp.s:
+	cd /home/ros/catkin_ws/build && $(MAKE) -f youbot_ik/CMakeFiles/test_ik.dir/build.make youbot_ik/CMakeFiles/test_ik.dir/src/test_ik.cpp.s
+.PHONY : src/test_ik.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -285,12 +323,16 @@ help:
 	@echo "... manip_teleop"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... test_ik"
 	@echo "... src/kukaIK.o"
 	@echo "... src/kukaIK.i"
 	@echo "... src/kukaIK.s"
 	@echo "... src/manip_teleop.o"
 	@echo "... src/manip_teleop.i"
 	@echo "... src/manip_teleop.s"
+	@echo "... src/test_ik.o"
+	@echo "... src/test_ik.i"
+	@echo "... src/test_ik.s"
 .PHONY : help
 
 

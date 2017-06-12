@@ -2152,6 +2152,19 @@ manip_teleop/fast:
 .PHONY : manip_teleop/fast
 
 #=============================================================================
+# Target rules for targets named test_ik
+
+# Build rule for target.
+test_ik: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_ik
+.PHONY : test_ik
+
+# fast build rule for target.
+test_ik/fast:
+	$(MAKE) -f youbot_ik/CMakeFiles/test_ik.dir/build.make youbot_ik/CMakeFiles/test_ik.dir/build
+.PHONY : test_ik/fast
+
+#=============================================================================
 # Target rules for targets named youbot_ros_hello_world
 
 # Build rule for target.
@@ -2344,6 +2357,7 @@ help:
 	@echo "... control_msgs_generate_messages_py"
 	@echo "... kukaIK"
 	@echo "... manip_teleop"
+	@echo "... test_ik"
 	@echo "... youbot_ros_hello_world"
 	@echo "... youbot_ros_simple_trajectory"
 .PHONY : help

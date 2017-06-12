@@ -7,7 +7,7 @@ ros::Publisher armPublisher;
 ros::Publisher gripperPublisher;
 
 // create a brics actuator message with the given joint position values
-trajectory_msgs::JointTrajectory createArmPositionCommand(std::vector<double>& newPositions) 
+trajectory_msgs::JointTrajectory createArmPositionCommand(std::vector<double>& newPositions)
 {
 	int numberOfJoints = 5;
 	trajectory_msgs::JointTrajectory msg;
@@ -31,7 +31,7 @@ trajectory_msgs::JointTrajectory createArmPositionCommand(std::vector<double>& n
 		jointName << "arm_joint_" << (i + 1);
 		msg.joint_names.push_back(jointName.str());
 	}
-	
+
 	// fill message header and sent it out
 	msg.header.frame_id = "arm_link_0";
 	msg.header.stamp = ros::Time::now();
@@ -41,7 +41,7 @@ trajectory_msgs::JointTrajectory createArmPositionCommand(std::vector<double>& n
 
 // create a brics actuator message for the gripper using the same position for both fingers
 trajectory_msgs::JointTrajectory createGripperPositionCommand(double newPosition) {
-	
+
 	trajectory_msgs::JointTrajectory msg;
 
 	trajectory_msgs::JointTrajectoryPoint point;
@@ -64,7 +64,7 @@ trajectory_msgs::JointTrajectory createGripperPositionCommand(double newPosition
 
 		msg.joint_names.push_back(jointName.str());
 	}
-	
+
 	// fill message header and sent it out
 	msg.header.frame_id = "gripper_finger_joint_l";
 	msg.header.stamp = ros::Time::now();
@@ -103,7 +103,7 @@ void moveArm (double th1,double th2,double th3,double th4,double th5) {
 	jointvalues[2] = th3;
 	jointvalues[3] = th4;
 	jointvalues[4] = th5;
-	
+
 	msg = createArmPositionCommand(jointvalues);
 	armPublisher.publish(msg);
 	//ros::Duration(time).sleep();
@@ -114,7 +114,7 @@ void moveArm (double th1,double th2,double th3,double th4,double th5) {
 // open and close gripper
 void open_gripper() {
 	trajectory_msgs::JointTrajectory msg;
-	
+
 	// open gripper
 	msg = createGripperPositionCommand(0.011);
 	gripperPublisher.publish(msg);
@@ -123,7 +123,7 @@ void open_gripper() {
 
 void close_gripper() {
 	trajectory_msgs::JointTrajectory msg;
-	
+
 	// close gripper
 	msg = createGripperPositionCommand(0);
 	gripperPublisher.publish(msg);
@@ -137,6 +137,6 @@ void youbot_publisher()
 	platformPublisher = n.advertise<geometry_msgs::Twist>("cmd_vel", 1);
 	armPublisher = n.advertise<trajectory_msgs::JointTrajectory>("arm_1/arm_controller/command", 1);
 	gripperPublisher = n.advertise<trajectory_msgs::JointTrajectory>("arm_1/gripper_controller/command", 1);
-
+	cout<<"youbot publisher called..."<<endl;
 	sleep(1);
 }

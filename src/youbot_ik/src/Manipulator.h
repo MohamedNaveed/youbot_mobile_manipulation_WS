@@ -3,12 +3,12 @@
 class Manipulator: public confg
 {
 	public:
-		double temp_JA2, temp_JA3, temp_JA4;//Calculated joint angle		
-		double z24, x24;//Vertical and horizontal distanc e etween joint 2 and 4 respectively 
+		double temp_JA2, temp_JA3, temp_JA4;//Calculated joint angle
+		double z24, x24;//Vertical and horizontal distanc e etween joint 2 and 4 respectively
 		double cal_JA2();//Calculate joint angle 2
 		double cal_JA3();//Calculate joint angle 3
 		double cal_JA4();//Clculate joint angle 4
-		
+
 		// double Tsgrip[4][4];//Gripper transformation matrix
 		// Matrix4d forward_kinematics();//To find end effector global pose
 		// double ealpha, ebeta, egamma;
@@ -17,11 +17,15 @@ class Manipulator: public confg
 
 
 double Manipulator::cal_JA3()
-{ 
+{
   z24=rf(zg-(l4*(sin(beta))));
+	cout<<"z24: " << z24 << "zg:" << zg << "l4:" << l4 <<" Beta:"<< beta << endl;
   x24=rf(row2-(l4*(cos(beta))));
+	cout<<"x24"<<x24<<"pho2:" << row2 <<endl;
   double cos_theta3=rf((pow(z24,2)+pow(x24,2)-pow(l2,2)-pow(l3,2))/(2*l2*l3));
+	cout<<"cos_theta3:" << cos_theta3 <<endl;
   double sin_theta3=rf(-1*sqrt(1-pow(cos_theta3,2)));
+	cout<<"sin_theta3:" << sin_theta3 <<endl;
   if (row3==1){
     sin_theta3=rf(sqrt(1-pow(cos_theta3,2)));
   }
@@ -88,7 +92,7 @@ double Manipulator::cal_JA4()
 // Matrix4d Manipulator::forward_kinematics()
 // {
 //  double xb, yb,zb;
- 
+
 //  xb=5;
 //  yb=5;
 //  zb=0;

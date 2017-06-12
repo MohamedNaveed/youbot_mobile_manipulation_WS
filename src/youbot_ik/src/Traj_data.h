@@ -28,7 +28,7 @@ MatrixXd move_base_data(double time, double step, double x, double y, double phi
     MatrixXd data_x=MatrixXd::Zero(step+1,4);
     MatrixXd data_y=MatrixXd::Zero(step+1,4);
     MatrixXd data_phi=MatrixXd::Zero(step+1,4);
-    
+
     //Storing trajectory data in declared matrix
     data_x=traj.traj_gen(xi,xidot,xiddot,xf,xfdot,xfddot,t0,tf,step);
     data_y=traj.traj_gen(yi,yidot,yiddot,yf,yfdot,yfddot,t0,tf,step);
@@ -68,7 +68,7 @@ MatrixXd move_base_ml_data(double time, double step, double x, double y, double 
     MatrixXd data_x=MatrixXd::Zero(step+1,4);
     MatrixXd data_y=MatrixXd::Zero(step+1,4);
     MatrixXd data_phi=MatrixXd::Zero(step+1,4);
-    
+
     //Storing trajectory data in declared matrix
     data_x=traj.traj_gen(xi,xidot,xiddot,xf,xfdot,xfddot,t0,tf,step);
     data_y=traj.traj_gen(yi,yidot,yiddot,yf,yfdot,yfddot,t0,tf,step);
@@ -78,12 +78,12 @@ MatrixXd move_base_ml_data(double time, double step, double x, double y, double 
     MatrixXd all_data=MatrixXd::Zero(step+1,12);
     all_data<<data_x,data_y,data_phi;
 
-    
+    cout<<"trajectory generated..."<<endl;
     return all_data;
 }
 
 
-//This function gives trajectory data in joint space for movement of arm 
+//This function gives trajectory data in joint space for movement of arm
 
 MatrixXd move_manip_js_data(double time, double step, double row3, double zg, double beta, double row2, double th1, double th5)
 {
@@ -92,10 +92,10 @@ MatrixXd move_manip_js_data(double time, double step, double row3, double zg, do
 
     VectorXd initial_JA=VectorXd::Zero(5);
     initial_JA=manip.prev_JA();//Get previous joint angle value of bot arm to get intial values for trajectory
-
+    cout<<"pho2 before set goal:"<<row2<<endl;
     manip.set_goal(row3,zg,beta,row2);//Set goal data to find theta 2, 3 and 4
     manip.store_goal(zg,beta,row2);//Set goal data to find theta 2, 3 and 4
-    
+
     double th3=manip.cal_JA3();//calculate joint angle2
     double th2=manip.cal_JA2();//calculate joint angle3
     double th4=manip.cal_JA4();//calculate joint angle4
@@ -104,7 +104,7 @@ MatrixXd move_manip_js_data(double time, double step, double row3, double zg, do
         th2=initial_JA(1);
         th3=initial_JA(2);
         th4=initial_JA(3);
-    }           
+    }
 
     manip.store_JA(th1,th2,th3,th4,th5);//Store current arm joint angles to use next time as initial value
 
@@ -117,15 +117,15 @@ MatrixXd move_manip_js_data(double time, double step, double row3, double zg, do
     double th2f=th2; double th2fdot=0; double th2fddot=0;
     //Data related to joint angle3
     double th3i=initial_JA(2); double th3idot=0; double th3iddot=0;
-    double th3f=th3; double th3fdot=0; double th3fddot=0;    
+    double th3f=th3; double th3fdot=0; double th3fddot=0;
     //Data related to joint angle4
     double th4i=initial_JA(3); double th4idot=0; double th4iddot=0;
     double th4f=th4; double th4fdot=0; double th4fddot=0;
     //Data related to joint angle5
     double th5i=initial_JA(4); double th5idot=0; double th5iddot=0;
     double th5f=th5; double th5fdot=0; double th5fddot=0;
-    // inital anf final time repectively    
-    double t0=0; double tf=time; 
+    // inital anf final time repectively
+    double t0=0; double tf=time;
 
     //Declaration of matrix to store trajectory data
     MatrixXd data_th1=MatrixXd::Zero(step+1,4);
@@ -144,19 +144,19 @@ MatrixXd move_manip_js_data(double time, double step, double row3, double zg, do
     //Storing all data in one matrix
     MatrixXd all_data=MatrixXd::Zero(step+1,20);
     all_data<<data_th1,data_th2,data_th3,data_th4,data_th5;
-
+    cout<<" manipulator trajectory generated..."<<endl;
     return all_data;
 }
 
 
-////This function gives trajectory data in cartesian space for movement of arm 
+////This function gives trajectory data in cartesian space for movement of arm
 
 MatrixXd move_manip_cs_data(double time, double step, double row3, double zg, double beta, double row2, double th1, double th5)
 {
     confg arm;
     Manipulator manip;
     Traj_gen traj;
-    
+
     VectorXd last_goal=VectorXd::Zero(3);
     last_goal=manip.prev_goal();//Get previous goal data of bot arm to get intial values for trajectory
     cout<<"prev_goal: "<<last_goal(0)<<" "<<last_goal(1)<<" "<<last_goal(2)<<endl;
@@ -172,11 +172,11 @@ MatrixXd move_manip_cs_data(double time, double step, double row3, double zg, do
     double zf=zg; double zfdot=0; double zfddot=0;
     //Data related beta
     double betai=last_goal(1); double betaidot=0; double betaiddot=0;
-    double betaf=beta; double betafdot=0; double betafddot=0;    
+    double betaf=beta; double betafdot=0; double betafddot=0;
     //Data related row2
     double row2i=last_goal(2); double row2idot=0; double row2iddot=0;
     double row2f=row2; double row2fdot=0; double row2fddot=0;
-    // inital anf final time repectively    
+    // inital anf final time repectively
     double t0=0; double tf=time;
 
     //Declaration of matrix to store trajectory data
@@ -188,20 +188,20 @@ MatrixXd move_manip_cs_data(double time, double step, double row3, double zg, do
     data_z=traj.traj_gen(zi,zidot,ziddot,zf,zfdot,zfddot,t0,tf,step);
     data_beta=traj.traj_gen(betai,betaidot,betaiddot,betaf,betafdot,betafddot,t0,tf,step);
     data_row2=traj.traj_gen(row2i,row2idot,row2iddot,row2f,row2fdot,row2fddot,t0,tf,step);
- 
+
     double th2,th3,th4;//declare variable to store joint angle 2, 3 and 4 for each trajectory data
 
     MatrixXd all_data=MatrixXd::Zero(step+1,5);//matrix to store joint angles for each point in tranjectory
 
     //Calculation of joint angles for each point in trajectory
-    
+
     double temp_th2=initial_JA(1);
     double temp_th3=initial_JA(2);
     double temp_th4=initial_JA(3);
     cout<<"temp_angle"<<temp_th2*180/pi()<<" "<<temp_th3*180/pi()<<" "<<temp_th4*180/pi()<<endl;
 
     for(int i=0; i<=step; i++)
-     {  
+     {
         manip.set_goal(row3,data_z(i,1),data_beta(i,1),data_row2(i,1));
         cout<<data_z(i,1)<<" "<<data_beta(i,1)<<" "<<data_row2(i,1)<<endl;;
 
@@ -214,7 +214,7 @@ MatrixXd move_manip_cs_data(double time, double step, double row3, double zg, do
             th2=temp_th2;
             th3=temp_th3;
             th4=temp_th4;
-        } 
+        }
 
         all_data(i,0)=th1;
         all_data(i,1)=th2;
