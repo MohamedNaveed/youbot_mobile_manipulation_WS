@@ -8,17 +8,17 @@ class Traj_gen
 };
 
 MatrixXd Traj_gen::traj_gen(double ui,double uidot,double uiddot,double uf,double ufdot,double ufddot,double t0,double tf,double step)
-{ 
+{
   VectorXd t=VectorXd::LinSpaced(step+1,t0,tf);
 
   VectorXd ft=VectorXd::Zero(step+1);// Vector to store time
   VectorXd fq=VectorXd::Zero(step+1);// Vector to store position
   VectorXd fqd=VectorXd::Zero(step+1);// Vector to store velocity
-  VectorXd fqdd=VectorXd::Zero(step+1);// Vector to acceleration 
+  VectorXd fqdd=VectorXd::Zero(step+1);// Vector to acceleration
   VectorXd b=VectorXd::Zero(6);// Vector to store conditional values
   VectorXd a=VectorXd::Zero(6);// Vector to store coefficients of equations
   MatrixXd M= MatrixXd::Zero(6,6);// Transformation matrix for joint 4 wrt joint 3
-
+	cout<<" x:"<<ui<<" x_final:"<<uf<<endl;
   ft(0)=t(0);
   fq(0)=ui;
   fqd(0)=uidot;
@@ -47,7 +47,7 @@ MatrixXd Traj_gen::traj_gen(double ui,double uidot,double uiddot,double uf,doubl
     }
     else{
       ft(i)=t(i);
-      fq(i)=a(0)+a(1)*t(i)+a(2)*pow(t(i),2)+a(3)*pow(t(i),3)+ a(4)*pow(t(i),4)+a(5)*pow(t(i),5);  
+      fq(i)=a(0)+a(1)*t(i)+a(2)*pow(t(i),2)+a(3)*pow(t(i),3)+ a(4)*pow(t(i),4)+a(5)*pow(t(i),5);
       fqd(i)=a(1)+2*a(2)*t(i)+3*a(3)*pow(t(i),2)+4*a(4)*pow(t(i),3)+5*a(5)*pow(t(i),4);
       fqdd(i)=2*a(2)+6*a(3)*t(i)+12*a(4)*pow(t(i),2)+20*a(5)*pow(t(i),3);
     }

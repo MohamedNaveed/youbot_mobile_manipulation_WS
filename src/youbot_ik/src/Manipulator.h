@@ -19,7 +19,7 @@ class Manipulator: public confg
 double Manipulator::cal_JA3()
 {
   z24=rf(zg-(l4*(sin(beta))));
-	cout<<"z24: " << z24 << "zg:" << zg << "l4:" << l4 <<" Beta:"<< beta << endl;
+	cout<<"z24: " << z24 << " zg:" << zg << " l4:" << l4 <<" Beta:"<< beta << endl;
   x24=rf(row2-(l4*(cos(beta))));
 	cout<<"x24"<<x24<<"pho2:" << row2 <<endl;
   double cos_theta3=rf((pow(z24,2)+pow(x24,2)-pow(l2,2)-pow(l3,2))/(2*l2*l3));

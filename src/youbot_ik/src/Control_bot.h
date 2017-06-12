@@ -16,10 +16,11 @@ void move_base(double time, double step, double x, double y, double phi)
 void move_base_ml(double time, double step, double x, double y, double phi)
 {
 	cout<<"move_base_ml called..."<<endl;
+	cout<<"x:"<<x<<" y:"<<y<<" phi:"<<phi<<endl;
 	MatrixXd data=MatrixXd::Zero(step+1,12);
 	data=move_base_ml_data(time, step, x, y, phi);
 	double dt=time/step;
-
+	cout<<"moving base"<<endl;
 	for(int i=0; i<=step; i++)
      {
          movePlatform(rf(data(i,2)),rf(data(i,6)),rf(data(i,10)));
@@ -39,7 +40,7 @@ void move_manip_js(double time, double step, double row3, double zg, double beta
 	for(int i=0; i<=step; i++)
      {
          moveArm(rf(data(i,1)),rf(data(i,5)),rf(data(i,9)),rf(data(i,13)),rf(data(i,17)));
-         ros::Duration(dt).sleep();
+         //ros::Duration(dt).sleep();
      }
 }
 

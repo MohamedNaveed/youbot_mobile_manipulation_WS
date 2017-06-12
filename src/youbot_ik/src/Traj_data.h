@@ -71,7 +71,9 @@ MatrixXd move_base_ml_data(double time, double step, double x, double y, double 
 
     //Storing trajectory data in declared matrix
     data_x=traj.traj_gen(xi,xidot,xiddot,xf,xfdot,xfddot,t0,tf,step);
+
     data_y=traj.traj_gen(yi,yidot,yiddot,yf,yfdot,yfddot,t0,tf,step);
+
     data_phi=traj.traj_gen(phii,phiidot,phiiddot,phif,phifdot,phifddot,t0,tf,step);
 
     //Storing all data in one matrix
