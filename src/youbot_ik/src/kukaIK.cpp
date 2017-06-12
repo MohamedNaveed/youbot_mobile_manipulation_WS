@@ -57,20 +57,21 @@ int main(int argc, char **argv) {
 	ros::Duration(3).sleep();
 	cout<<"initial parameters set..."<<endl;
 	obj_position=get_pose_cylinder();
-
+	cout<<"pose received"<<endl;
 
  //----------------------------self detect and pick---------------------------
- 	for(int x=0; x<5; x++){
+ 	for(int x=0; x<5; x++)
+	{
 
 		obj_position=get_pose_cylinder();
-
-		row3=0;
+		cout<<"stage 1..."<<endl;
+		row3=1;
 		zg=(obj_position(2)+50+30), beta=rad(-30), row2=380;
 		th1=rad(0);
 		th5=rad(3);
 		time_m=1;
 		step_m=time_m*200;
-
+		cout<<"stage 2..."<<endl;
 		x_g=(obj_position(0)-380)/1000;
 		time_x=abs(x_g/0.05);
 		step_x=time_x*200;
@@ -82,31 +83,33 @@ int main(int argc, char **argv) {
 		cout<<"moving base..."<<endl;
 		move_base_ml(time_y, step_y, 0, y_g, 0);
 		ros::Duration(0.5).sleep();
-
+		cout<<"stage 3..."<<endl;
 		move_base_ml(time_x, step_x, x_g, 0, 0);
 		ros::Duration(0.5).sleep();
 
-		obj_position=get_pose_cylinder();
+		//obj_position=get_pose_cylinder(); commented to check flow
 
-		while(abs(obj_position(0)-380)>10){
+		//while(abs(obj_position(0)-380)>10) commented to check flow
+		//{
 			move_base_ml(2, 400, -0.1, 0, 0);
 			ros::Duration(1).sleep();
 
-			obj_position=get_pose_cylinder();
+			//obj_position=get_pose_cylinder(); commented to check flow
 
 			x_g=(obj_position(0)-380)/1000;
 			time_x=abs(x_g/0.03);
 			step_x=time_x*200;
-
+			cout<<"stage 4..."<<endl;
 			move_base_ml(time_x, step_x, x_g, 0, 0);
 			ros::Duration(1).sleep();
 
-			obj_position=get_pose_cylinder();
-		 }
+			//obj_position=get_pose_cylinder();
+		// } commented to check flow
 
-		obj_position=get_pose_cylinder();
+//		obj_position=get_pose_cylinder();
 
-		while(abs(obj_position(1))>10){
+		//while(abs(obj_position(1))>10)
+		//{
 			if(obj_position(1)>0){
 				move_base_ml(1, 200, 0, 0.025, 0);
 				ros::Duration(1).sleep();
@@ -117,7 +120,7 @@ int main(int argc, char **argv) {
 		 	}
 
 
-			obj_position=get_pose_cylinder();
+			//obj_position=get_pose_cylinder(); commented to	check flow
 
 			y_g=obj_position(1)/1000;
 			time_y=abs(y_g/0.05);
@@ -126,9 +129,9 @@ int main(int argc, char **argv) {
 			move_base_ml(time_y, step_y, 0, y_g, 0);
 			ros::Duration(1).sleep();
 
-			obj_position=get_pose_cylinder();
-		 }
-
+			//obj_position=get_pose_cylinder();commented to	check flow
+		// }
+		cout<<"stage 5...opening gripper"<<endl;
 		open_gripper();
 		ros::Duration(1).sleep();
 
@@ -136,13 +139,13 @@ int main(int argc, char **argv) {
 		move_manip_js(time_m, step_m, 0, 30, beta, 300, th1, th5);//move arm to goal in desired time
 		ros::Duration(1).sleep();
 
-		move_manip_cs(time_m, step_m, 0, 30, beta, 380, th1, th5);//move arm to goal in desired time
+		//move_manip_cs(time_m, step_m, 0, 30, beta, 380, th1, th5);//move arm to goal in desired time
 		ros::Duration(1).sleep();
 
 	//------
 
 		close_gripper();
-		ros::Duration(10).sleep();
+		ros::Duration(100).sleep();
 
 		moveArm(rad(0), rad(0), rad(0), rad(0), rad(3));
 		ros::Duration(1).sleep();
