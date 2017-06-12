@@ -36,25 +36,46 @@ int main(int argc, char **argv)
   youbot_publisher();
 
   confg set;//Intializing all parameters
-  double x,y,z,rho2=300, rho3=0, beta=0; //x,y,z are the input goal locations, rho2,rho3=0 (elbow up) 1 (elbow down) are the redunend parameters, beta is the angle made by last link with horizontal
-  double time_m=.05;
+  double x,y,z,rho2=300, rho3=0, beta=0, phi=0; //x,y,z are the input goal locations, rho2,rho3=0 (elbow up) 1 (elbow down) are the redunend parameters, beta is the angle made by last link with horizontal
+  double time_m=0.1;
   double step_m=time_m*200;
+
   double theta_1=rad(0), theta_5=rad(3);
   cout<<"enter x:"<<endl;
   cin>>x;
-  cout<<"enter pitch:"<<endl;
-  cin>>beta;
+  cout<<"enter y:"<<endl;
+  cin>>y;
   cout<<"enter z:"<<endl;
   cin>>z;
+  cout<<"enter pitch:"<<endl;
+  cin>>beta;
   cout<<"enter roll:"<<endl;
-  cin>>th5;
-  cout<<"The entered values are x:"<<x<<" y:"<<y<<" z:"<<z<<endl;
+  cin>>theta_5;
+  cout<<"enter yaw:"<<endl;
+  cin>>phi;
+  cout<<"The entered values are x:"<<x<<" y:"<<y<<" z:"<<z<<" Pitch Beta:"<<beta<<" Roll Theta_5:"<<theta_5<<" Yaw Phi:"<<phi<<endl;
+  double x_goal=(x-rho2)/1000;
+  double time_x=abs(x_goal/0.05);
+  double step_x=time_x*200;
 
-  cout<<"moving youbot manipulator..."<<endl;
+  double y_goal=y/1000;
+  double time_y=abs(y_goal/0.05);
+  double step_y=time_y*200;
+  // double time_phi=abs(y/0.05);
+  // double step_phi=time_phi*200;
+  double time_max=max(time_x,time_y);//find maximum time to reach the goal position
+  double step_max=max(step_x,step_y);
+
   while(ros::ok())
   {
-    move_manip_js(time_m, step_m, rho3, z, beta, x, theta_1, theta_5);//move arm to goal in desired time
-    //ros::Duration(1).sleep();
+    cout<<"moving youbot platform..."<<endl;
+
+    move_base_ml(time_max, step_max, x_goal, y_goal, rad(phi));
+    ros::Duration(1).sleep();
+
+    cout<<"moving youbot manipulator..."<<endl;
+    move_manip_js(time_m, step_m, rho3, z, rad(beta), rho2, theta_1, rad(theta_5));//move arm to goal in desired time
+    ros::Duration(50).sleep();
   }
   sleep(1);
   return 0;
