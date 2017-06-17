@@ -220,6 +220,20 @@ manip_teleop/fast:
 .PHONY : manip_teleop/fast
 
 # Convenience name for target.
+youbot_ik/CMakeFiles/q_to_matrix.dir/rule:
+	cd /home/ros/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 youbot_ik/CMakeFiles/q_to_matrix.dir/rule
+.PHONY : youbot_ik/CMakeFiles/q_to_matrix.dir/rule
+
+# Convenience name for target.
+q_to_matrix: youbot_ik/CMakeFiles/q_to_matrix.dir/rule
+.PHONY : q_to_matrix
+
+# fast build rule for target.
+q_to_matrix/fast:
+	cd /home/ros/catkin_ws/build && $(MAKE) -f youbot_ik/CMakeFiles/q_to_matrix.dir/build.make youbot_ik/CMakeFiles/q_to_matrix.dir/build
+.PHONY : q_to_matrix/fast
+
+# Convenience name for target.
 youbot_ik/CMakeFiles/test_ik.dir/rule:
 	cd /home/ros/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 youbot_ik/CMakeFiles/test_ik.dir/rule
 .PHONY : youbot_ik/CMakeFiles/test_ik.dir/rule
@@ -281,6 +295,30 @@ src/manip_teleop.cpp.s:
 	cd /home/ros/catkin_ws/build && $(MAKE) -f youbot_ik/CMakeFiles/manip_teleop.dir/build.make youbot_ik/CMakeFiles/manip_teleop.dir/src/manip_teleop.cpp.s
 .PHONY : src/manip_teleop.cpp.s
 
+src/q_to_matrix.o: src/q_to_matrix.cpp.o
+.PHONY : src/q_to_matrix.o
+
+# target to build an object file
+src/q_to_matrix.cpp.o:
+	cd /home/ros/catkin_ws/build && $(MAKE) -f youbot_ik/CMakeFiles/q_to_matrix.dir/build.make youbot_ik/CMakeFiles/q_to_matrix.dir/src/q_to_matrix.cpp.o
+.PHONY : src/q_to_matrix.cpp.o
+
+src/q_to_matrix.i: src/q_to_matrix.cpp.i
+.PHONY : src/q_to_matrix.i
+
+# target to preprocess a source file
+src/q_to_matrix.cpp.i:
+	cd /home/ros/catkin_ws/build && $(MAKE) -f youbot_ik/CMakeFiles/q_to_matrix.dir/build.make youbot_ik/CMakeFiles/q_to_matrix.dir/src/q_to_matrix.cpp.i
+.PHONY : src/q_to_matrix.cpp.i
+
+src/q_to_matrix.s: src/q_to_matrix.cpp.s
+.PHONY : src/q_to_matrix.s
+
+# target to generate assembly for a file
+src/q_to_matrix.cpp.s:
+	cd /home/ros/catkin_ws/build && $(MAKE) -f youbot_ik/CMakeFiles/q_to_matrix.dir/build.make youbot_ik/CMakeFiles/q_to_matrix.dir/src/q_to_matrix.cpp.s
+.PHONY : src/q_to_matrix.cpp.s
+
 src/test_ik.o: src/test_ik.cpp.o
 .PHONY : src/test_ik.o
 
@@ -321,6 +359,7 @@ help:
 	@echo "... kukaIK"
 	@echo "... list_install_components"
 	@echo "... manip_teleop"
+	@echo "... q_to_matrix"
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... test_ik"
@@ -330,6 +369,9 @@ help:
 	@echo "... src/manip_teleop.o"
 	@echo "... src/manip_teleop.i"
 	@echo "... src/manip_teleop.s"
+	@echo "... src/q_to_matrix.o"
+	@echo "... src/q_to_matrix.i"
+	@echo "... src/q_to_matrix.s"
 	@echo "... src/test_ik.o"
 	@echo "... src/test_ik.i"
 	@echo "... src/test_ik.s"

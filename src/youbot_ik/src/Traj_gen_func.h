@@ -18,7 +18,7 @@ MatrixXd Traj_gen::traj_gen(double ui,double uidot,double uiddot,double uf,doubl
   VectorXd b=VectorXd::Zero(6);// Vector to store conditional values
   VectorXd a=VectorXd::Zero(6);// Vector to store coefficients of equations
   MatrixXd M= MatrixXd::Zero(6,6);// Transformation matrix for joint 4 wrt joint 3
-	cout<<" x:"<<ui<<" x_final:"<<uf<<endl;
+	//cout<<" x:"<<ui<<" x_final:"<<uf<<endl;
   ft(0)=t(0);
   fq(0)=ui;
   fqd(0)=uidot;

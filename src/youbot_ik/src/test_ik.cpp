@@ -37,7 +37,7 @@ int main(int argc, char **argv)
 
   confg set;//Intializing all parameters
   double x,y,z,rho2=300, rho3=0, beta=0, phi=0; //x,y,z are the input goal locations, rho2,rho3=0 (elbow up) 1 (elbow down) are the redunend parameters, beta is the angle made by last link with horizontal
-  double time_m=0.1;
+  double time_m=1;
   double step_m=time_m*200;
 
   double theta_1=rad(0), theta_5=rad(3);
@@ -75,7 +75,8 @@ int main(int argc, char **argv)
 
     cout<<"moving youbot manipulator..."<<endl;
     move_manip_js(time_m, step_m, rho3, z, rad(beta), rho2, theta_1, rad(theta_5));//move arm to goal in desired time
-    ros::Duration(50).sleep();
+    ros::Duration(300).sleep();
+    break;
   }
   sleep(1);
   return 0;

@@ -1,5 +1,4 @@
 #include <iostream> // for standard operations
-
 using namespace std;
 
 Vector4d transform(double kinect_x, double kinect_y, double kinect_z){
@@ -10,7 +9,7 @@ double trans_x=-0.292;
 double trans_y=-0.101995;
 double trans_z=1.147;
 
- 
+
  Vector4d pose_kinect=Vector4d::Zero();//vector to store pose of object in kinect frame
  pose_kinect<<kinect_x,kinect_y,kinect_z,1;
 
@@ -34,7 +33,7 @@ double trans_z=1.147;
     	      0, sin(rot_x), cos(rot_x), 0,
      	      0, 0, 0, 1;
 
- 
+
  pose_bot=Tw2k_trans*Tk2k_rotz*Tk2k_rotx*pose_kinect;
 
 // cout<<"object position in bot coordinate frame(in mm): "<<endl;

@@ -1892,6 +1892,110 @@ kinect2_viewer/fast:
 .PHONY : kinect2_viewer/fast
 
 #=============================================================================
+# Target rules for targets named publish_frame
+
+# Build rule for target.
+publish_frame: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 publish_frame
+.PHONY : publish_frame
+
+# fast build rule for target.
+publish_frame/fast:
+	$(MAKE) -f learning_tf/CMakeFiles/publish_frame.dir/build.make learning_tf/CMakeFiles/publish_frame.dir/build
+.PHONY : publish_frame/fast
+
+#=============================================================================
+# Target rules for targets named std_srvs_generate_messages_cpp
+
+# Build rule for target.
+std_srvs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 std_srvs_generate_messages_cpp
+.PHONY : std_srvs_generate_messages_cpp
+
+# fast build rule for target.
+std_srvs_generate_messages_cpp/fast:
+	$(MAKE) -f learning_tf/CMakeFiles/std_srvs_generate_messages_cpp.dir/build.make learning_tf/CMakeFiles/std_srvs_generate_messages_cpp.dir/build
+.PHONY : std_srvs_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named std_srvs_generate_messages_lisp
+
+# Build rule for target.
+std_srvs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 std_srvs_generate_messages_lisp
+.PHONY : std_srvs_generate_messages_lisp
+
+# fast build rule for target.
+std_srvs_generate_messages_lisp/fast:
+	$(MAKE) -f learning_tf/CMakeFiles/std_srvs_generate_messages_lisp.dir/build.make learning_tf/CMakeFiles/std_srvs_generate_messages_lisp.dir/build
+.PHONY : std_srvs_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named std_srvs_generate_messages_py
+
+# Build rule for target.
+std_srvs_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 std_srvs_generate_messages_py
+.PHONY : std_srvs_generate_messages_py
+
+# fast build rule for target.
+std_srvs_generate_messages_py/fast:
+	$(MAKE) -f learning_tf/CMakeFiles/std_srvs_generate_messages_py.dir/build.make learning_tf/CMakeFiles/std_srvs_generate_messages_py.dir/build
+.PHONY : std_srvs_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named turtle_tf_broadcaster
+
+# Build rule for target.
+turtle_tf_broadcaster: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 turtle_tf_broadcaster
+.PHONY : turtle_tf_broadcaster
+
+# fast build rule for target.
+turtle_tf_broadcaster/fast:
+	$(MAKE) -f learning_tf/CMakeFiles/turtle_tf_broadcaster.dir/build.make learning_tf/CMakeFiles/turtle_tf_broadcaster.dir/build
+.PHONY : turtle_tf_broadcaster/fast
+
+#=============================================================================
+# Target rules for targets named turtlesim_generate_messages_cpp
+
+# Build rule for target.
+turtlesim_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 turtlesim_generate_messages_cpp
+.PHONY : turtlesim_generate_messages_cpp
+
+# fast build rule for target.
+turtlesim_generate_messages_cpp/fast:
+	$(MAKE) -f learning_tf/CMakeFiles/turtlesim_generate_messages_cpp.dir/build.make learning_tf/CMakeFiles/turtlesim_generate_messages_cpp.dir/build
+.PHONY : turtlesim_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named turtlesim_generate_messages_lisp
+
+# Build rule for target.
+turtlesim_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 turtlesim_generate_messages_lisp
+.PHONY : turtlesim_generate_messages_lisp
+
+# fast build rule for target.
+turtlesim_generate_messages_lisp/fast:
+	$(MAKE) -f learning_tf/CMakeFiles/turtlesim_generate_messages_lisp.dir/build.make learning_tf/CMakeFiles/turtlesim_generate_messages_lisp.dir/build
+.PHONY : turtlesim_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named turtlesim_generate_messages_py
+
+# Build rule for target.
+turtlesim_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 turtlesim_generate_messages_py
+.PHONY : turtlesim_generate_messages_py
+
+# fast build rule for target.
+turtlesim_generate_messages_py/fast:
+	$(MAKE) -f learning_tf/CMakeFiles/turtlesim_generate_messages_py.dir/build.make learning_tf/CMakeFiles/turtlesim_generate_messages_py.dir/build
+.PHONY : turtlesim_generate_messages_py/fast
+
+#=============================================================================
 # Target rules for targets named map_msgs_generate_messages_cpp
 
 # Build rule for target.
@@ -2152,6 +2256,19 @@ manip_teleop/fast:
 .PHONY : manip_teleop/fast
 
 #=============================================================================
+# Target rules for targets named q_to_matrix
+
+# Build rule for target.
+q_to_matrix: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 q_to_matrix
+.PHONY : q_to_matrix
+
+# fast build rule for target.
+q_to_matrix/fast:
+	$(MAKE) -f youbot_ik/CMakeFiles/q_to_matrix.dir/build.make youbot_ik/CMakeFiles/q_to_matrix.dir/build
+.PHONY : q_to_matrix/fast
+
+#=============================================================================
 # Target rules for targets named test_ik
 
 # Build rule for target.
@@ -2337,6 +2454,14 @@ help:
 	@echo "... kinect2_calibration"
 	@echo "... additional_files_kinect2_viewer"
 	@echo "... kinect2_viewer"
+	@echo "... publish_frame"
+	@echo "... std_srvs_generate_messages_cpp"
+	@echo "... std_srvs_generate_messages_lisp"
+	@echo "... std_srvs_generate_messages_py"
+	@echo "... turtle_tf_broadcaster"
+	@echo "... turtlesim_generate_messages_cpp"
+	@echo "... turtlesim_generate_messages_lisp"
+	@echo "... turtlesim_generate_messages_py"
 	@echo "... map_msgs_generate_messages_cpp"
 	@echo "... map_msgs_generate_messages_lisp"
 	@echo "... map_msgs_generate_messages_py"
@@ -2357,6 +2482,7 @@ help:
 	@echo "... control_msgs_generate_messages_py"
 	@echo "... kukaIK"
 	@echo "... manip_teleop"
+	@echo "... q_to_matrix"
 	@echo "... test_ik"
 	@echo "... youbot_ros_hello_world"
 	@echo "... youbot_ros_simple_trajectory"

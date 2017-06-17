@@ -40,6 +40,7 @@ void move_manip_js(double time, double step, double row3, double zg, double beta
 	for(int i=0; i<=step; i++)
      {
          moveArm(rf(data(i,1)),rf(data(i,5)),rf(data(i,9)),rf(data(i,13)),rf(data(i,17)));
+				 //cout<<"Joint 1:"<<data(i,5)<<" Velocity:"<<rf(data(i,6))<<endl;
          //ros::Duration(dt).sleep();
      }
 }

@@ -137,6 +137,7 @@ include_directories(
 add_executable(kukaIK src/kukaIK.cpp)
 add_executable(manip_teleop src/manip_teleop.cpp)
 add_executable(test_ik src/test_ik.cpp)
+add_executable(q_to_matrix src/q_to_matrix.cpp)
 #add_executable(Check_gazebo src/Check_gazebo.cpp)
 
 ## Add cmake target dependencies of the executable
