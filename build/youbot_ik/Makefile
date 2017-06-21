@@ -150,20 +150,6 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-youbot_ik/CMakeFiles/Ik_with_quaternion.dir/rule:
-	cd /home/ros/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 youbot_ik/CMakeFiles/Ik_with_quaternion.dir/rule
-.PHONY : youbot_ik/CMakeFiles/Ik_with_quaternion.dir/rule
-
-# Convenience name for target.
-Ik_with_quaternion: youbot_ik/CMakeFiles/Ik_with_quaternion.dir/rule
-.PHONY : Ik_with_quaternion
-
-# fast build rule for target.
-Ik_with_quaternion/fast:
-	cd /home/ros/catkin_ws/build && $(MAKE) -f youbot_ik/CMakeFiles/Ik_with_quaternion.dir/build.make youbot_ik/CMakeFiles/Ik_with_quaternion.dir/build
-.PHONY : Ik_with_quaternion/fast
-
-# Convenience name for target.
 youbot_ik/CMakeFiles/control_msgs_generate_messages_cpp.dir/rule:
 	cd /home/ros/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 youbot_ik/CMakeFiles/control_msgs_generate_messages_cpp.dir/rule
 .PHONY : youbot_ik/CMakeFiles/control_msgs_generate_messages_cpp.dir/rule
@@ -274,30 +260,6 @@ test_ik: youbot_ik/CMakeFiles/test_ik.dir/rule
 test_ik/fast:
 	cd /home/ros/catkin_ws/build && $(MAKE) -f youbot_ik/CMakeFiles/test_ik.dir/build.make youbot_ik/CMakeFiles/test_ik.dir/build
 .PHONY : test_ik/fast
-
-src/Ik_with_quaternion.o: src/Ik_with_quaternion.cpp.o
-.PHONY : src/Ik_with_quaternion.o
-
-# target to build an object file
-src/Ik_with_quaternion.cpp.o:
-	cd /home/ros/catkin_ws/build && $(MAKE) -f youbot_ik/CMakeFiles/Ik_with_quaternion.dir/build.make youbot_ik/CMakeFiles/Ik_with_quaternion.dir/src/Ik_with_quaternion.cpp.o
-.PHONY : src/Ik_with_quaternion.cpp.o
-
-src/Ik_with_quaternion.i: src/Ik_with_quaternion.cpp.i
-.PHONY : src/Ik_with_quaternion.i
-
-# target to preprocess a source file
-src/Ik_with_quaternion.cpp.i:
-	cd /home/ros/catkin_ws/build && $(MAKE) -f youbot_ik/CMakeFiles/Ik_with_quaternion.dir/build.make youbot_ik/CMakeFiles/Ik_with_quaternion.dir/src/Ik_with_quaternion.cpp.i
-.PHONY : src/Ik_with_quaternion.cpp.i
-
-src/Ik_with_quaternion.s: src/Ik_with_quaternion.cpp.s
-.PHONY : src/Ik_with_quaternion.s
-
-# target to generate assembly for a file
-src/Ik_with_quaternion.cpp.s:
-	cd /home/ros/catkin_ws/build && $(MAKE) -f youbot_ik/CMakeFiles/Ik_with_quaternion.dir/build.make youbot_ik/CMakeFiles/Ik_with_quaternion.dir/src/Ik_with_quaternion.cpp.s
-.PHONY : src/Ik_with_quaternion.cpp.s
 
 src/kukaIK.o: src/kukaIK.cpp.o
 .PHONY : src/kukaIK.o
@@ -425,7 +387,6 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... Ik_with_quaternion"
 	@echo "... control_msgs_generate_messages_cpp"
 	@echo "... control_msgs_generate_messages_lisp"
 	@echo "... control_msgs_generate_messages_py"
@@ -441,9 +402,6 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... test_ik"
-	@echo "... src/Ik_with_quaternion.o"
-	@echo "... src/Ik_with_quaternion.i"
-	@echo "... src/Ik_with_quaternion.s"
 	@echo "... src/kukaIK.o"
 	@echo "... src/kukaIK.i"
 	@echo "... src/kukaIK.s"

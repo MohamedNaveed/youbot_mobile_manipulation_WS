@@ -2191,19 +2191,6 @@ youbot_gazebo_publisher/fast:
 .PHONY : youbot_gazebo_publisher/fast
 
 #=============================================================================
-# Target rules for targets named Ik_with_quaternion
-
-# Build rule for target.
-Ik_with_quaternion: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Ik_with_quaternion
-.PHONY : Ik_with_quaternion
-
-# fast build rule for target.
-Ik_with_quaternion/fast:
-	$(MAKE) -f youbot_ik/CMakeFiles/Ik_with_quaternion.dir/build.make youbot_ik/CMakeFiles/Ik_with_quaternion.dir/build
-.PHONY : Ik_with_quaternion/fast
-
-#=============================================================================
 # Target rules for targets named control_msgs_generate_messages_cpp
 
 # Build rule for target.
@@ -2503,7 +2490,6 @@ help:
 	@echo "... trajectory_msgs_generate_messages_lisp"
 	@echo "... trajectory_msgs_generate_messages_py"
 	@echo "... youbot_gazebo_publisher"
-	@echo "... Ik_with_quaternion"
 	@echo "... control_msgs_generate_messages_cpp"
 	@echo "... control_msgs_generate_messages_lisp"
 	@echo "... control_msgs_generate_messages_py"

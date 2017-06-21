@@ -139,8 +139,8 @@ int main(int argc, char **argv)
   cout<<"initial parameters set..."<<endl;
 
   //Getting pose
-  //pose<<get_pose_coke();
-	//cout<<"Received pose:"<<pose<<endl;
+  pose<<get_pose_coke();
+	cout<<"Received pose:"<<pose<<endl;
   tf::Quaternion q(pose(3), pose(4), pose(5), pose(6));//w,x,y,z
   Eigen::Quaterniond eigen_q(q);//convert to quaternion in eigen
   R = eigen_q.toRotationMatrix();//Rotation matrix of the quaternion

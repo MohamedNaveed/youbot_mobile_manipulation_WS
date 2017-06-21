@@ -1,4 +1,3 @@
-/home/ros/catkin_ws/build/youbot_ik/CMakeFiles/Ik_with_quaternion.dir
 /home/ros/catkin_ws/build/iai_kinect2/iai_kinect2/CMakeFiles/_catkin_empty_exported_target.dir
 /home/ros/catkin_ws/build/object_recognition_msgs/CMakeFiles/_object_recognition_msgs_generate_messages_check_deps_GetObjectInformation.dir
 /home/ros/catkin_ws/build/object_recognition_msgs/CMakeFiles/_object_recognition_msgs_generate_messages_check_deps_ObjectInformation.dir

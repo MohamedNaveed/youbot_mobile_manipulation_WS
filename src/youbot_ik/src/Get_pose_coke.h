@@ -3,7 +3,7 @@
 using namespace std;
 double rate=0.1;//rate at which data is being published
 
-Vector3d get_pose_coke()
+void get_pose_coke()
 {
 	cout<<"searching object..."<<endl;
 
@@ -19,7 +19,7 @@ Vector3d get_pose_coke()
 	int numb=3;//number of pose data to collect for taking average
 	int i=0;
 
-	Vector4d transformed_pose=Vector4d::Zero();
+	Vector3d transformed_pose=Vector3d::Zero();
 
 	while(i<numb)
 	{
@@ -27,7 +27,7 @@ Vector3d get_pose_coke()
 		ros::spinOnce();
 
 
-		transformed_pose=transform(pose_lin_x, pose_lin_y, pose_lin_z);
+		transformed_pose=transform_k_J2(pose_lin_x, pose_lin_y, pose_lin_z, pose_ang_w, pose_ang_x, pose_ang_y, pose_ang_z);
 
 
 		if(detect==1 && obj_key==obj){
@@ -48,9 +48,7 @@ Vector3d get_pose_coke()
 	cout<<"x coordinate: "<<pose_lin_x<<endl;
 	cout<<"y coordinate: "<<pose_lin_y<<endl;
 	cout<<"z coordinate: "<<pose_lin_z<<endl;
+	cout<<"ang w: "<<pose_ang_w<<" ang x:"<<pose_ang_x<<" ang y:"<<pose_ang_y<<" ang z:"<<pose_ang_z<<endl;
 
-	Vector3d pose;
-	pose<<pose_lin_x, pose_lin_y, pose_lin_z;// pose_ang_w, pose_ang_x, pose_ang_y, pose_ang_z;//give value here to check
 	cout<<"pose subscription done..."<<endl;
-	return pose;
 }

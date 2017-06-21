@@ -53,7 +53,7 @@ MatrixXd move_base_ml_data(double time, double step, double x, double y, double 
 
     // Intial and final data to move base
     //Data related to x-coordinate
-    double xi=0; double xidot=0; double xiddot=0;
+    double xi=0; double xidot=0.01; double xiddot=0;
     double xf=x; double xfdot=0; double xfddot=0;
     //Data related to y-coordinate
     double yi=0; double yidot=0; double yiddot=0;
