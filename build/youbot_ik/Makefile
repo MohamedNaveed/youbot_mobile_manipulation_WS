@@ -150,6 +150,20 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+youbot_ik/CMakeFiles/Ik_with_quaternion.dir/rule:
+	cd /home/ros/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 youbot_ik/CMakeFiles/Ik_with_quaternion.dir/rule
+.PHONY : youbot_ik/CMakeFiles/Ik_with_quaternion.dir/rule
+
+# Convenience name for target.
+Ik_with_quaternion: youbot_ik/CMakeFiles/Ik_with_quaternion.dir/rule
+.PHONY : Ik_with_quaternion
+
+# fast build rule for target.
+Ik_with_quaternion/fast:
+	cd /home/ros/catkin_ws/build && $(MAKE) -f youbot_ik/CMakeFiles/Ik_with_quaternion.dir/build.make youbot_ik/CMakeFiles/Ik_with_quaternion.dir/build
+.PHONY : Ik_with_quaternion/fast
+
+# Convenience name for target.
 youbot_ik/CMakeFiles/control_msgs_generate_messages_cpp.dir/rule:
 	cd /home/ros/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 youbot_ik/CMakeFiles/control_msgs_generate_messages_cpp.dir/rule
 .PHONY : youbot_ik/CMakeFiles/control_msgs_generate_messages_cpp.dir/rule
@@ -220,6 +234,20 @@ manip_teleop/fast:
 .PHONY : manip_teleop/fast
 
 # Convenience name for target.
+youbot_ik/CMakeFiles/publish_frame_or.dir/rule:
+	cd /home/ros/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 youbot_ik/CMakeFiles/publish_frame_or.dir/rule
+.PHONY : youbot_ik/CMakeFiles/publish_frame_or.dir/rule
+
+# Convenience name for target.
+publish_frame_or: youbot_ik/CMakeFiles/publish_frame_or.dir/rule
+.PHONY : publish_frame_or
+
+# fast build rule for target.
+publish_frame_or/fast:
+	cd /home/ros/catkin_ws/build && $(MAKE) -f youbot_ik/CMakeFiles/publish_frame_or.dir/build.make youbot_ik/CMakeFiles/publish_frame_or.dir/build
+.PHONY : publish_frame_or/fast
+
+# Convenience name for target.
 youbot_ik/CMakeFiles/q_to_matrix.dir/rule:
 	cd /home/ros/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 youbot_ik/CMakeFiles/q_to_matrix.dir/rule
 .PHONY : youbot_ik/CMakeFiles/q_to_matrix.dir/rule
@@ -246,6 +274,30 @@ test_ik: youbot_ik/CMakeFiles/test_ik.dir/rule
 test_ik/fast:
 	cd /home/ros/catkin_ws/build && $(MAKE) -f youbot_ik/CMakeFiles/test_ik.dir/build.make youbot_ik/CMakeFiles/test_ik.dir/build
 .PHONY : test_ik/fast
+
+src/Ik_with_quaternion.o: src/Ik_with_quaternion.cpp.o
+.PHONY : src/Ik_with_quaternion.o
+
+# target to build an object file
+src/Ik_with_quaternion.cpp.o:
+	cd /home/ros/catkin_ws/build && $(MAKE) -f youbot_ik/CMakeFiles/Ik_with_quaternion.dir/build.make youbot_ik/CMakeFiles/Ik_with_quaternion.dir/src/Ik_with_quaternion.cpp.o
+.PHONY : src/Ik_with_quaternion.cpp.o
+
+src/Ik_with_quaternion.i: src/Ik_with_quaternion.cpp.i
+.PHONY : src/Ik_with_quaternion.i
+
+# target to preprocess a source file
+src/Ik_with_quaternion.cpp.i:
+	cd /home/ros/catkin_ws/build && $(MAKE) -f youbot_ik/CMakeFiles/Ik_with_quaternion.dir/build.make youbot_ik/CMakeFiles/Ik_with_quaternion.dir/src/Ik_with_quaternion.cpp.i
+.PHONY : src/Ik_with_quaternion.cpp.i
+
+src/Ik_with_quaternion.s: src/Ik_with_quaternion.cpp.s
+.PHONY : src/Ik_with_quaternion.s
+
+# target to generate assembly for a file
+src/Ik_with_quaternion.cpp.s:
+	cd /home/ros/catkin_ws/build && $(MAKE) -f youbot_ik/CMakeFiles/Ik_with_quaternion.dir/build.make youbot_ik/CMakeFiles/Ik_with_quaternion.dir/src/Ik_with_quaternion.cpp.s
+.PHONY : src/Ik_with_quaternion.cpp.s
 
 src/kukaIK.o: src/kukaIK.cpp.o
 .PHONY : src/kukaIK.o
@@ -294,6 +346,30 @@ src/manip_teleop.s: src/manip_teleop.cpp.s
 src/manip_teleop.cpp.s:
 	cd /home/ros/catkin_ws/build && $(MAKE) -f youbot_ik/CMakeFiles/manip_teleop.dir/build.make youbot_ik/CMakeFiles/manip_teleop.dir/src/manip_teleop.cpp.s
 .PHONY : src/manip_teleop.cpp.s
+
+src/publish_frame_or.o: src/publish_frame_or.cpp.o
+.PHONY : src/publish_frame_or.o
+
+# target to build an object file
+src/publish_frame_or.cpp.o:
+	cd /home/ros/catkin_ws/build && $(MAKE) -f youbot_ik/CMakeFiles/publish_frame_or.dir/build.make youbot_ik/CMakeFiles/publish_frame_or.dir/src/publish_frame_or.cpp.o
+.PHONY : src/publish_frame_or.cpp.o
+
+src/publish_frame_or.i: src/publish_frame_or.cpp.i
+.PHONY : src/publish_frame_or.i
+
+# target to preprocess a source file
+src/publish_frame_or.cpp.i:
+	cd /home/ros/catkin_ws/build && $(MAKE) -f youbot_ik/CMakeFiles/publish_frame_or.dir/build.make youbot_ik/CMakeFiles/publish_frame_or.dir/src/publish_frame_or.cpp.i
+.PHONY : src/publish_frame_or.cpp.i
+
+src/publish_frame_or.s: src/publish_frame_or.cpp.s
+.PHONY : src/publish_frame_or.s
+
+# target to generate assembly for a file
+src/publish_frame_or.cpp.s:
+	cd /home/ros/catkin_ws/build && $(MAKE) -f youbot_ik/CMakeFiles/publish_frame_or.dir/build.make youbot_ik/CMakeFiles/publish_frame_or.dir/src/publish_frame_or.cpp.s
+.PHONY : src/publish_frame_or.cpp.s
 
 src/q_to_matrix.o: src/q_to_matrix.cpp.o
 .PHONY : src/q_to_matrix.o
@@ -349,6 +425,7 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... Ik_with_quaternion"
 	@echo "... control_msgs_generate_messages_cpp"
 	@echo "... control_msgs_generate_messages_lisp"
 	@echo "... control_msgs_generate_messages_py"
@@ -359,16 +436,23 @@ help:
 	@echo "... kukaIK"
 	@echo "... list_install_components"
 	@echo "... manip_teleop"
+	@echo "... publish_frame_or"
 	@echo "... q_to_matrix"
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... test_ik"
+	@echo "... src/Ik_with_quaternion.o"
+	@echo "... src/Ik_with_quaternion.i"
+	@echo "... src/Ik_with_quaternion.s"
 	@echo "... src/kukaIK.o"
 	@echo "... src/kukaIK.i"
 	@echo "... src/kukaIK.s"
 	@echo "... src/manip_teleop.o"
 	@echo "... src/manip_teleop.i"
 	@echo "... src/manip_teleop.s"
+	@echo "... src/publish_frame_or.o"
+	@echo "... src/publish_frame_or.i"
+	@echo "... src/publish_frame_or.s"
 	@echo "... src/q_to_matrix.o"
 	@echo "... src/q_to_matrix.i"
 	@echo "... src/q_to_matrix.s"

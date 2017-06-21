@@ -7,8 +7,6 @@ using namespace std;
 #include "Math_other.h"//self-defined mathemetical functions
 #include <ros/ros.h>
 
-
-
 int main()
 {
   Eigen::Quaterniond rot;

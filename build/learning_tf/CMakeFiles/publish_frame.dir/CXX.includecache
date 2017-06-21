@@ -13,6 +13,12 @@ tf/transform_broadcaster.h
 -
 iostream
 -
+eigen3/Eigen/Geometry
+-
+eigen3/Eigen/Dense
+-
+math.h
+-
 
 /opt/ros/indigo/include/XmlRpcDecl.h
 ros/macros.h

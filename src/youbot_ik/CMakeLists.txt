@@ -11,6 +11,7 @@ find_package(catkin REQUIRED COMPONENTS
   rospy
   std_msgs
   object_recognition_msgs
+  tf
 )
 
 ## System dependencies are found with CMake's conventions
@@ -138,6 +139,8 @@ add_executable(kukaIK src/kukaIK.cpp)
 add_executable(manip_teleop src/manip_teleop.cpp)
 add_executable(test_ik src/test_ik.cpp)
 add_executable(q_to_matrix src/q_to_matrix.cpp)
+add_executable(Ik_with_quaternion src/Ik_with_quaternion.cpp)
+add_executable(publish_frame_or src/publish_frame_or.cpp)
 #add_executable(Check_gazebo src/Check_gazebo.cpp)
 
 ## Add cmake target dependencies of the executable
@@ -151,6 +154,8 @@ add_executable(q_to_matrix src/q_to_matrix.cpp)
 target_link_libraries(kukaIK ${catkin_LIBRARIES})
 target_link_libraries(manip_teleop ${catkin_LIBRARIES})
 target_link_libraries(test_ik ${catkin_LIBRARIES})
+target_link_libraries(Ik_with_quaternion ${catkin_LIBRARIES})
+target_link_libraries(publish_frame_or ${catkin_LIBRARIES})
 #target_link_libraries(Check_gazebo ${catkin_LIBRARIES})
 
 #############

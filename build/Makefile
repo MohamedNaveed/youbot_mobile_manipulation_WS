@@ -2191,6 +2191,19 @@ youbot_gazebo_publisher/fast:
 .PHONY : youbot_gazebo_publisher/fast
 
 #=============================================================================
+# Target rules for targets named Ik_with_quaternion
+
+# Build rule for target.
+Ik_with_quaternion: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Ik_with_quaternion
+.PHONY : Ik_with_quaternion
+
+# fast build rule for target.
+Ik_with_quaternion/fast:
+	$(MAKE) -f youbot_ik/CMakeFiles/Ik_with_quaternion.dir/build.make youbot_ik/CMakeFiles/Ik_with_quaternion.dir/build
+.PHONY : Ik_with_quaternion/fast
+
+#=============================================================================
 # Target rules for targets named control_msgs_generate_messages_cpp
 
 # Build rule for target.
@@ -2254,6 +2267,19 @@ manip_teleop: cmake_check_build_system
 manip_teleop/fast:
 	$(MAKE) -f youbot_ik/CMakeFiles/manip_teleop.dir/build.make youbot_ik/CMakeFiles/manip_teleop.dir/build
 .PHONY : manip_teleop/fast
+
+#=============================================================================
+# Target rules for targets named publish_frame_or
+
+# Build rule for target.
+publish_frame_or: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 publish_frame_or
+.PHONY : publish_frame_or
+
+# fast build rule for target.
+publish_frame_or/fast:
+	$(MAKE) -f youbot_ik/CMakeFiles/publish_frame_or.dir/build.make youbot_ik/CMakeFiles/publish_frame_or.dir/build
+.PHONY : publish_frame_or/fast
 
 #=============================================================================
 # Target rules for targets named q_to_matrix
@@ -2477,11 +2503,13 @@ help:
 	@echo "... trajectory_msgs_generate_messages_lisp"
 	@echo "... trajectory_msgs_generate_messages_py"
 	@echo "... youbot_gazebo_publisher"
+	@echo "... Ik_with_quaternion"
 	@echo "... control_msgs_generate_messages_cpp"
 	@echo "... control_msgs_generate_messages_lisp"
 	@echo "... control_msgs_generate_messages_py"
 	@echo "... kukaIK"
 	@echo "... manip_teleop"
+	@echo "... publish_frame_or"
 	@echo "... q_to_matrix"
 	@echo "... test_ik"
 	@echo "... youbot_ros_hello_world"
