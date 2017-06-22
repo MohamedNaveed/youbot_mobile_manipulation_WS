@@ -23,8 +23,8 @@ void move_base_ml(double time, double step, double x, double y, double phi)
 	cout<<"moving base"<<endl;
 	for(int i=0; i<=step; i++)
      {
+			 	 cout<<"x:"<<data(i,1)<<" xdot:"<<data(i,2)<<endl;
          movePlatform(rf(data(i,2)),rf(data(i,6)),rf(data(i,10)));
-				 cout<<"x:"<<data(i,1)<<" xdot:"<<data(i,2)<<endl;
          ros::Duration(dt).sleep();
      }
 }

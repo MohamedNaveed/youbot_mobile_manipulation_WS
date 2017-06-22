@@ -32,7 +32,6 @@ using namespace Eigen;//eigen namespace
 #include "Transform.h"
 #include "Get_pose_coke.h"//functions to give pose of objectsget in youbot frame
 #include "Position_subscriber.h"
-#include "PID.h"
 
 void home_position()
 {
@@ -42,11 +41,24 @@ void home_position()
 	ros::Duration(3).sleep();
 }
 
+void apply_PID()
+{
+  ros::Rate odom_rate(10);//rate at which data is being published
+
+    odom_rate.sleep();
+    ros::spinOnce();
+    cout<<"at apply_PID"<<" x_present:"<<x_present<<" y_present:"<<y_present<<endl;
+}
+
 int main(int argc, char** argv)
 {
   double roll=0,pitch=0,yaw=0, rho2=.300, Beta, Theta; //rho1 - redundancy
 	double L=.033;//distance between J1 and J2 along x
 	double M=.061;//distance between Wheel axis and J1 along x
+  double x_error, x_dot,sum_x_error,dif_x_error, x_error_old;
+
+  double Kp=1, Ki=0, Kd=0;
+
 	ros::init(argc, argv, "my_tf_broadcaster");
 	static tf::TransformBroadcaster br;
 	youbot_publisher();
@@ -56,6 +68,10 @@ int main(int argc, char** argv)
 
 	//Getting pose
 	home_position(); // moving arm to home position
+  //movePlatform(rf(-0.009),0,0);//give an input velocity to check bot movement
+  //cout<<"Testing velocity"<<endl;
+  //ros::Duration(10).sleep();
+  //cout<<"tested"<<endl;
   //get_pose_coke();
 	cout<<"Received pose x :"<<pose_lin_x<<" y:"<<pose_lin_y<<" z:"<<pose_lin_z<<endl;
 	cout<<"Orient"<<" W:"<<pose_ang_w<<" X:"<<pose_ang_x<<" Y:"<<pose_ang_y<<" Z:"<<pose_ang_z<<endl;
@@ -97,17 +113,25 @@ int main(int argc, char** argv)
 	double time_max=max(time_x,time_y);//find maximum time to reach the goal position
   double step_max=max(step_x,step_y);
 
+  cout<<"moving youbot platform..."<<endl;
+  move_base_ml(time_max, step_max, x_goal, y_goal, rad(yaw));
+
   while(ros::ok())
   {
     br.sendTransform(tf::StampedTransform(transform1, ros::Time::now(),"kinect2_rgb_optical_frame","input"));
     //br.sendTransform(tf::StampedTransform(transform2, ros::Time::now(),"kinect2_rgb_optical_frame","wheel axis"));
 		//br.sendTransform(tf::StampedTransform(transform3, ros::Time::now(),"wheel axis","Joint2"));
 
-		cout<<"moving youbot platform..."<<endl;
-		move_base_ml(time_max, step_max, x_goal, y_goal, rad(yaw));
     apply_PID();
     cout<<"x_present:"<<x_present<<" y_present:"<<y_present<<endl;
-		ros::Duration(10).sleep();
+    x_error=x_goal-x_present;
+    sum_x_error+=x_error;
+    dif_x_error=x_error-x_error_old;
+    x_dot=Kp*x_error + Ki*sum_x_error + Kd*dif_x_error;
+    cout<<"PID x_dot:"<<x_dot<<endl;
+    movePlatform(x_dot,0,0);
+    x_error_old=x_error;
+		ros::Duration(.1).sleep();
 
   }
 

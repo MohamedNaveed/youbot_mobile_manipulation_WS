@@ -88,10 +88,6 @@ iostream
 iostream
 -
 
-/home/ros/catkin_ws/src/youbot_ik/src/PID.h
-iostream
--
-
 /home/ros/catkin_ws/src/youbot_ik/src/Position_subscriber.h
 iostream
 -
@@ -169,8 +165,6 @@ Get_pose_coke.h
 /home/ros/catkin_ws/src/youbot_ik/src/Get_pose_coke.h
 Position_subscriber.h
 /home/ros/catkin_ws/src/youbot_ik/src/Position_subscriber.h
-PID.h
-/home/ros/catkin_ws/src/youbot_ik/src/PID.h
 
 /opt/ros/indigo/include/XmlRpcDecl.h
 ros/macros.h
