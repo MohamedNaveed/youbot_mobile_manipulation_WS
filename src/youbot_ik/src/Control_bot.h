@@ -1,4 +1,14 @@
 //Function to move base (remembers the coordinates)
+#include "Position_subscriber.h"
+void apply_PID(double rate)
+{
+  ros::Rate odom_rate(rate);//rate at which data is being published
+
+    odom_rate.sleep();
+    ros::spinOnce();
+    cout<<"at apply_PID"<<" x_present:"<<x_present<<" y_present:"<<y_present<<endl;
+}
+
 void move_base(double time, double step, double x, double y, double phi)
 {
 	MatrixXd data=MatrixXd::Zero(step+1,12);
@@ -15,17 +25,30 @@ void move_base(double time, double step, double x, double y, double phi)
 //Function to move robot (dont remeber the coordinate)
 void move_base_ml(double time, double step, double x, double y, double phi)
 {
+	double x_error, x_dot,sum_x_error,dif_x_error, x_error_old;
+  double Kp=1, Ki=0, Kd=0;
+
 	cout<<"move_base_ml called..."<<endl;
 	cout<<"x:"<<x<<" y:"<<y<<" phi:"<<phi<<endl;
 	MatrixXd data=MatrixXd::Zero(step+1,12);
 	data=move_base_ml_data(time, step, x, y, phi);
 	double dt=time/step;
 	cout<<"moving base"<<endl;
+
+
 	for(int i=0; i<=step; i++)
      {
-			 	 cout<<"x:"<<data(i,1)<<" xdot:"<<data(i,2)<<endl;
-         movePlatform(rf(data(i,2)),rf(data(i,6)),rf(data(i,10)));
-         ros::Duration(dt).sleep();
+			 	apply_PID(1/dt);
+				if(i>0)
+			 		x_error=data(i-1,1)-x_present;
+			 	sum_x_error+=x_error;
+			 	dif_x_error=x_error-x_error_old;
+			 	x_dot=Kp*x_error + Ki*sum_x_error + Kd*dif_x_error;
+			 	cout<<"PID x_dot:"<<x_dot<<"x error:"<<x_error<<endl;
+			 	cout<<"x:"<<data(i,1)<<" xdot:"<<data(i,2)<<endl;
+        movePlatform(rf(data(i,2)+x_dot),rf(data(i,6)),rf(data(i,10)));
+				x_error_old=x_error;
+        //ros::Duration(dt).sleep();
      }
 }
 

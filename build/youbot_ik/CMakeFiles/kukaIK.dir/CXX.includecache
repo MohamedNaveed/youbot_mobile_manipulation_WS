@@ -73,6 +73,8 @@ object_recognition_msgs/RecognizedObject.h
 /home/ros/catkin_ws/src/youbot_ik/src/Configuration.h
 
 /home/ros/catkin_ws/src/youbot_ik/src/Control_bot.h
+Position_subscriber.h
+/home/ros/catkin_ws/src/youbot_ik/src/Position_subscriber.h
 
 /home/ros/catkin_ws/src/youbot_ik/src/Get_pose.h
 iostream
@@ -85,6 +87,10 @@ iostream
 -
 
 /home/ros/catkin_ws/src/youbot_ik/src/Obj_pose_subs.h
+iostream
+-
+
+/home/ros/catkin_ws/src/youbot_ik/src/Position_subscriber.h
 iostream
 -
 

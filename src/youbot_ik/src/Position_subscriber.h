@@ -3,7 +3,6 @@
 using namespace std;
 
 double x_present, y_present;
-
 ros::Subscriber ObjOdomSubscriber;
 
 void Odom_data_callback(const nav_msgs::Odometry::ConstPtr& msg)

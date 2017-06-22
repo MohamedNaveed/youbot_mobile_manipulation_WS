@@ -8,6 +8,7 @@ youbot_ik/CMakeFiles/test_ik.dir/src/test_ik.cpp.o: /home/ros/catkin_ws/src/youb
 youbot_ik/CMakeFiles/test_ik.dir/src/test_ik.cpp.o: /home/ros/catkin_ws/src/youbot_ik/src/Control_bot.h
 youbot_ik/CMakeFiles/test_ik.dir/src/test_ik.cpp.o: /home/ros/catkin_ws/src/youbot_ik/src/Manipulator.h
 youbot_ik/CMakeFiles/test_ik.dir/src/test_ik.cpp.o: /home/ros/catkin_ws/src/youbot_ik/src/Math_other.h
+youbot_ik/CMakeFiles/test_ik.dir/src/test_ik.cpp.o: /home/ros/catkin_ws/src/youbot_ik/src/Position_subscriber.h
 youbot_ik/CMakeFiles/test_ik.dir/src/test_ik.cpp.o: /home/ros/catkin_ws/src/youbot_ik/src/Traj_data.h
 youbot_ik/CMakeFiles/test_ik.dir/src/test_ik.cpp.o: /home/ros/catkin_ws/src/youbot_ik/src/Traj_gen_func.h
 youbot_ik/CMakeFiles/test_ik.dir/src/test_ik.cpp.o: /home/ros/catkin_ws/src/youbot_ik/src/Transform.h

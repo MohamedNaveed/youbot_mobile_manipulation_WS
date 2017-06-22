@@ -73,6 +73,8 @@ object_recognition_msgs/RecognizedObject.h
 /home/ros/catkin_ws/src/youbot_ik/src/Configuration.h
 
 /home/ros/catkin_ws/src/youbot_ik/src/Control_bot.h
+Position_subscriber.h
+/home/ros/catkin_ws/src/youbot_ik/src/Position_subscriber.h
 
 /home/ros/catkin_ws/src/youbot_ik/src/Get_pose_coke.h
 iostream
@@ -163,8 +165,6 @@ Transform.h
 /home/ros/catkin_ws/src/youbot_ik/src/Transform.h
 Get_pose_coke.h
 /home/ros/catkin_ws/src/youbot_ik/src/Get_pose_coke.h
-Position_subscriber.h
-/home/ros/catkin_ws/src/youbot_ik/src/Position_subscriber.h
 
 /opt/ros/indigo/include/XmlRpcDecl.h
 ros/macros.h
