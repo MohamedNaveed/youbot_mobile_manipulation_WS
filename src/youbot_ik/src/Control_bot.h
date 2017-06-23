@@ -5,7 +5,7 @@ June 2017
 */
 //Function to move base (remembers the coordinates)
 #include "Position_subscriber.h"
-#include <geometry_msgs/Twist.h>
+//#include <geometry_msgs/Twist.h>
 #include "Position_publisher.h"
 void apply_PID(double rate)
 {
@@ -34,6 +34,7 @@ void move_base_ml(double time, double step, double x, double y, double phi)
 {
 	double x_error, x_dot,sum_x_error,dif_x_error, x_error_old;
   double y_error, y_dot,sum_y_error,dif_y_error, y_error_old;
+  double phi_error, phi_dot, sum_phi_error, dif_phi_error, phi_error_old;
   double Kp=0, Ki=0, Kd=0;
 
 	cout<<"move_base_ml called..."<<endl;
@@ -50,24 +51,29 @@ void move_base_ml(double time, double step, double x, double y, double phi)
 				if(i>0)//to prevent data(-1, x) when i=0
         {
 			 		x_error=data(i-1,1)-x_present;
-          y_error=data(i-1,5)-y_present;
+          y_error=data(i-1,5)-y_present;//x,y in meters
+          //phi_error=data(i-1,9)-phi_present;//phi is in rad
         }
 			 	sum_x_error+=x_error;
         sum_y_error+=y_error;
+        //sum_phi_error+=phi_error;
 			 	dif_x_error=x_error-x_error_old;
         dif_y_error=y_error-y_error_old;
+        //dif_phi_error=phi_error-phi_error_old;
 
         x_dot=Kp*x_error + Ki*sum_x_error + Kd*dif_x_error;//PID equation
         y_dot=Kp*y_error + Ki*sum_y_error + Kd*dif_x_error;
+        //phi_dot=Kp*phi_error +  Ki*sum_phi_error + Kd*dif_phi_error;
 
         cout<<"PID x_dot:"<<x_dot<<"x error:"<<x_error<<endl;
         cout<<"PID y_dot:"<<y_dot<<"y error:"<<y_error<<endl;
 			 	cout<<"x:"<<data(i,1)<<" xdot:"<<data(i,2)<<endl;
         cout<<"x:"<<data(i,5)<<" xdot:"<<data(i,6)<<endl;
-				publish_data(data(i,1),data(i,5));
+				publish_data(data(i,1),data(i,5));//, data(i,9));
         movePlatform(rf(data(i,2)+x_dot),rf(data(i,6)+y_dot),rf(data(i,10)));
 				x_error_old=x_error;
         y_error_old=y_error;
+      //  phi_error_old=phi_error;
         //ros::Duration(dt).sleep();
      }
 }

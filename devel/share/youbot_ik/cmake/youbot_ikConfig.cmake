@@ -145,7 +145,7 @@ foreach(library ${libraries})
   endif()
 endforeach()
 
-set(youbot_ik_EXPORTED_TARGETS "")
+set(youbot_ik_EXPORTED_TARGETS "youbot_ik_generate_messages_cpp;youbot_ik_generate_messages_lisp;youbot_ik_generate_messages_py")
 # create dummy targets for exported code generation targets to make life of users easier
 foreach(t ${youbot_ik_EXPORTED_TARGETS})
   if(NOT TARGET ${t})
@@ -182,7 +182,7 @@ foreach(depend ${depends})
   list(APPEND youbot_ik_EXPORTED_TARGETS ${${youbot_ik_dep}_EXPORTED_TARGETS})
 endforeach()
 
-set(pkg_cfg_extras "")
+set(pkg_cfg_extras "youbot_ik-msg-extras.cmake")
 foreach(extra ${pkg_cfg_extras})
   if(NOT IS_ABSOLUTE ${extra})
     set(extra ${youbot_ik_DIR}/${extra})

@@ -2295,6 +2295,97 @@ test_ik/fast:
 .PHONY : test_ik/fast
 
 #=============================================================================
+# Target rules for targets named youbot_ik_gencpp
+
+# Build rule for target.
+youbot_ik_gencpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 youbot_ik_gencpp
+.PHONY : youbot_ik_gencpp
+
+# fast build rule for target.
+youbot_ik_gencpp/fast:
+	$(MAKE) -f youbot_ik/CMakeFiles/youbot_ik_gencpp.dir/build.make youbot_ik/CMakeFiles/youbot_ik_gencpp.dir/build
+.PHONY : youbot_ik_gencpp/fast
+
+#=============================================================================
+# Target rules for targets named youbot_ik_generate_messages
+
+# Build rule for target.
+youbot_ik_generate_messages: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 youbot_ik_generate_messages
+.PHONY : youbot_ik_generate_messages
+
+# fast build rule for target.
+youbot_ik_generate_messages/fast:
+	$(MAKE) -f youbot_ik/CMakeFiles/youbot_ik_generate_messages.dir/build.make youbot_ik/CMakeFiles/youbot_ik_generate_messages.dir/build
+.PHONY : youbot_ik_generate_messages/fast
+
+#=============================================================================
+# Target rules for targets named youbot_ik_generate_messages_cpp
+
+# Build rule for target.
+youbot_ik_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 youbot_ik_generate_messages_cpp
+.PHONY : youbot_ik_generate_messages_cpp
+
+# fast build rule for target.
+youbot_ik_generate_messages_cpp/fast:
+	$(MAKE) -f youbot_ik/CMakeFiles/youbot_ik_generate_messages_cpp.dir/build.make youbot_ik/CMakeFiles/youbot_ik_generate_messages_cpp.dir/build
+.PHONY : youbot_ik_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named youbot_ik_generate_messages_lisp
+
+# Build rule for target.
+youbot_ik_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 youbot_ik_generate_messages_lisp
+.PHONY : youbot_ik_generate_messages_lisp
+
+# fast build rule for target.
+youbot_ik_generate_messages_lisp/fast:
+	$(MAKE) -f youbot_ik/CMakeFiles/youbot_ik_generate_messages_lisp.dir/build.make youbot_ik/CMakeFiles/youbot_ik_generate_messages_lisp.dir/build
+.PHONY : youbot_ik_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named youbot_ik_generate_messages_py
+
+# Build rule for target.
+youbot_ik_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 youbot_ik_generate_messages_py
+.PHONY : youbot_ik_generate_messages_py
+
+# fast build rule for target.
+youbot_ik_generate_messages_py/fast:
+	$(MAKE) -f youbot_ik/CMakeFiles/youbot_ik_generate_messages_py.dir/build.make youbot_ik/CMakeFiles/youbot_ik_generate_messages_py.dir/build
+.PHONY : youbot_ik_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named youbot_ik_genlisp
+
+# Build rule for target.
+youbot_ik_genlisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 youbot_ik_genlisp
+.PHONY : youbot_ik_genlisp
+
+# fast build rule for target.
+youbot_ik_genlisp/fast:
+	$(MAKE) -f youbot_ik/CMakeFiles/youbot_ik_genlisp.dir/build.make youbot_ik/CMakeFiles/youbot_ik_genlisp.dir/build
+.PHONY : youbot_ik_genlisp/fast
+
+#=============================================================================
+# Target rules for targets named youbot_ik_genpy
+
+# Build rule for target.
+youbot_ik_genpy: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 youbot_ik_genpy
+.PHONY : youbot_ik_genpy
+
+# fast build rule for target.
+youbot_ik_genpy/fast:
+	$(MAKE) -f youbot_ik/CMakeFiles/youbot_ik_genpy.dir/build.make youbot_ik/CMakeFiles/youbot_ik_genpy.dir/build
+.PHONY : youbot_ik_genpy/fast
+
+#=============================================================================
 # Target rules for targets named youbot_ros_hello_world
 
 # Build rule for target.
@@ -2498,6 +2589,13 @@ help:
 	@echo "... publish_frame_or"
 	@echo "... q_to_matrix"
 	@echo "... test_ik"
+	@echo "... youbot_ik_gencpp"
+	@echo "... youbot_ik_generate_messages"
+	@echo "... youbot_ik_generate_messages_cpp"
+	@echo "... youbot_ik_generate_messages_lisp"
+	@echo "... youbot_ik_generate_messages_py"
+	@echo "... youbot_ik_genlisp"
+	@echo "... youbot_ik_genpy"
 	@echo "... youbot_ros_hello_world"
 	@echo "... youbot_ros_simple_trajectory"
 .PHONY : help

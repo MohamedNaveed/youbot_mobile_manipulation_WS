@@ -261,6 +261,104 @@ test_ik/fast:
 	cd /home/ros/catkin_ws/build && $(MAKE) -f youbot_ik/CMakeFiles/test_ik.dir/build.make youbot_ik/CMakeFiles/test_ik.dir/build
 .PHONY : test_ik/fast
 
+# Convenience name for target.
+youbot_ik/CMakeFiles/youbot_ik_gencpp.dir/rule:
+	cd /home/ros/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 youbot_ik/CMakeFiles/youbot_ik_gencpp.dir/rule
+.PHONY : youbot_ik/CMakeFiles/youbot_ik_gencpp.dir/rule
+
+# Convenience name for target.
+youbot_ik_gencpp: youbot_ik/CMakeFiles/youbot_ik_gencpp.dir/rule
+.PHONY : youbot_ik_gencpp
+
+# fast build rule for target.
+youbot_ik_gencpp/fast:
+	cd /home/ros/catkin_ws/build && $(MAKE) -f youbot_ik/CMakeFiles/youbot_ik_gencpp.dir/build.make youbot_ik/CMakeFiles/youbot_ik_gencpp.dir/build
+.PHONY : youbot_ik_gencpp/fast
+
+# Convenience name for target.
+youbot_ik/CMakeFiles/youbot_ik_generate_messages.dir/rule:
+	cd /home/ros/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 youbot_ik/CMakeFiles/youbot_ik_generate_messages.dir/rule
+.PHONY : youbot_ik/CMakeFiles/youbot_ik_generate_messages.dir/rule
+
+# Convenience name for target.
+youbot_ik_generate_messages: youbot_ik/CMakeFiles/youbot_ik_generate_messages.dir/rule
+.PHONY : youbot_ik_generate_messages
+
+# fast build rule for target.
+youbot_ik_generate_messages/fast:
+	cd /home/ros/catkin_ws/build && $(MAKE) -f youbot_ik/CMakeFiles/youbot_ik_generate_messages.dir/build.make youbot_ik/CMakeFiles/youbot_ik_generate_messages.dir/build
+.PHONY : youbot_ik_generate_messages/fast
+
+# Convenience name for target.
+youbot_ik/CMakeFiles/youbot_ik_generate_messages_cpp.dir/rule:
+	cd /home/ros/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 youbot_ik/CMakeFiles/youbot_ik_generate_messages_cpp.dir/rule
+.PHONY : youbot_ik/CMakeFiles/youbot_ik_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+youbot_ik_generate_messages_cpp: youbot_ik/CMakeFiles/youbot_ik_generate_messages_cpp.dir/rule
+.PHONY : youbot_ik_generate_messages_cpp
+
+# fast build rule for target.
+youbot_ik_generate_messages_cpp/fast:
+	cd /home/ros/catkin_ws/build && $(MAKE) -f youbot_ik/CMakeFiles/youbot_ik_generate_messages_cpp.dir/build.make youbot_ik/CMakeFiles/youbot_ik_generate_messages_cpp.dir/build
+.PHONY : youbot_ik_generate_messages_cpp/fast
+
+# Convenience name for target.
+youbot_ik/CMakeFiles/youbot_ik_generate_messages_lisp.dir/rule:
+	cd /home/ros/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 youbot_ik/CMakeFiles/youbot_ik_generate_messages_lisp.dir/rule
+.PHONY : youbot_ik/CMakeFiles/youbot_ik_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+youbot_ik_generate_messages_lisp: youbot_ik/CMakeFiles/youbot_ik_generate_messages_lisp.dir/rule
+.PHONY : youbot_ik_generate_messages_lisp
+
+# fast build rule for target.
+youbot_ik_generate_messages_lisp/fast:
+	cd /home/ros/catkin_ws/build && $(MAKE) -f youbot_ik/CMakeFiles/youbot_ik_generate_messages_lisp.dir/build.make youbot_ik/CMakeFiles/youbot_ik_generate_messages_lisp.dir/build
+.PHONY : youbot_ik_generate_messages_lisp/fast
+
+# Convenience name for target.
+youbot_ik/CMakeFiles/youbot_ik_generate_messages_py.dir/rule:
+	cd /home/ros/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 youbot_ik/CMakeFiles/youbot_ik_generate_messages_py.dir/rule
+.PHONY : youbot_ik/CMakeFiles/youbot_ik_generate_messages_py.dir/rule
+
+# Convenience name for target.
+youbot_ik_generate_messages_py: youbot_ik/CMakeFiles/youbot_ik_generate_messages_py.dir/rule
+.PHONY : youbot_ik_generate_messages_py
+
+# fast build rule for target.
+youbot_ik_generate_messages_py/fast:
+	cd /home/ros/catkin_ws/build && $(MAKE) -f youbot_ik/CMakeFiles/youbot_ik_generate_messages_py.dir/build.make youbot_ik/CMakeFiles/youbot_ik_generate_messages_py.dir/build
+.PHONY : youbot_ik_generate_messages_py/fast
+
+# Convenience name for target.
+youbot_ik/CMakeFiles/youbot_ik_genlisp.dir/rule:
+	cd /home/ros/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 youbot_ik/CMakeFiles/youbot_ik_genlisp.dir/rule
+.PHONY : youbot_ik/CMakeFiles/youbot_ik_genlisp.dir/rule
+
+# Convenience name for target.
+youbot_ik_genlisp: youbot_ik/CMakeFiles/youbot_ik_genlisp.dir/rule
+.PHONY : youbot_ik_genlisp
+
+# fast build rule for target.
+youbot_ik_genlisp/fast:
+	cd /home/ros/catkin_ws/build && $(MAKE) -f youbot_ik/CMakeFiles/youbot_ik_genlisp.dir/build.make youbot_ik/CMakeFiles/youbot_ik_genlisp.dir/build
+.PHONY : youbot_ik_genlisp/fast
+
+# Convenience name for target.
+youbot_ik/CMakeFiles/youbot_ik_genpy.dir/rule:
+	cd /home/ros/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 youbot_ik/CMakeFiles/youbot_ik_genpy.dir/rule
+.PHONY : youbot_ik/CMakeFiles/youbot_ik_genpy.dir/rule
+
+# Convenience name for target.
+youbot_ik_genpy: youbot_ik/CMakeFiles/youbot_ik_genpy.dir/rule
+.PHONY : youbot_ik_genpy
+
+# fast build rule for target.
+youbot_ik_genpy/fast:
+	cd /home/ros/catkin_ws/build && $(MAKE) -f youbot_ik/CMakeFiles/youbot_ik_genpy.dir/build.make youbot_ik/CMakeFiles/youbot_ik_genpy.dir/build
+.PHONY : youbot_ik_genpy/fast
+
 src/kukaIK.o: src/kukaIK.cpp.o
 .PHONY : src/kukaIK.o
 
@@ -402,6 +500,13 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... test_ik"
+	@echo "... youbot_ik_gencpp"
+	@echo "... youbot_ik_generate_messages"
+	@echo "... youbot_ik_generate_messages_cpp"
+	@echo "... youbot_ik_generate_messages_lisp"
+	@echo "... youbot_ik_generate_messages_py"
+	@echo "... youbot_ik_genlisp"
+	@echo "... youbot_ik_genpy"
 	@echo "... src/kukaIK.o"
 	@echo "... src/kukaIK.i"
 	@echo "... src/kukaIK.s"

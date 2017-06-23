@@ -51,7 +51,7 @@ void home_position()
 
 int main(int argc, char** argv)
 {
-  double roll=0,pitch=0,yaw=0, rho2=.300, Beta, Theta; //rho1 - redundancy
+  double roll=0,pitch=0,yaw=45, rho2=.300, Beta, Theta; //rho1 - redundancy
 	double L=.033;//distance between J1 and J2 along x
 	double M=.061;//distance between Wheel axis and J1 along x
 
