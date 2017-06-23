@@ -1,4 +1,11 @@
 //Header files
+/*
+Writtern by Mohamed Naveed G , B.Tech, NITT
+Mail id: mohdnaveed96@gmail.com
+June 2017
+
+Some of the header files and function used were written by Vijendra Singh
+*/
 #include "ros/ros.h"
 #include "boost/units/systems/si.hpp"
 #include "boost/units/io.hpp"
@@ -58,6 +65,7 @@ int main(int argc, char** argv)
 	youbot_publisher();
   pose_subscriber();
   get_position();
+  position_publisher();
 	confg set;
 
 	//Getting pose
@@ -97,7 +105,7 @@ int main(int argc, char** argv)
   transform3.setRotation(q_J2);//transform for J2
 
 	double x_goal=1 + M-L*cos(rho1) - rho2*cos(rho1);
-	double y_goal=0 - L*sin(rho1) - rho2*sin(rho1);
+	double y_goal=1 - L*sin(rho1) - rho2*sin(rho1);
 	cout<<"x_goal:"<<x_goal<<"  y_goal:"<<y_goal<<endl;
 	double time_x=abs(x_goal/0.05);
   double step_x=time_x*200;

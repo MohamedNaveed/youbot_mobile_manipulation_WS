@@ -11,6 +11,7 @@ youbot_ik/CMakeFiles/publish_frame_or.dir/src/publish_frame_or.cpp.o
  /home/ros/catkin_ws/src/youbot_ik/src/Manipulator.h
  /home/ros/catkin_ws/src/youbot_ik/src/Math_other.h
  /home/ros/catkin_ws/src/youbot_ik/src/Obj_pose_subs.h
+ /home/ros/catkin_ws/src/youbot_ik/src/Position_publisher.h
  /home/ros/catkin_ws/src/youbot_ik/src/Position_subscriber.h
  /home/ros/catkin_ws/src/youbot_ik/src/Traj_data.h
  /home/ros/catkin_ws/src/youbot_ik/src/Traj_gen_func.h

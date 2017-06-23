@@ -1,3 +1,8 @@
+/*
+Writtern by Mohamed Naveed G , B.Tech, NITT
+Mail id: mohdnaveed96@gmail.com
+June 2017
+*/
 #include <iostream> // for standard operations
 
 using namespace std;
