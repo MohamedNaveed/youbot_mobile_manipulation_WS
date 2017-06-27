@@ -6500,6 +6500,7 @@ clean: youbot_ik/CMakeFiles/youbot_ik_generate_messages.dir/clean
 # Target rules for target youbot_ik/CMakeFiles/youbot_ik_generate_messages_cpp.dir
 
 # All Build rule for target.
+youbot_ik/CMakeFiles/youbot_ik_generate_messages_cpp.dir/all: object_recognition_msgs/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all
 youbot_ik/CMakeFiles/youbot_ik_generate_messages_cpp.dir/all: object_recognition_msgs/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
 	$(MAKE) -f youbot_ik/CMakeFiles/youbot_ik_generate_messages_cpp.dir/build.make youbot_ik/CMakeFiles/youbot_ik_generate_messages_cpp.dir/depend
 	$(MAKE) -f youbot_ik/CMakeFiles/youbot_ik_generate_messages_cpp.dir/build.make youbot_ik/CMakeFiles/youbot_ik_generate_messages_cpp.dir/build
@@ -6532,6 +6533,7 @@ clean: youbot_ik/CMakeFiles/youbot_ik_generate_messages_cpp.dir/clean
 
 # All Build rule for target.
 youbot_ik/CMakeFiles/youbot_ik_generate_messages_lisp.dir/all: object_recognition_msgs/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
+youbot_ik/CMakeFiles/youbot_ik_generate_messages_lisp.dir/all: object_recognition_msgs/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all
 	$(MAKE) -f youbot_ik/CMakeFiles/youbot_ik_generate_messages_lisp.dir/build.make youbot_ik/CMakeFiles/youbot_ik_generate_messages_lisp.dir/depend
 	$(MAKE) -f youbot_ik/CMakeFiles/youbot_ik_generate_messages_lisp.dir/build.make youbot_ik/CMakeFiles/youbot_ik_generate_messages_lisp.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/ros/catkin_ws/build/CMakeFiles 
@@ -6563,6 +6565,7 @@ clean: youbot_ik/CMakeFiles/youbot_ik_generate_messages_lisp.dir/clean
 
 # All Build rule for target.
 youbot_ik/CMakeFiles/youbot_ik_generate_messages_py.dir/all: object_recognition_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/all
+youbot_ik/CMakeFiles/youbot_ik_generate_messages_py.dir/all: object_recognition_msgs/CMakeFiles/geometry_msgs_generate_messages_py.dir/all
 	$(MAKE) -f youbot_ik/CMakeFiles/youbot_ik_generate_messages_py.dir/build.make youbot_ik/CMakeFiles/youbot_ik_generate_messages_py.dir/depend
 	$(MAKE) -f youbot_ik/CMakeFiles/youbot_ik_generate_messages_py.dir/build.make youbot_ik/CMakeFiles/youbot_ik_generate_messages_py.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/ros/catkin_ws/build/CMakeFiles 

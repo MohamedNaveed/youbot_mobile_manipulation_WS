@@ -7,13 +7,17 @@ June 2017
 
 using namespace std;
 
-double x_present, y_present;
+double x_present, y_present, phi_present_w,phi_present_x,phi_present_y,phi_present_z;
 ros::Subscriber ObjOdomSubscriber;
 
 void Odom_data_callback(const nav_msgs::Odometry::ConstPtr& msg)
 {
   x_present=msg->pose.pose.position.x;
   y_present=msg->pose.pose.position.y;
+  phi_present_w=msg->pose.pose.orientation.w;
+  phi_present_x=msg->pose.pose.orientation.x;
+  phi_present_y=msg->pose.pose.orientation.y;
+  phi_present_z=msg->pose.pose.orientation.z;
   cout<<"Hi I got called"<<endl;
 }
 

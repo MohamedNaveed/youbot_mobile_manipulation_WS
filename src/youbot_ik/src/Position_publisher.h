@@ -7,19 +7,20 @@ June 2017
 using namespace std;
 
 ros::Publisher pub;
-void publish_data(double pointx, double pointy)
+void publish_data(double pointx, double pointy, double theta)
 {
   cout<<"at publisher"<<endl;
-  geometry_msgs::Point pos;
+  geometry_msgs::Pose2D pos;
   pos.x=pointx;
   pos.y=pointy;
+  pos.theta=theta*57.32;
   pub.publish(pos);
 }
 
 void position_publisher()
 {
   ros::NodeHandle n;
-  pub=n.advertise<geometry_msgs::Point>("youbot/cmd_pos", 1);
+  pub=n.advertise<geometry_msgs::Pose2D>("youbot/cmd_pos", 1);
   cout<<"Position publisher called"<<endl;
   sleep(1);
 }

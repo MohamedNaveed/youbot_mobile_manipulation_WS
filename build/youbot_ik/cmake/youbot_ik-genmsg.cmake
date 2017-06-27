@@ -4,7 +4,7 @@ message(WARNING "Invoking generate_messages() without having added any message o
 You should either add add_message_files() and/or add_service_files() calls or remove the invocation of generate_messages().")
 message(STATUS "youbot_ik: 0 messages, 0 services")
 
-set(MSG_I_FLAGS "-Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg")
+set(MSG_I_FLAGS "-Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg;-Igeometry_msgs:/opt/ros/indigo/share/geometry_msgs/cmake/../msg")
 
 # Find all generators
 find_package(gencpp REQUIRED)
@@ -108,6 +108,9 @@ endif()
 if(TARGET std_msgs_generate_messages_cpp)
   add_dependencies(youbot_ik_generate_messages_cpp std_msgs_generate_messages_cpp)
 endif()
+if(TARGET geometry_msgs_generate_messages_cpp)
+  add_dependencies(youbot_ik_generate_messages_cpp geometry_msgs_generate_messages_cpp)
+endif()
 
 if(genlisp_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/youbot_ik)
   # install generated code
@@ -118,6 +121,9 @@ if(genlisp_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/
 endif()
 if(TARGET std_msgs_generate_messages_lisp)
   add_dependencies(youbot_ik_generate_messages_lisp std_msgs_generate_messages_lisp)
+endif()
+if(TARGET geometry_msgs_generate_messages_lisp)
+  add_dependencies(youbot_ik_generate_messages_lisp geometry_msgs_generate_messages_lisp)
 endif()
 
 if(genpy_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/youbot_ik)
@@ -130,4 +136,7 @@ if(genpy_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/youb
 endif()
 if(TARGET std_msgs_generate_messages_py)
   add_dependencies(youbot_ik_generate_messages_py std_msgs_generate_messages_py)
+endif()
+if(TARGET geometry_msgs_generate_messages_py)
+  add_dependencies(youbot_ik_generate_messages_py geometry_msgs_generate_messages_py)
 endif()

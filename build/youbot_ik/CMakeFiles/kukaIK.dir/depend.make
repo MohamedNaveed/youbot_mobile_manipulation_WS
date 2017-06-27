@@ -25,6 +25,7 @@ youbot_ik/CMakeFiles/kukaIK.dir/src/kukaIK.cpp.o: /opt/ros/indigo/include/brics_
 youbot_ik/CMakeFiles/kukaIK.dir/src/kukaIK.cpp.o: /opt/ros/indigo/include/brics_actuator/Poison.h
 youbot_ik/CMakeFiles/kukaIK.dir/src/kukaIK.cpp.o: /opt/ros/indigo/include/geometry_msgs/Point.h
 youbot_ik/CMakeFiles/kukaIK.dir/src/kukaIK.cpp.o: /opt/ros/indigo/include/geometry_msgs/Pose.h
+youbot_ik/CMakeFiles/kukaIK.dir/src/kukaIK.cpp.o: /opt/ros/indigo/include/geometry_msgs/Pose2D.h
 youbot_ik/CMakeFiles/kukaIK.dir/src/kukaIK.cpp.o: /opt/ros/indigo/include/geometry_msgs/PoseWithCovariance.h
 youbot_ik/CMakeFiles/kukaIK.dir/src/kukaIK.cpp.o: /opt/ros/indigo/include/geometry_msgs/PoseWithCovarianceStamped.h
 youbot_ik/CMakeFiles/kukaIK.dir/src/kukaIK.cpp.o: /opt/ros/indigo/include/geometry_msgs/Quaternion.h

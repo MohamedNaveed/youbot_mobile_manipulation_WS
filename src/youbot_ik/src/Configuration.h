@@ -29,15 +29,15 @@ class confg//
     static double l3;
     static double l4;
 };
-
-double confg::l2=155;
-double confg::l3=135;
-double confg::l4=195.1;
+//all are in m
+double confg::l2=.155;
+double confg::l3=.135;
+double confg::l4=.1951;
 
 int confg::row3=0;
-double confg::zg=738.26-245;
-double confg::beta=1.5708;
-double confg::row2=-28+28;
+double confg::zg=0;
+double confg::beta=0;
+double confg::row2=0;
 
 double confg::JA1=rad(0);
 double confg::JA2=rad(0);
@@ -73,8 +73,8 @@ void confg::set_goal(int r3, double z, double b, double r2)
     row2=r2;
 
     //zg=-215;//-245;
-    row2=row2+28;
-		cout<<"pho2 at set goal : "<<row2<<endl;
+    //row2=row2;
+		cout<<"rho2 at set goal : "<<row2<<endl;
 }
 
 void confg::store_JA(double p_th1, double p_th2, double p_th3, double p_th4, double p_th5)

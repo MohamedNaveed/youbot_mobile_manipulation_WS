@@ -5,7 +5,7 @@ June 2017
 */
 //Function to move base (remembers the coordinates)
 #include "Position_subscriber.h"
-//#include <geometry_msgs/Twist.h>
+#include <geometry_msgs/Pose2D.h>//required to publish Pose2D messages
 #include "Position_publisher.h"
 void apply_PID(double rate)
 {
@@ -29,13 +29,25 @@ void move_base(double time, double step, double x, double y, double phi)
      }
 }
 
+double find_phi_present()
+{
+  Eigen::Quaterniond Phi_q(phi_present_w,phi_present_x,phi_present_y,phi_present_z);
+  Phi_q.normalize();
+  Eigen::Matrix<double,3,3> R_phi;
+  R_phi = Phi_q.toRotationMatrix();//Rotation matrix of phi
+  double phi_present=atan2(R_phi(1,0),R_phi(0,0));
+  cout<<"phi: "<<phi_present<<endl;
+  return phi_present;
+}
+
 //Function to move robot (dont remeber the coordinate)
 void move_base_ml(double time, double step, double x, double y, double phi)
 {
 	double x_error, x_dot,sum_x_error,dif_x_error, x_error_old;
   double y_error, y_dot,sum_y_error,dif_y_error, y_error_old;
   double phi_error, phi_dot, sum_phi_error, dif_phi_error, phi_error_old;
-  double Kp=0, Ki=0, Kd=0;
+  double phi_present;
+  double Kp=2, Ki=0, Kd=0;
 
 	cout<<"move_base_ml called..."<<endl;
 	cout<<"x:"<<x<<" y:"<<y<<" phi:"<<phi<<endl;
@@ -43,37 +55,38 @@ void move_base_ml(double time, double step, double x, double y, double phi)
 	data=move_base_ml_data(time, step, x, y, phi);
 	double dt=time/step;
 	cout<<"moving base"<<endl;
-//	publish_traj();
+  //publish_traj();
 
 	for(int i=0; i<=step; i++)
      {
 			 	apply_PID(1/dt);
+        phi_present=find_phi_present();//orientation is in quaternion, this function converts it to angle
 				if(i>0)//to prevent data(-1, x) when i=0
         {
 			 		x_error=data(i-1,1)-x_present;
           y_error=data(i-1,5)-y_present;//x,y in meters
-          //phi_error=data(i-1,9)-phi_present;//phi is in rad
+          phi_error=data(i-1,9)-phi_present;//phi is in rad
         }
 			 	sum_x_error+=x_error;
         sum_y_error+=y_error;
-        //sum_phi_error+=phi_error;
+        sum_phi_error+=phi_error;
 			 	dif_x_error=x_error-x_error_old;
         dif_y_error=y_error-y_error_old;
-        //dif_phi_error=phi_error-phi_error_old;
+        dif_phi_error=phi_error-phi_error_old;
 
         x_dot=Kp*x_error + Ki*sum_x_error + Kd*dif_x_error;//PID equation
         y_dot=Kp*y_error + Ki*sum_y_error + Kd*dif_x_error;
-        //phi_dot=Kp*phi_error +  Ki*sum_phi_error + Kd*dif_phi_error;
+        phi_dot=Kp*phi_error +  Ki*sum_phi_error + Kd*dif_phi_error;
 
         cout<<"PID x_dot:"<<x_dot<<"x error:"<<x_error<<endl;
         cout<<"PID y_dot:"<<y_dot<<"y error:"<<y_error<<endl;
 			 	cout<<"x:"<<data(i,1)<<" xdot:"<<data(i,2)<<endl;
-        cout<<"x:"<<data(i,5)<<" xdot:"<<data(i,6)<<endl;
-				publish_data(data(i,1),data(i,5));//, data(i,9));
-        movePlatform(rf(data(i,2)+x_dot),rf(data(i,6)+y_dot),rf(data(i,10)));
+        cout<<"y:"<<data(i,5)<<" ydot:"<<data(i,6)<<endl;
+				publish_data(x_error, y_error, phi_error);
+        movePlatform(rf(data(i,2)+x_dot),rf(data(i,6)+y_dot),rf(data(i,10)+phi_dot));
 				x_error_old=x_error;
         y_error_old=y_error;
-      //  phi_error_old=phi_error;
+        phi_error_old=phi_error;
         //ros::Duration(dt).sleep();
      }
 }
@@ -84,6 +97,7 @@ void move_manip_js(double time, double step, double row3, double zg, double beta
 {
 	cout<<"move_manip_js called..."<<endl;
 	MatrixXd data=MatrixXd::Zero(step+1,20);
+
 	data=move_manip_js_data(time, step, row3, zg, beta, row2, th1, th5);
 	double dt=time/step;
 

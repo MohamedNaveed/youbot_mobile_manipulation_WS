@@ -75,6 +75,8 @@ object_recognition_msgs/RecognizedObject.h
 /home/ros/catkin_ws/src/youbot_ik/src/Control_bot.h
 Position_subscriber.h
 /home/ros/catkin_ws/src/youbot_ik/src/Position_subscriber.h
+geometry_msgs/Pose2D.h
+-
 Position_publisher.h
 /home/ros/catkin_ws/src/youbot_ik/src/Position_publisher.h
 
@@ -294,6 +296,22 @@ ros/message_operations.h
 geometry_msgs/Point.h
 -
 geometry_msgs/Quaternion.h
+-
+
+/opt/ros/indigo/include/geometry_msgs/Pose2D.h
+string
+-
+vector
+-
+map
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
 -
 
 /opt/ros/indigo/include/geometry_msgs/PoseStamped.h

@@ -27,6 +27,7 @@ youbot_ik/CMakeFiles/publish_frame_or.dir/src/publish_frame_or.cpp.o: /opt/ros/i
 youbot_ik/CMakeFiles/publish_frame_or.dir/src/publish_frame_or.cpp.o: /opt/ros/indigo/include/geometry_msgs/Point.h
 youbot_ik/CMakeFiles/publish_frame_or.dir/src/publish_frame_or.cpp.o: /opt/ros/indigo/include/geometry_msgs/PointStamped.h
 youbot_ik/CMakeFiles/publish_frame_or.dir/src/publish_frame_or.cpp.o: /opt/ros/indigo/include/geometry_msgs/Pose.h
+youbot_ik/CMakeFiles/publish_frame_or.dir/src/publish_frame_or.cpp.o: /opt/ros/indigo/include/geometry_msgs/Pose2D.h
 youbot_ik/CMakeFiles/publish_frame_or.dir/src/publish_frame_or.cpp.o: /opt/ros/indigo/include/geometry_msgs/PoseStamped.h
 youbot_ik/CMakeFiles/publish_frame_or.dir/src/publish_frame_or.cpp.o: /opt/ros/indigo/include/geometry_msgs/PoseWithCovariance.h
 youbot_ik/CMakeFiles/publish_frame_or.dir/src/publish_frame_or.cpp.o: /opt/ros/indigo/include/geometry_msgs/PoseWithCovarianceStamped.h

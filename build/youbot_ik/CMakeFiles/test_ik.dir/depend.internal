@@ -24,6 +24,7 @@ youbot_ik/CMakeFiles/test_ik.dir/src/test_ik.cpp.o
  /opt/ros/indigo/include/brics_actuator/Poison.h
  /opt/ros/indigo/include/geometry_msgs/Point.h
  /opt/ros/indigo/include/geometry_msgs/Pose.h
+ /opt/ros/indigo/include/geometry_msgs/Pose2D.h
  /opt/ros/indigo/include/geometry_msgs/PoseWithCovariance.h
  /opt/ros/indigo/include/geometry_msgs/PoseWithCovarianceStamped.h
  /opt/ros/indigo/include/geometry_msgs/Quaternion.h
