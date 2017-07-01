@@ -192,48 +192,6 @@ brics_actuator_generate_messages_py/fast:
 .PHONY : brics_actuator_generate_messages_py/fast
 
 # Convenience name for target.
-youbot_gazebo_publisher/youbot_gazebo_publisher/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/rule:
-	cd /home/ros/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 youbot_gazebo_publisher/youbot_gazebo_publisher/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/rule
-.PHONY : youbot_gazebo_publisher/youbot_gazebo_publisher/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-trajectory_msgs_generate_messages_cpp: youbot_gazebo_publisher/youbot_gazebo_publisher/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/rule
-.PHONY : trajectory_msgs_generate_messages_cpp
-
-# fast build rule for target.
-trajectory_msgs_generate_messages_cpp/fast:
-	cd /home/ros/catkin_ws/build && $(MAKE) -f youbot_gazebo_publisher/youbot_gazebo_publisher/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/build.make youbot_gazebo_publisher/youbot_gazebo_publisher/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/build
-.PHONY : trajectory_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-youbot_gazebo_publisher/youbot_gazebo_publisher/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/rule:
-	cd /home/ros/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 youbot_gazebo_publisher/youbot_gazebo_publisher/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/rule
-.PHONY : youbot_gazebo_publisher/youbot_gazebo_publisher/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-trajectory_msgs_generate_messages_lisp: youbot_gazebo_publisher/youbot_gazebo_publisher/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/rule
-.PHONY : trajectory_msgs_generate_messages_lisp
-
-# fast build rule for target.
-trajectory_msgs_generate_messages_lisp/fast:
-	cd /home/ros/catkin_ws/build && $(MAKE) -f youbot_gazebo_publisher/youbot_gazebo_publisher/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/build.make youbot_gazebo_publisher/youbot_gazebo_publisher/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/build
-.PHONY : trajectory_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-youbot_gazebo_publisher/youbot_gazebo_publisher/CMakeFiles/trajectory_msgs_generate_messages_py.dir/rule:
-	cd /home/ros/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 youbot_gazebo_publisher/youbot_gazebo_publisher/CMakeFiles/trajectory_msgs_generate_messages_py.dir/rule
-.PHONY : youbot_gazebo_publisher/youbot_gazebo_publisher/CMakeFiles/trajectory_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-trajectory_msgs_generate_messages_py: youbot_gazebo_publisher/youbot_gazebo_publisher/CMakeFiles/trajectory_msgs_generate_messages_py.dir/rule
-.PHONY : trajectory_msgs_generate_messages_py
-
-# fast build rule for target.
-trajectory_msgs_generate_messages_py/fast:
-	cd /home/ros/catkin_ws/build && $(MAKE) -f youbot_gazebo_publisher/youbot_gazebo_publisher/CMakeFiles/trajectory_msgs_generate_messages_py.dir/build.make youbot_gazebo_publisher/youbot_gazebo_publisher/CMakeFiles/trajectory_msgs_generate_messages_py.dir/build
-.PHONY : trajectory_msgs_generate_messages_py/fast
-
-# Convenience name for target.
 youbot_gazebo_publisher/youbot_gazebo_publisher/CMakeFiles/youbot_gazebo_publisher.dir/rule:
 	cd /home/ros/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 youbot_gazebo_publisher/youbot_gazebo_publisher/CMakeFiles/youbot_gazebo_publisher.dir/rule
 .PHONY : youbot_gazebo_publisher/youbot_gazebo_publisher/CMakeFiles/youbot_gazebo_publisher.dir/rule
@@ -287,9 +245,6 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... test"
-	@echo "... trajectory_msgs_generate_messages_cpp"
-	@echo "... trajectory_msgs_generate_messages_lisp"
-	@echo "... trajectory_msgs_generate_messages_py"
 	@echo "... youbot_gazebo_publisher"
 	@echo "... src/youbot_gazebo_publisher.o"
 	@echo "... src/youbot_gazebo_publisher.i"

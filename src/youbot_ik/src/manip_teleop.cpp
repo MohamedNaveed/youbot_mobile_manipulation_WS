@@ -25,7 +25,7 @@ int main(int argc, char **argv) {
 
 	double ang=0;
 	int joint=1;
-	double prev_th1=0, prev_th2=0, prev_th3=0, prev_th4=0, prev_th5=0;
+	double prev_th1=-168, prev_th2=-64, prev_th3=145, prev_th4=-102, prev_th5=-166;
 
 	while(joint!=0){
 		cout<<"which joint do you want to set?"<<endl;

@@ -1892,6 +1892,201 @@ kinect2_viewer/fast:
 .PHONY : kinect2_viewer/fast
 
 #=============================================================================
+# Target rules for targets named control_msgs_generate_messages_cpp
+
+# Build rule for target.
+control_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 control_msgs_generate_messages_cpp
+.PHONY : control_msgs_generate_messages_cpp
+
+# fast build rule for target.
+control_msgs_generate_messages_cpp/fast:
+	$(MAKE) -f mobile_manipulation/CMakeFiles/control_msgs_generate_messages_cpp.dir/build.make mobile_manipulation/CMakeFiles/control_msgs_generate_messages_cpp.dir/build
+.PHONY : control_msgs_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named control_msgs_generate_messages_lisp
+
+# Build rule for target.
+control_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 control_msgs_generate_messages_lisp
+.PHONY : control_msgs_generate_messages_lisp
+
+# fast build rule for target.
+control_msgs_generate_messages_lisp/fast:
+	$(MAKE) -f mobile_manipulation/CMakeFiles/control_msgs_generate_messages_lisp.dir/build.make mobile_manipulation/CMakeFiles/control_msgs_generate_messages_lisp.dir/build
+.PHONY : control_msgs_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named control_msgs_generate_messages_py
+
+# Build rule for target.
+control_msgs_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 control_msgs_generate_messages_py
+.PHONY : control_msgs_generate_messages_py
+
+# fast build rule for target.
+control_msgs_generate_messages_py/fast:
+	$(MAKE) -f mobile_manipulation/CMakeFiles/control_msgs_generate_messages_py.dir/build.make mobile_manipulation/CMakeFiles/control_msgs_generate_messages_py.dir/build
+.PHONY : control_msgs_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named mobile_manipulation_gencpp
+
+# Build rule for target.
+mobile_manipulation_gencpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 mobile_manipulation_gencpp
+.PHONY : mobile_manipulation_gencpp
+
+# fast build rule for target.
+mobile_manipulation_gencpp/fast:
+	$(MAKE) -f mobile_manipulation/CMakeFiles/mobile_manipulation_gencpp.dir/build.make mobile_manipulation/CMakeFiles/mobile_manipulation_gencpp.dir/build
+.PHONY : mobile_manipulation_gencpp/fast
+
+#=============================================================================
+# Target rules for targets named mobile_manipulation_generate_messages
+
+# Build rule for target.
+mobile_manipulation_generate_messages: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 mobile_manipulation_generate_messages
+.PHONY : mobile_manipulation_generate_messages
+
+# fast build rule for target.
+mobile_manipulation_generate_messages/fast:
+	$(MAKE) -f mobile_manipulation/CMakeFiles/mobile_manipulation_generate_messages.dir/build.make mobile_manipulation/CMakeFiles/mobile_manipulation_generate_messages.dir/build
+.PHONY : mobile_manipulation_generate_messages/fast
+
+#=============================================================================
+# Target rules for targets named mobile_manipulation_generate_messages_cpp
+
+# Build rule for target.
+mobile_manipulation_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 mobile_manipulation_generate_messages_cpp
+.PHONY : mobile_manipulation_generate_messages_cpp
+
+# fast build rule for target.
+mobile_manipulation_generate_messages_cpp/fast:
+	$(MAKE) -f mobile_manipulation/CMakeFiles/mobile_manipulation_generate_messages_cpp.dir/build.make mobile_manipulation/CMakeFiles/mobile_manipulation_generate_messages_cpp.dir/build
+.PHONY : mobile_manipulation_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named mobile_manipulation_generate_messages_lisp
+
+# Build rule for target.
+mobile_manipulation_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 mobile_manipulation_generate_messages_lisp
+.PHONY : mobile_manipulation_generate_messages_lisp
+
+# fast build rule for target.
+mobile_manipulation_generate_messages_lisp/fast:
+	$(MAKE) -f mobile_manipulation/CMakeFiles/mobile_manipulation_generate_messages_lisp.dir/build.make mobile_manipulation/CMakeFiles/mobile_manipulation_generate_messages_lisp.dir/build
+.PHONY : mobile_manipulation_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named mobile_manipulation_generate_messages_py
+
+# Build rule for target.
+mobile_manipulation_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 mobile_manipulation_generate_messages_py
+.PHONY : mobile_manipulation_generate_messages_py
+
+# fast build rule for target.
+mobile_manipulation_generate_messages_py/fast:
+	$(MAKE) -f mobile_manipulation/CMakeFiles/mobile_manipulation_generate_messages_py.dir/build.make mobile_manipulation/CMakeFiles/mobile_manipulation_generate_messages_py.dir/build
+.PHONY : mobile_manipulation_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named mobile_manipulation_genlisp
+
+# Build rule for target.
+mobile_manipulation_genlisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 mobile_manipulation_genlisp
+.PHONY : mobile_manipulation_genlisp
+
+# fast build rule for target.
+mobile_manipulation_genlisp/fast:
+	$(MAKE) -f mobile_manipulation/CMakeFiles/mobile_manipulation_genlisp.dir/build.make mobile_manipulation/CMakeFiles/mobile_manipulation_genlisp.dir/build
+.PHONY : mobile_manipulation_genlisp/fast
+
+#=============================================================================
+# Target rules for targets named mobile_manipulation_genpy
+
+# Build rule for target.
+mobile_manipulation_genpy: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 mobile_manipulation_genpy
+.PHONY : mobile_manipulation_genpy
+
+# fast build rule for target.
+mobile_manipulation_genpy/fast:
+	$(MAKE) -f mobile_manipulation/CMakeFiles/mobile_manipulation_genpy.dir/build.make mobile_manipulation/CMakeFiles/mobile_manipulation_genpy.dir/build
+.PHONY : mobile_manipulation_genpy/fast
+
+#=============================================================================
+# Target rules for targets named move_pick
+
+# Build rule for target.
+move_pick: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 move_pick
+.PHONY : move_pick
+
+# fast build rule for target.
+move_pick/fast:
+	$(MAKE) -f mobile_manipulation/CMakeFiles/move_pick.dir/build.make mobile_manipulation/CMakeFiles/move_pick.dir/build
+.PHONY : move_pick/fast
+
+#=============================================================================
+# Target rules for targets named teleop_manip
+
+# Build rule for target.
+teleop_manip: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 teleop_manip
+.PHONY : teleop_manip
+
+# fast build rule for target.
+teleop_manip/fast:
+	$(MAKE) -f mobile_manipulation/CMakeFiles/teleop_manip.dir/build.make mobile_manipulation/CMakeFiles/teleop_manip.dir/build
+.PHONY : teleop_manip/fast
+
+#=============================================================================
+# Target rules for targets named trajectory_msgs_generate_messages_cpp
+
+# Build rule for target.
+trajectory_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 trajectory_msgs_generate_messages_cpp
+.PHONY : trajectory_msgs_generate_messages_cpp
+
+# fast build rule for target.
+trajectory_msgs_generate_messages_cpp/fast:
+	$(MAKE) -f mobile_manipulation/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/build.make mobile_manipulation/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/build
+.PHONY : trajectory_msgs_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named trajectory_msgs_generate_messages_lisp
+
+# Build rule for target.
+trajectory_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 trajectory_msgs_generate_messages_lisp
+.PHONY : trajectory_msgs_generate_messages_lisp
+
+# fast build rule for target.
+trajectory_msgs_generate_messages_lisp/fast:
+	$(MAKE) -f mobile_manipulation/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/build.make mobile_manipulation/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/build
+.PHONY : trajectory_msgs_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named trajectory_msgs_generate_messages_py
+
+# Build rule for target.
+trajectory_msgs_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 trajectory_msgs_generate_messages_py
+.PHONY : trajectory_msgs_generate_messages_py
+
+# fast build rule for target.
+trajectory_msgs_generate_messages_py/fast:
+	$(MAKE) -f mobile_manipulation/CMakeFiles/trajectory_msgs_generate_messages_py.dir/build.make mobile_manipulation/CMakeFiles/trajectory_msgs_generate_messages_py.dir/build
+.PHONY : trajectory_msgs_generate_messages_py/fast
+
+#=============================================================================
 # Target rules for targets named publish_frame
 
 # Build rule for target.
@@ -2139,45 +2334,6 @@ brics_actuator_generate_messages_py/fast:
 .PHONY : brics_actuator_generate_messages_py/fast
 
 #=============================================================================
-# Target rules for targets named trajectory_msgs_generate_messages_cpp
-
-# Build rule for target.
-trajectory_msgs_generate_messages_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 trajectory_msgs_generate_messages_cpp
-.PHONY : trajectory_msgs_generate_messages_cpp
-
-# fast build rule for target.
-trajectory_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f youbot_gazebo_publisher/youbot_gazebo_publisher/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/build.make youbot_gazebo_publisher/youbot_gazebo_publisher/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/build
-.PHONY : trajectory_msgs_generate_messages_cpp/fast
-
-#=============================================================================
-# Target rules for targets named trajectory_msgs_generate_messages_lisp
-
-# Build rule for target.
-trajectory_msgs_generate_messages_lisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 trajectory_msgs_generate_messages_lisp
-.PHONY : trajectory_msgs_generate_messages_lisp
-
-# fast build rule for target.
-trajectory_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f youbot_gazebo_publisher/youbot_gazebo_publisher/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/build.make youbot_gazebo_publisher/youbot_gazebo_publisher/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/build
-.PHONY : trajectory_msgs_generate_messages_lisp/fast
-
-#=============================================================================
-# Target rules for targets named trajectory_msgs_generate_messages_py
-
-# Build rule for target.
-trajectory_msgs_generate_messages_py: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 trajectory_msgs_generate_messages_py
-.PHONY : trajectory_msgs_generate_messages_py
-
-# fast build rule for target.
-trajectory_msgs_generate_messages_py/fast:
-	$(MAKE) -f youbot_gazebo_publisher/youbot_gazebo_publisher/CMakeFiles/trajectory_msgs_generate_messages_py.dir/build.make youbot_gazebo_publisher/youbot_gazebo_publisher/CMakeFiles/trajectory_msgs_generate_messages_py.dir/build
-.PHONY : trajectory_msgs_generate_messages_py/fast
-
-#=============================================================================
 # Target rules for targets named youbot_gazebo_publisher
 
 # Build rule for target.
@@ -2189,45 +2345,6 @@ youbot_gazebo_publisher: cmake_check_build_system
 youbot_gazebo_publisher/fast:
 	$(MAKE) -f youbot_gazebo_publisher/youbot_gazebo_publisher/CMakeFiles/youbot_gazebo_publisher.dir/build.make youbot_gazebo_publisher/youbot_gazebo_publisher/CMakeFiles/youbot_gazebo_publisher.dir/build
 .PHONY : youbot_gazebo_publisher/fast
-
-#=============================================================================
-# Target rules for targets named control_msgs_generate_messages_cpp
-
-# Build rule for target.
-control_msgs_generate_messages_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 control_msgs_generate_messages_cpp
-.PHONY : control_msgs_generate_messages_cpp
-
-# fast build rule for target.
-control_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f youbot_ik/CMakeFiles/control_msgs_generate_messages_cpp.dir/build.make youbot_ik/CMakeFiles/control_msgs_generate_messages_cpp.dir/build
-.PHONY : control_msgs_generate_messages_cpp/fast
-
-#=============================================================================
-# Target rules for targets named control_msgs_generate_messages_lisp
-
-# Build rule for target.
-control_msgs_generate_messages_lisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 control_msgs_generate_messages_lisp
-.PHONY : control_msgs_generate_messages_lisp
-
-# fast build rule for target.
-control_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f youbot_ik/CMakeFiles/control_msgs_generate_messages_lisp.dir/build.make youbot_ik/CMakeFiles/control_msgs_generate_messages_lisp.dir/build
-.PHONY : control_msgs_generate_messages_lisp/fast
-
-#=============================================================================
-# Target rules for targets named control_msgs_generate_messages_py
-
-# Build rule for target.
-control_msgs_generate_messages_py: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 control_msgs_generate_messages_py
-.PHONY : control_msgs_generate_messages_py
-
-# fast build rule for target.
-control_msgs_generate_messages_py/fast:
-	$(MAKE) -f youbot_ik/CMakeFiles/control_msgs_generate_messages_py.dir/build.make youbot_ik/CMakeFiles/control_msgs_generate_messages_py.dir/build
-.PHONY : control_msgs_generate_messages_py/fast
 
 #=============================================================================
 # Target rules for targets named kukaIK
@@ -2558,6 +2675,21 @@ help:
 	@echo "... kinect2_calibration"
 	@echo "... additional_files_kinect2_viewer"
 	@echo "... kinect2_viewer"
+	@echo "... control_msgs_generate_messages_cpp"
+	@echo "... control_msgs_generate_messages_lisp"
+	@echo "... control_msgs_generate_messages_py"
+	@echo "... mobile_manipulation_gencpp"
+	@echo "... mobile_manipulation_generate_messages"
+	@echo "... mobile_manipulation_generate_messages_cpp"
+	@echo "... mobile_manipulation_generate_messages_lisp"
+	@echo "... mobile_manipulation_generate_messages_py"
+	@echo "... mobile_manipulation_genlisp"
+	@echo "... mobile_manipulation_genpy"
+	@echo "... move_pick"
+	@echo "... teleop_manip"
+	@echo "... trajectory_msgs_generate_messages_cpp"
+	@echo "... trajectory_msgs_generate_messages_lisp"
+	@echo "... trajectory_msgs_generate_messages_py"
 	@echo "... publish_frame"
 	@echo "... std_srvs_generate_messages_cpp"
 	@echo "... std_srvs_generate_messages_lisp"
@@ -2577,13 +2709,7 @@ help:
 	@echo "... brics_actuator_generate_messages_cpp"
 	@echo "... brics_actuator_generate_messages_lisp"
 	@echo "... brics_actuator_generate_messages_py"
-	@echo "... trajectory_msgs_generate_messages_cpp"
-	@echo "... trajectory_msgs_generate_messages_lisp"
-	@echo "... trajectory_msgs_generate_messages_py"
 	@echo "... youbot_gazebo_publisher"
-	@echo "... control_msgs_generate_messages_cpp"
-	@echo "... control_msgs_generate_messages_lisp"
-	@echo "... control_msgs_generate_messages_py"
 	@echo "... kukaIK"
 	@echo "... manip_teleop"
 	@echo "... publish_frame_or"

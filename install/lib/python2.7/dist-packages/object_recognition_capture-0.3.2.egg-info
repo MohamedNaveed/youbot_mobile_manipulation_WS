@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: object_recognition_capture
+Version: 0.3.2
+Summary: Capture is a set of tools to capture objects in 3D and perform odometry
+Home-page: http://wg-perception.github.io/capture
+Author: Vincent Rabaud
+Author-email: vincent.rabaud@gmail.com
+License: BSD
+Description: UNKNOWN
+Platform: UNKNOWN

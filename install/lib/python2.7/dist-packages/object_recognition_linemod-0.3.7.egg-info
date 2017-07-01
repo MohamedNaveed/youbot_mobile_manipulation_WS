@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: object_recognition_linemod
+Version: 0.3.7
+Summary: An object recognition pipeline that uses LINE-MOD from OpenCV
+Home-page: https://github.com/wg-perception/linemod
+Author: Vincent Rabaud
+Author-email: vincent.rabaud@gmail.com
+License: BSD
+Description: UNKNOWN
+Platform: UNKNOWN

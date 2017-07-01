@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: object_recognition_ros
+Version: 0.3.7
+Summary: object_recognition_core contains tools to launch several recognition pipelines, train objects, store models ...
+Home-page: wg-perception.github.io/object_recognition_ros
+Author: Vincent Rabaud
+Author-email: vincent.rabaud@gmail.com
+License: BSD
+Description: UNKNOWN
+Platform: UNKNOWN

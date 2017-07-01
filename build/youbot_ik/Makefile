@@ -150,48 +150,6 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-youbot_ik/CMakeFiles/control_msgs_generate_messages_cpp.dir/rule:
-	cd /home/ros/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 youbot_ik/CMakeFiles/control_msgs_generate_messages_cpp.dir/rule
-.PHONY : youbot_ik/CMakeFiles/control_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-control_msgs_generate_messages_cpp: youbot_ik/CMakeFiles/control_msgs_generate_messages_cpp.dir/rule
-.PHONY : control_msgs_generate_messages_cpp
-
-# fast build rule for target.
-control_msgs_generate_messages_cpp/fast:
-	cd /home/ros/catkin_ws/build && $(MAKE) -f youbot_ik/CMakeFiles/control_msgs_generate_messages_cpp.dir/build.make youbot_ik/CMakeFiles/control_msgs_generate_messages_cpp.dir/build
-.PHONY : control_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-youbot_ik/CMakeFiles/control_msgs_generate_messages_lisp.dir/rule:
-	cd /home/ros/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 youbot_ik/CMakeFiles/control_msgs_generate_messages_lisp.dir/rule
-.PHONY : youbot_ik/CMakeFiles/control_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-control_msgs_generate_messages_lisp: youbot_ik/CMakeFiles/control_msgs_generate_messages_lisp.dir/rule
-.PHONY : control_msgs_generate_messages_lisp
-
-# fast build rule for target.
-control_msgs_generate_messages_lisp/fast:
-	cd /home/ros/catkin_ws/build && $(MAKE) -f youbot_ik/CMakeFiles/control_msgs_generate_messages_lisp.dir/build.make youbot_ik/CMakeFiles/control_msgs_generate_messages_lisp.dir/build
-.PHONY : control_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-youbot_ik/CMakeFiles/control_msgs_generate_messages_py.dir/rule:
-	cd /home/ros/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 youbot_ik/CMakeFiles/control_msgs_generate_messages_py.dir/rule
-.PHONY : youbot_ik/CMakeFiles/control_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-control_msgs_generate_messages_py: youbot_ik/CMakeFiles/control_msgs_generate_messages_py.dir/rule
-.PHONY : control_msgs_generate_messages_py
-
-# fast build rule for target.
-control_msgs_generate_messages_py/fast:
-	cd /home/ros/catkin_ws/build && $(MAKE) -f youbot_ik/CMakeFiles/control_msgs_generate_messages_py.dir/build.make youbot_ik/CMakeFiles/control_msgs_generate_messages_py.dir/build
-.PHONY : control_msgs_generate_messages_py/fast
-
-# Convenience name for target.
 youbot_ik/CMakeFiles/kukaIK.dir/rule:
 	cd /home/ros/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 youbot_ik/CMakeFiles/kukaIK.dir/rule
 .PHONY : youbot_ik/CMakeFiles/kukaIK.dir/rule
@@ -485,9 +443,6 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... control_msgs_generate_messages_cpp"
-	@echo "... control_msgs_generate_messages_lisp"
-	@echo "... control_msgs_generate_messages_py"
 	@echo "... edit_cache"
 	@echo "... install"
 	@echo "... install/local"
