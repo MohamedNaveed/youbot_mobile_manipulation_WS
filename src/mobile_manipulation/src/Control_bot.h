@@ -47,8 +47,9 @@ void move_base_ml(double time, double step, double x, double y, double phi)
   double y_error, y_dot,sum_y_error,dif_y_error, y_error_old;
   double phi_error, phi_dot, sum_phi_error, dif_phi_error, phi_error_old;
   double phi_present;
-  double Kp=2, Ki=0, Kd=0;
-
+  double Kp_x=0, Ki_x=0, Kd_x=0;
+  double Kp_y=0.5, Ki_y=0, Kd_y=0;
+  double Kp_phi=0.5, Ki_phi=0, Kd_phi=0;
 	cout<<"move_base_ml called..."<<endl;
 	cout<<"x:"<<x<<" y:"<<y<<" phi:"<<phi<<endl;
 	MatrixXd data=MatrixXd::Zero(step+1,12);
@@ -77,9 +78,9 @@ void move_base_ml(double time, double step, double x, double y, double phi)
         dif_y_error=y_error-y_error_old;
         dif_phi_error=phi_error-phi_error_old;
 
-        x_dot=Kp*x_error + Ki*sum_x_error + Kd*dif_x_error;//PID equation
-        y_dot=Kp*y_error + Ki*sum_y_error + Kd*dif_x_error;
-        phi_dot=Kp*phi_error +  Ki*sum_phi_error + Kd*dif_phi_error;
+        x_dot=Kp_x*x_error + Ki_x*sum_x_error + Kd_x*dif_x_error;//PID equation
+        y_dot=Kp_y*y_error + Ki_y*sum_y_error + Kd_y*dif_x_error;
+        phi_dot=Kp_phi*phi_error +  Ki_phi*sum_phi_error + Kd_phi*dif_phi_error;
 
         //cout<<"PID x_dot:"<<x_dot<<"x error:"<<x_error<<endl;
         //cout<<"PID y_dot:"<<y_dot<<"y error:"<<y_error<<endl;
