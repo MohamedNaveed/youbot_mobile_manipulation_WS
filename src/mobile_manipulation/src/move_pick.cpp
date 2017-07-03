@@ -80,7 +80,7 @@ void transform_frame_3()
 
 int main(int argc, char** argv)
 {
-  double roll=0,pitch=0,yaw=0, rho2=.380, rho3=0, Beta, Theta, Theta_5; //rho1 - redundancy
+  double roll=0,pitch=0,yaw=0, rho2=.360, rho3=0, Beta, Theta, Theta_5; //rho1 - redundancy
 	double L=.033;//distance between J1 and J2 along x
 	double M=.061;//distance between Wheel axis and J1 along x
 
