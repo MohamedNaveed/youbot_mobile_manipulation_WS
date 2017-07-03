@@ -133,6 +133,7 @@ int main(int argc, char** argv)
 	temp=final_R;//using temp, because Eigen:: Quaterniond quaternion takes only Matrix3d as input while final_R is matrixXd
 	Eigen::Quaterniond quaternion(temp);
   tf::Quaternion q_J2(quaternion.x(),quaternion.y(),quaternion.z(), quaternion.w());
+
   if(Beta<-2.5)//Pose might be inverted, to prevent that
     Beta=-3.14-Beta;
   Beta=min(-.26,Beta);//compensate low height
@@ -162,7 +163,7 @@ int main(int argc, char** argv)
   cout<<"Theta 5:"<<Theta_5<<endl;
 
   ros::Duration(2).sleep();
-  cout<<" Object goal wrt J2:"<<T_obj_J2(0,3)<<endl;
+  cout<<" Object goal wrt J2:"<<T_obj_J2(0,3)+.07<<endl;
   move_manip_js(time_m, step_m, rho3, T_obj_J2(0,3)+.07, Beta, rho2, rad(rho1), -Theta_5);//move arm to goal in desired time give data in m //.1 added to compensate for height of wheel kept below
   close_gripper();
   ros::Duration(2).sleep();
