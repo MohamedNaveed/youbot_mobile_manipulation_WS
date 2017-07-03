@@ -159,7 +159,8 @@ int main(int argc, char** argv)
     Theta_5=Theta_5-3.14;
   cout<<"Theta 5:"<<Theta_5<<endl;
   ros::Duration(2).sleep();
-  move_manip_js(time_m, step_m, rho3, T_obj_J2(0,3)+.15, Beta, rho2, rad(rho1), -Theta_5);//move arm to goal in desired time give data in m //.1 added to compensate for height of wheel kept below
+  move_manip_js(time_m, step_m, rho3, T_obj_J2(0,3)+.05, Beta, rho2, rad(rho1), -Theta_5);//move arm to goal in desired time give data in m //.1 added to compensate for height of wheel kept below
+  ros::Duration(2).sleep();
   close_gripper();
   ros::Duration(2).sleep();
   transform_frame_3();

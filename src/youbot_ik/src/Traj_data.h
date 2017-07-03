@@ -46,21 +46,21 @@ MatrixXd move_base_data(double time, double step, double x, double y, double phi
 //This function gives trajectory data for movement of base whithout holding previous information
 //Note: x, y, and phi stand for x distance, y distance and yaw angle bot need to move
 
-MatrixXd move_base_ml_data(double time, double step, double x, double y, double phi)
+MatrixXd move_base_ml_data(double time, double step, double x, double y, double phi, double xi, double yi, double phii)
 {
     confg base;
     Traj_gen traj;
 
     // Intial and final data to move base
     //Data related to x-coordinate
-    double xi=0; double xidot=0.01; double xiddot=0;
-    double xf=x; double xfdot=0; double xfddot=0;
+    double xidot=0; double xiddot=0;
+    double xf=x+xi; double xfdot=0; double xfddot=0;
     //Data related to y-coordinate
-    double yi=0; double yidot=0; double yiddot=0;
-    double yf=y; double yfdot=0; double yfddot=0;
+    double yidot=0; double yiddot=0;
+    double yf=y+yi; double yfdot=0; double yfddot=0;
     //Data related to yaw angle phi
-    double phii=0; double phiidot=0; double phiiddot=0;
-    double phif=phi; double phifdot=0; double phifddot=0;
+    double phiidot=0; double phiiddot=0;
+    double phif=phi+phii; double phifdot=0; double phifddot=0;
     // inital anf final time repectively
     double t0=0; double tf=time;
 

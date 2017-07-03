@@ -7,7 +7,7 @@ June 2017
 #include "Position_subscriber.h"
 #include <geometry_msgs/Pose2D.h>//required to publish Pose2D messages
 #include "Position_publisher.h"
-void apply_PID(double rate)
+void call_odom(double rate)
 {
   ros::Rate odom_rate(rate);//rate at which data is being published
 
@@ -29,7 +29,7 @@ void move_base(double time, double step, double x, double y, double phi)
      }
 }
 
-double find_phi_present()
+double find_phi_present()//orientation is in quaternion, this function converts it to angle
 {
   Eigen::Quaterniond Phi_q(phi_present_w,phi_present_x,phi_present_y,phi_present_z);
   Phi_q.normalize();
@@ -52,14 +52,17 @@ void move_base_ml(double time, double step, double x, double y, double phi)
 	cout<<"move_base_ml called..."<<endl;
 	cout<<"x:"<<x<<" y:"<<y<<" phi:"<<phi<<endl;
 	MatrixXd data=MatrixXd::Zero(step+1,12);
-	data=move_base_ml_data(time, step, x, y, phi);
-	double dt=time/step;
+  double dt=time/step;
+  call_odom(1/dt);
+  phi_present=find_phi_present();
+	data=move_base_ml_data(time, step, x, y, phi, x_present, y_present, phi_present);
+
 	cout<<"moving base"<<endl;
   //publish_traj();
 
 	for(int i=0; i<=step; i++)
      {
-			 	apply_PID(1/dt);
+			 	call_odom(1/dt);
         phi_present=find_phi_present();//orientation is in quaternion, this function converts it to angle
 				if(i>0)//to prevent data(-1, x) when i=0
         {
@@ -129,7 +132,7 @@ void move_and_wave(double time, double step, double x, double y, double phi,
 	double row3, double zg, double beta, double row2,double th1, double th5)
 {
 	MatrixXd data_base=MatrixXd::Zero(step+1,5);
-	data_base=move_base_ml_data(time, step, x, y, phi);
+	data_base=move_base_ml_data(time, step, x, y, phi, 0, 0, 0);
 	MatrixXd data_arm=MatrixXd::Zero(step+1,5);
 	data_arm=move_manip_cs_data(time, step, row3, zg, beta, row2, th1, th5);
 	double dt=time/step;
