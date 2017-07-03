@@ -80,7 +80,7 @@ void transform_frame_3()
 
 int main(int argc, char** argv)
 {
-  double roll=0,pitch=0,yaw=0, rho2=.380, rho3=0, Beta, Theta, Theta_5; //rho1 - redundancy
+  double roll=0,pitch=0,yaw=0, rho2=.300, rho3=0, Beta, Theta, Theta_5; //rho1 - redundancy
 	double L=.033;//distance between J1 and J2 along x
 	double M=.061;//distance between Wheel axis and J1 along x
 
@@ -161,7 +161,7 @@ int main(int argc, char** argv)
   if(Beta<-2.5)//Pose might be inverted, to prevent that
     Beta=-3.14-Beta;
   ros::Duration(2).sleep();
-  cout<<" Object goal wrt J2:"<<T_obj_J2(0,3)+.10<<endl;
+  cout<<" Object goal wrt J2:"<<T_obj_J2(0,3)<<endl;
   move_manip_js(time_m, step_m, rho3, T_obj_J2(0,3), Beta, rho2, rad(rho1), -Theta_5);//move arm to goal in desired time give data in m //.1 added to compensate for height of wheel kept below
   ros::Duration(4).sleep();
   close_gripper();
