@@ -63,7 +63,7 @@ void kinect_to_bot_transform()
 {
   // double rot_x=rad(-135);
   // double rot_z=rad(-90);
-	double trans_x=-0.302;
+	double trans_x=-0.300;
 	double trans_y=-0.070;
 	double trans_z=0.718;
 

@@ -167,8 +167,8 @@ int main(int argc, char** argv)
   //z and rho2 are offset to stop at distance from object
   ros::Duration(10).sleep();
   cout<<"Moving in CS"<<endl;
-  move_manip_cs(5, 5*200, rho3, T_obj_J2(0,3), Beta, rho2, rad(rho1), -Theta_5-0.55);
-  ros::Duration(5).sleep();
+  move_manip_cs(4, 4*200, rho3, T_obj_J2(0,3), Beta, rho2, rad(rho1), -Theta_5-0.55);
+  ros::Duration(3).sleep();
   close_gripper();
   ros::Duration(2).sleep();
   transform_frame_3();

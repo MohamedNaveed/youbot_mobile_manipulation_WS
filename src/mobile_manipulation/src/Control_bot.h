@@ -47,8 +47,8 @@ void move_base_ml(double time, double step, double x, double y, double phi)
   double y_error, y_dot,sum_y_error,dif_y_error, y_error_old;
   double phi_error, phi_dot, sum_phi_error, dif_phi_error, phi_error_old;
   double phi_present;
-  double Kp_x=0, Ki_x=0, Kd_x=0;
-  double Kp_y=0.5, Ki_y=0, Kd_y=0;
+  double Kp_x=1, Ki_x=0, Kd_x=0;
+  double Kp_y=1, Ki_y=0.01, Kd_y=0;
   double Kp_phi=0.5, Ki_phi=0, Kd_phi=0;
 	cout<<"move_base_ml called..."<<endl;
 	cout<<"x:"<<x<<" y:"<<y<<" phi:"<<phi<<endl;
