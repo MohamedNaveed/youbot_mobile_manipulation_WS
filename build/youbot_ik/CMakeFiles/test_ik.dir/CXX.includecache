@@ -95,6 +95,8 @@ iostream
 -
 
 /home/ros/catkin_ws/src/youbot_ik/src/Traj_data.h
+math.h
+-
 
 /home/ros/catkin_ws/src/youbot_ik/src/Traj_gen_func.h
 

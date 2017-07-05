@@ -1,6 +1,6 @@
 //This func gives trajectory data for movement of base
 //Note: x, y, and phi stand for x-coordinate, y-coordinate and yaw angle if bot is starting from 0,0,0
-
+#include <math.h>
 MatrixXd move_base_data(double time, double step, double x, double y, double phi)
 {
     confg base;
@@ -184,13 +184,16 @@ MatrixXd move_manip_cs_data(double time, double step, double row3, double zg, do
     //Declaration of matrix to store trajectory data
     MatrixXd data_z=MatrixXd::Zero(step+1,4);
     MatrixXd data_beta=MatrixXd::Zero(step+1,4);
-    MatrixXd data_row2=MatrixXd::Zero(step+1,4);
-
+    //MatrixXd data_row2=MatrixXd::Zero(step+1,4);
+    VectorXd data_row2=VectorXd::Zero(step+1);
     //Storing trajectory data in declared matrix
     data_z=traj.traj_gen(zi,zidot,ziddot,zf,zfdot,zfddot,t0,tf,step);
     data_beta=traj.traj_gen(betai,betaidot,betaiddot,betaf,betafdot,betafddot,t0,tf,step);
-    data_row2=traj.traj_gen(row2i,row2idot,row2iddot,row2f,row2fdot,row2fddot,t0,tf,step);
-
+    //data_row2=traj.traj_gen(row2i,row2idot,row2iddot,row2f,row2fdot,row2fddot,t0,tf,step);
+    for(int var=0; var<=step; var++)
+    {
+      data_row2(var)=(cos(beta)/sin(beta))*(data_z(var,1)-zi) + row2i;//line equation for motion in cartesian space
+    }
     double th2,th3,th4;//declare variable to store joint angle 2, 3 and 4 for each trajectory data
 
     MatrixXd all_data=MatrixXd::Zero(step+1,5);//matrix to store joint angles for each point in tranjectory
@@ -204,8 +207,8 @@ MatrixXd move_manip_cs_data(double time, double step, double row3, double zg, do
 
     for(int i=0; i<=step; i++)
      {
-        manip.set_goal(row3,data_z(i,1),data_beta(i,1),data_row2(i,1));
-        cout<<data_z(i,1)<<" "<<data_beta(i,1)<<" "<<data_row2(i,1)<<endl;;
+        manip.set_goal(row3,data_z(i,1),data_beta(i,1),data_row2(i));
+        cout<<data_z(i,1)<<" "<<data_beta(i,1)<<" "<<data_row2(i)<<endl;;
 
         th3=manip.cal_JA3();
         th2=manip.cal_JA2();
@@ -223,7 +226,7 @@ MatrixXd move_manip_cs_data(double time, double step, double row3, double zg, do
         all_data(i,2)=th3;
         all_data(i,3)=th4;
         all_data(i,4)=th5;
-        cout<<th2<<" "<<th3<<" "<< th4<<" "<< endl;
+        cout<<"th2:"<<th2<<" th3:"<<th3<<" th4:"<< th4<<" "<< endl;
 
         temp_th2=th2;
         temp_th3=th3;

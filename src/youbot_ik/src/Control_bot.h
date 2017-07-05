@@ -100,7 +100,6 @@ void move_manip_js(double time, double step, double row3, double zg, double beta
 {
 	cout<<"move_manip_js called..."<<endl;
 	MatrixXd data=MatrixXd::Zero(step+1,20);
-
 	data=move_manip_js_data(time, step, row3, zg, beta, row2, th1, th5);
 	double dt=time/step;
 

@@ -165,7 +165,7 @@ int main(int argc, char** argv)
 
   ros::Duration(2).sleep();
   cout<<" Object goal wrt J2:"<<T_obj_J2(0,3)<<endl;
-  move_manip_js(time_m, step_m, rho3, T_obj_J2(0,3), Beta, rho2, rad(rho1), -Theta);//move arm to goal in desired time give data in m //.1 added to compensate for height of wheel kept below
+  move_manip_js(time_m, step_m, rho3, T_obj_J2(0,3), Beta, rho2, rad(rho1), -Theta_5);//move arm to goal in desired time give data in m //.1 added to compensate for height of wheel kept below
   ros::Duration(4).sleep();
   close_gripper();
   ros::Duration(2).sleep();
