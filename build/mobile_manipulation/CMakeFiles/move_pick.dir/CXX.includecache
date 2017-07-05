@@ -103,6 +103,8 @@ iostream
 -
 
 /home/ros/catkin_ws/src/mobile_manipulation/src/Traj_data.h
+math.h
+-
 
 /home/ros/catkin_ws/src/mobile_manipulation/src/Traj_gen_func.h
 

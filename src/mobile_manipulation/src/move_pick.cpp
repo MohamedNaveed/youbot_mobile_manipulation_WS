@@ -138,7 +138,6 @@ int main(int argc, char** argv)
     Beta=-3.14-Beta;
   Beta=min(-.52,Beta);//compensate low height
   rho2=.200 + .1951*cos(Beta);//to conpesate for last link pose
-
 	double x_goal=T_obj_wheelaxis(0,3) + M-L*cos(rho1) - rho2*cos(rho1);//
 	double y_goal=T_obj_wheelaxis(1,3) - L*sin(rho1) - rho2*sin(rho1);//
 
@@ -156,20 +155,24 @@ int main(int argc, char** argv)
   movePlatform(0,0,0);//the final x_dot , y_dot might be a non-zero value
 
   transform2.setOrigin(tf::Vector3(T_obj_wheelaxis(0,3)-x_goal,T_obj_wheelaxis(1,3)-y_goal,T_obj_wheelaxis(2,3)));
-  double time_m=5, step_m=200*time_m;
+  double time_m=10, step_m=200*time_m;
   cout<<"matrix is "<<T_obj_J2<<" Given z :"<<T_obj_J2(0,3)<<endl;
   Theta_5=acos(T_obj_wheelaxis(2,2));
   if(Theta_5>1.57)
     Theta_5=Theta_5-3.14;
   cout<<"Theta 5:"<<Theta_5<<endl;
-
-  ros::Duration(2).sleep();
+  //ros::Duration(5).sleep();
   cout<<" Object goal wrt J2:"<<T_obj_J2(0,3)<<endl;
-  move_manip_js(time_m, step_m, rho3, T_obj_J2(0,3), Beta, rho2, rad(rho1), -Theta_5);//move arm to goal in desired time give data in m //.1 added to compensate for height of wheel kept below
-  ros::Duration(4).sleep();
+  move_manip_js(time_m, step_m, rho3, T_obj_J2(0,3)+.05*sin(-Beta), Beta, rho2-.05*cos(-Beta), rad(rho1),-Theta_5-0.55);//move arm to goal in desired time give data in m //.1 added to compensate for height of wheel kept below
+  //z and rho2 are offset to stop at distance from object
+  ros::Duration(10).sleep();
+  cout<<"Moving in CS"<<endl;
+  move_manip_cs(5, 5*200, rho3, T_obj_J2(0,3), Beta, rho2, rad(rho1), -Theta_5-0.55);
+  ros::Duration(5).sleep();
   close_gripper();
   ros::Duration(2).sleep();
   transform_frame_3();
+  cout<<"Range_out:"<<range_out<<endl;
   while(ros::ok())
   {
     br.sendTransform(tf::StampedTransform(transform1, ros::Time::now(),"kinect2_rgb_optical_frame","object"));

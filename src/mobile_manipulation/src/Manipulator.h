@@ -1,5 +1,5 @@
 //Note: If you are including this header somewhere then include Math_other.h before it as it uses a function from it
-
+int range_out=0;
 class Manipulator: public confg
 {
 	public:
@@ -39,6 +39,7 @@ double Manipulator::cal_JA3()
   else{
     cout<<"JA3: "<<JA3*180/pi()<<", angle exceeded the allowed range"<<endl;
     cout<<"Bringing it back to zero"<<endl;
+		range_out++;
     //JA3=0;
   }
   return JA3;
@@ -59,6 +60,7 @@ double Manipulator::cal_JA2()
   else{
     cout<<"JA2: "<<JA2*180/pi()<<", angle exceeded the allowed range"<<endl;
     cout<<"Bringing it back to zero"<<endl;
+		range_out++;
     //JA2=0;
   }
   return JA2;
@@ -83,6 +85,7 @@ double Manipulator::cal_JA4()
   else{
     cout<<"JA4: "<<JA4*180/pi()<<", angle exceeded the allowed range"<<endl;
     cout<<"Bringing it back to zero"<<endl;
+		range_out++;
     //JA4=0;
   }
   return JA4;
