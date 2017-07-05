@@ -155,7 +155,7 @@ int main(int argc, char** argv)
   movePlatform(0,0,0);//the final x_dot , y_dot might be a non-zero value
 
   transform2.setOrigin(tf::Vector3(T_obj_wheelaxis(0,3)-x_goal,T_obj_wheelaxis(1,3)-y_goal,T_obj_wheelaxis(2,3)));
-  double time_m=10, step_m=200*time_m;
+  double time_m=5, step_m=200*time_m;
   cout<<"matrix is "<<T_obj_J2<<" Given z :"<<T_obj_J2(0,3)<<endl;
   Theta_5=acos(T_obj_wheelaxis(2,2));
   if(Theta_5>1.57)
@@ -163,11 +163,11 @@ int main(int argc, char** argv)
   cout<<"Theta 5:"<<Theta_5<<endl;
   //ros::Duration(5).sleep();
   cout<<" Object goal wrt J2:"<<T_obj_J2(0,3)<<endl;
-  move_manip_js(time_m, step_m, rho3, T_obj_J2(0,3)+.05*sin(-Beta), Beta, rho2-.05*cos(-Beta), rad(rho1),-Theta_5-0.55);//move arm to goal in desired time give data in m //.1 added to compensate for height of wheel kept below
-  //z and rho2 are offset to stop at distance from object
+  move_manip_js(time_m, step_m, rho3, T_obj_J2(0,3)+.05*sin(-Beta), Beta, rho2-.05*cos(-Beta), rad(rho1),0);//move arm to goal in desired time give data in m //.1 added to compensate for height of wheel kept below
+  //z and rho2 are offset to stop at distance from object -Theta_5-0.55
   ros::Duration(10).sleep();
   cout<<"Moving in CS"<<endl;
-  move_manip_cs(5, 5*200, rho3, T_obj_J2(0,3), Beta, rho2, rad(rho1), -Theta_5-0.55);
+  move_manip_cs(5, 5*200, rho3, T_obj_J2(0,3), Beta, rho2, rad(rho1), 0);
   ros::Duration(5).sleep();
   close_gripper();
   ros::Duration(2).sleep();
