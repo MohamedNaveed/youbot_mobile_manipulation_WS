@@ -65,7 +65,7 @@ void kinect_to_bot_transform()
   // double rot_z=rad(-90);
 	double trans_x=-0.300;
 	double trans_y=-0.070;
-	double trans_z=0.718;
+	double trans_z=0.738;
 
 	Matrix4d Tw2k_trans= Matrix4d::Identity();//transformation matrix for tranlation from kinect to bot coordinate frame
   Tw2k_trans=Translate(trans_x, trans_y, trans_z);

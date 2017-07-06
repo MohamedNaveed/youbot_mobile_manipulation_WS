@@ -158,21 +158,22 @@ int main(int argc, char** argv)
   double time_m=10, step_m=200*time_m;
   cout<<"matrix is "<<T_obj_J2<<" Given z :"<<T_obj_J2(0,3)<<endl;
   Theta_5=acos(T_obj_wheelaxis(2,2));
-  if(Theta_5>1.57)
-    Theta_5=Theta_5-3.14;
+  if(Theta_5>2.5 || Theta_5<0.7)
+    Theta_5=0;
   cout<<"Theta 5:"<<Theta_5<<endl;
   //ros::Duration(5).sleep();
   cout<<" Object goal wrt J2:"<<T_obj_J2(0,3)<<endl;
-  move_manip_js(time_m, step_m, rho3, T_obj_J2(0,3)+.05*sin(-Beta), Beta, rho2-.05*cos(-Beta), rad(rho1),-Theta_5-0.55);//move arm to goal in desired time give data in m //.1 added to compensate for height of wheel kept below
+  move_manip_js(time_m, step_m, rho3, T_obj_J2(0,3)+.05*sin(-Beta), Beta, rho2-.05*cos(-Beta), rad(rho1),Theta_5);//move arm to goal in desired time give data in m //.1 added to compensate for height of wheel kept below
   //z and rho2 are offset to stop at distance from object
   ros::Duration(10).sleep();
   cout<<"Moving in CS"<<endl;
-  move_manip_cs(4, 4*200, rho3, T_obj_J2(0,3), Beta, rho2, rad(rho1), -Theta_5-0.55);
-  ros::Duration(3).sleep();
+  move_manip_cs(2, 2*200, rho3, T_obj_J2(0,3), Beta, rho2, rad(rho1), Theta_5);
+  //ros::Duration(3).sleep();
   close_gripper();
   ros::Duration(2).sleep();
   transform_frame_3();
   cout<<"Range_out:"<<range_out<<endl;
+  cout<<"Theta 5:"<<Theta_5<<endl;
   while(ros::ok())
   {
     br.sendTransform(tf::StampedTransform(transform1, ros::Time::now(),"kinect2_rgb_optical_frame","object"));
