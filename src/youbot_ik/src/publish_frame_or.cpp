@@ -163,14 +163,21 @@ int main(int argc, char** argv)
   cout<<"Theta 5:"<<Theta_5<<endl;
   //ros::Duration(5).sleep();
   cout<<" Object goal wrt J2:"<<T_obj_J2(0,3)<<endl;
-  move_manip_js(time_m, step_m, rho3, T_obj_J2(0,3)+.05*sin(-Beta), Beta, rho2-.05*cos(-Beta), rad(rho1),Theta_5);//move arm to goal in desired time give data in m //.1 added to compensate for height of wheel kept below
-  //z and rho2 are offset to stop at distance from object
-  ros::Duration(10).sleep();
-  cout<<"Moving in CS"<<endl;
-  move_manip_cs(2, 2*200, rho3, T_obj_J2(0,3), Beta, rho2, rad(rho1), Theta_5);
-  //ros::Duration(3).sleep();
-  close_gripper();
-  ros::Duration(2).sleep();
+
+  if(T_obj_J2(0,3)>-.22 && T_obj_J2(1,3)>.20)//prevent collision with ground and lidar
+  {
+    move_manip_js(time_m, step_m, rho3, T_obj_J2(0,3)+.05*sin(-Beta), Beta, rho2-.05*cos(-Beta), rad(rho1),Theta_5);//move arm to goal in desired time give data in m //.1 added to compensate for height of wheel kept below
+    //z and rho2 are offset to stop at distance from object
+    ros::Duration(20).sleep();
+    cout<<"Moving in CS"<<endl;
+    move_manip_cs(2, 2*200, rho3, T_obj_J2(0,3), Beta, rho2, rad(rho1), Theta_5);
+    //ros::Duration(3).sleep();
+    close_gripper();
+    ros::Duration(2).sleep();
+  }
+  else
+    cout<<"Warning: Arm collision predicted!"<<endl;
+
   transform_frame_3();
   cout<<"Range_out:"<<range_out<<endl;
   cout<<"Theta 5:"<<Theta_5<<endl;

@@ -192,48 +192,6 @@ map_msgs_generate_messages_py/fast:
 .PHONY : map_msgs_generate_messages_py/fast
 
 # Convenience name for target.
-object_recognition_ros_visualization/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule:
-	cd /home/ros/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 object_recognition_ros_visualization/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule
-.PHONY : object_recognition_ros_visualization/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-nav_msgs_generate_messages_cpp: object_recognition_ros_visualization/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule
-.PHONY : nav_msgs_generate_messages_cpp
-
-# fast build rule for target.
-nav_msgs_generate_messages_cpp/fast:
-	cd /home/ros/catkin_ws/build && $(MAKE) -f object_recognition_ros_visualization/CMakeFiles/nav_msgs_generate_messages_cpp.dir/build.make object_recognition_ros_visualization/CMakeFiles/nav_msgs_generate_messages_cpp.dir/build
-.PHONY : nav_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-object_recognition_ros_visualization/CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule:
-	cd /home/ros/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 object_recognition_ros_visualization/CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule
-.PHONY : object_recognition_ros_visualization/CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-nav_msgs_generate_messages_lisp: object_recognition_ros_visualization/CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule
-.PHONY : nav_msgs_generate_messages_lisp
-
-# fast build rule for target.
-nav_msgs_generate_messages_lisp/fast:
-	cd /home/ros/catkin_ws/build && $(MAKE) -f object_recognition_ros_visualization/CMakeFiles/nav_msgs_generate_messages_lisp.dir/build.make object_recognition_ros_visualization/CMakeFiles/nav_msgs_generate_messages_lisp.dir/build
-.PHONY : nav_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-object_recognition_ros_visualization/CMakeFiles/nav_msgs_generate_messages_py.dir/rule:
-	cd /home/ros/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 object_recognition_ros_visualization/CMakeFiles/nav_msgs_generate_messages_py.dir/rule
-.PHONY : object_recognition_ros_visualization/CMakeFiles/nav_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-nav_msgs_generate_messages_py: object_recognition_ros_visualization/CMakeFiles/nav_msgs_generate_messages_py.dir/rule
-.PHONY : nav_msgs_generate_messages_py
-
-# fast build rule for target.
-nav_msgs_generate_messages_py/fast:
-	cd /home/ros/catkin_ws/build && $(MAKE) -f object_recognition_ros_visualization/CMakeFiles/nav_msgs_generate_messages_py.dir/build.make object_recognition_ros_visualization/CMakeFiles/nav_msgs_generate_messages_py.dir/build
-.PHONY : nav_msgs_generate_messages_py/fast
-
-# Convenience name for target.
 object_recognition_ros_visualization/CMakeFiles/object_recognition_ros_visualization-sphinx.dir/rule:
 	cd /home/ros/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 object_recognition_ros_visualization/CMakeFiles/object_recognition_ros_visualization-sphinx.dir/rule
 .PHONY : object_recognition_ros_visualization/CMakeFiles/object_recognition_ros_visualization-sphinx.dir/rule
@@ -261,9 +219,6 @@ help:
 	@echo "... map_msgs_generate_messages_cpp"
 	@echo "... map_msgs_generate_messages_lisp"
 	@echo "... map_msgs_generate_messages_py"
-	@echo "... nav_msgs_generate_messages_cpp"
-	@echo "... nav_msgs_generate_messages_lisp"
-	@echo "... nav_msgs_generate_messages_py"
 	@echo "... object_recognition_ros_visualization-sphinx"
 	@echo "... rebuild_cache"
 	@echo "... test"

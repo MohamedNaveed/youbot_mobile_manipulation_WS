@@ -41,12 +41,13 @@ int main(int argc, char **argv)
   double step_m=time_m*200;
 
   double theta_1=rad(0), theta_5=rad(3);
-  cout<<"enter x:"<<endl;
-  cin>>x;
-  cout<<"enter y:"<<endl;
-  cin>>y;
-  cout<<"enter z:"<<endl;
-  cin>>z;
+
+    cout<<"enter x_dot:"<<endl;
+    cin>>x;
+    cout<<"enter y:"<<endl;
+    cin>>y;
+    cout<<"enter z:"<<endl;
+    cin>>z;
   cout<<"enter pitch:"<<endl;
   cin>>beta;
   cout<<"enter roll:"<<endl;
@@ -68,15 +69,19 @@ int main(int argc, char **argv)
 
   while(ros::ok())
   {
+    cout<<"enter x_dot:"<<endl;
+    cin>>x;
+    cout<<"enter y_dot:"<<endl;
+    cin>>y;
+    cout<<"enter phi_dot:"<<endl;
+    cin>>z;
     cout<<"moving youbot platform..."<<endl;
-
-    move_base_ml(time_max, step_max, x_goal, y_goal, rad(phi));
+    movePlatform(x,y,z);
+    //move_base_ml(time_max, step_max, x_goal, y_goal, rad(phi));
     ros::Duration(1).sleep();
 
-    cout<<"moving youbot manipulator..."<<endl;
-    move_manip_js(time_m, step_m, rho3, z, rad(beta), rho2, theta_1, rad(theta_5));//move arm to goal in desired time
-    ros::Duration(300).sleep();
-    break;
+
+    //move_manip_js(time_m, step_m, rho3, z, rad(beta), rho2, theta_1, rad(theta_5));//move arm to goal in desired time
   }
   sleep(1);
   return 0;
