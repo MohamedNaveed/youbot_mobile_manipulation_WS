@@ -2282,6 +2282,214 @@ kinect2_viewer/fast:
 .PHONY : kinect2_viewer/fast
 
 #=============================================================================
+# Target rules for targets named _run_tests_map_server_edit
+
+# Build rule for target.
+_run_tests_map_server_edit: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _run_tests_map_server_edit
+.PHONY : _run_tests_map_server_edit
+
+# fast build rule for target.
+_run_tests_map_server_edit/fast:
+	$(MAKE) -f map_server_edit/CMakeFiles/_run_tests_map_server_edit.dir/build.make map_server_edit/CMakeFiles/_run_tests_map_server_edit.dir/build
+.PHONY : _run_tests_map_server_edit/fast
+
+#=============================================================================
+# Target rules for targets named _run_tests_map_server_edit_gtest
+
+# Build rule for target.
+_run_tests_map_server_edit_gtest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _run_tests_map_server_edit_gtest
+.PHONY : _run_tests_map_server_edit_gtest
+
+# fast build rule for target.
+_run_tests_map_server_edit_gtest/fast:
+	$(MAKE) -f map_server_edit/CMakeFiles/_run_tests_map_server_edit_gtest.dir/build.make map_server_edit/CMakeFiles/_run_tests_map_server_edit_gtest.dir/build
+.PHONY : _run_tests_map_server_edit_gtest/fast
+
+#=============================================================================
+# Target rules for targets named _run_tests_map_server_edit_gtest_map_server_edit_utest
+
+# Build rule for target.
+_run_tests_map_server_edit_gtest_map_server_edit_utest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _run_tests_map_server_edit_gtest_map_server_edit_utest
+.PHONY : _run_tests_map_server_edit_gtest_map_server_edit_utest
+
+# fast build rule for target.
+_run_tests_map_server_edit_gtest_map_server_edit_utest/fast:
+	$(MAKE) -f map_server_edit/CMakeFiles/_run_tests_map_server_edit_gtest_map_server_edit_utest.dir/build.make map_server_edit/CMakeFiles/_run_tests_map_server_edit_gtest_map_server_edit_utest.dir/build
+.PHONY : _run_tests_map_server_edit_gtest_map_server_edit_utest/fast
+
+#=============================================================================
+# Target rules for targets named _run_tests_map_server_edit_rostest
+
+# Build rule for target.
+_run_tests_map_server_edit_rostest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _run_tests_map_server_edit_rostest
+.PHONY : _run_tests_map_server_edit_rostest
+
+# fast build rule for target.
+_run_tests_map_server_edit_rostest/fast:
+	$(MAKE) -f map_server_edit/CMakeFiles/_run_tests_map_server_edit_rostest.dir/build.make map_server_edit/CMakeFiles/_run_tests_map_server_edit_rostest.dir/build
+.PHONY : _run_tests_map_server_edit_rostest/fast
+
+#=============================================================================
+# Target rules for targets named _run_tests_map_server_edit_rostest_test_rtest.xml
+
+# Build rule for target.
+_run_tests_map_server_edit_rostest_test_rtest.xml: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _run_tests_map_server_edit_rostest_test_rtest.xml
+.PHONY : _run_tests_map_server_edit_rostest_test_rtest.xml
+
+# fast build rule for target.
+_run_tests_map_server_edit_rostest_test_rtest.xml/fast:
+	$(MAKE) -f map_server_edit/CMakeFiles/_run_tests_map_server_edit_rostest_test_rtest.xml.dir/build.make map_server_edit/CMakeFiles/_run_tests_map_server_edit_rostest_test_rtest.xml.dir/build
+.PHONY : _run_tests_map_server_edit_rostest_test_rtest.xml/fast
+
+#=============================================================================
+# Target rules for targets named clean_test_results_map_server_edit
+
+# Build rule for target.
+clean_test_results_map_server_edit: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 clean_test_results_map_server_edit
+.PHONY : clean_test_results_map_server_edit
+
+# fast build rule for target.
+clean_test_results_map_server_edit/fast:
+	$(MAKE) -f map_server_edit/CMakeFiles/clean_test_results_map_server_edit.dir/build.make map_server_edit/CMakeFiles/clean_test_results_map_server_edit.dir/build
+.PHONY : clean_test_results_map_server_edit/fast
+
+#=============================================================================
+# Target rules for targets named map_server_edit
+
+# Build rule for target.
+map_server_edit: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 map_server_edit
+.PHONY : map_server_edit
+
+# fast build rule for target.
+map_server_edit/fast:
+	$(MAKE) -f map_server_edit/CMakeFiles/map_server_edit.dir/build.make map_server_edit/CMakeFiles/map_server_edit.dir/build
+.PHONY : map_server_edit/fast
+
+#=============================================================================
+# Target rules for targets named map_server_edit-map_saver_edit
+
+# Build rule for target.
+map_server_edit-map_saver_edit: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 map_server_edit-map_saver_edit
+.PHONY : map_server_edit-map_saver_edit
+
+# fast build rule for target.
+map_server_edit-map_saver_edit/fast:
+	$(MAKE) -f map_server_edit/CMakeFiles/map_server_edit-map_saver_edit.dir/build.make map_server_edit/CMakeFiles/map_server_edit-map_saver_edit.dir/build
+.PHONY : map_server_edit-map_saver_edit/fast
+
+#=============================================================================
+# Target rules for targets named map_server_edit_image_loader
+
+# Build rule for target.
+map_server_edit_image_loader: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 map_server_edit_image_loader
+.PHONY : map_server_edit_image_loader
+
+# fast build rule for target.
+map_server_edit_image_loader/fast:
+	$(MAKE) -f map_server_edit/CMakeFiles/map_server_edit_image_loader.dir/build.make map_server_edit/CMakeFiles/map_server_edit_image_loader.dir/build
+.PHONY : map_server_edit_image_loader/fast
+
+#=============================================================================
+# Target rules for targets named map_server_edit_utest
+
+# Build rule for target.
+map_server_edit_utest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 map_server_edit_utest
+.PHONY : map_server_edit_utest
+
+# fast build rule for target.
+map_server_edit_utest/fast:
+	$(MAKE) -f map_server_edit/CMakeFiles/map_server_edit_utest.dir/build.make map_server_edit/CMakeFiles/map_server_edit_utest.dir/build
+.PHONY : map_server_edit_utest/fast
+
+#=============================================================================
+# Target rules for targets named rtest
+
+# Build rule for target.
+rtest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rtest
+.PHONY : rtest
+
+# fast build rule for target.
+rtest/fast:
+	$(MAKE) -f map_server_edit/CMakeFiles/rtest.dir/build.make map_server_edit/CMakeFiles/rtest.dir/build
+.PHONY : rtest/fast
+
+#=============================================================================
+# Target rules for targets named run_tests_map_server_edit
+
+# Build rule for target.
+run_tests_map_server_edit: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 run_tests_map_server_edit
+.PHONY : run_tests_map_server_edit
+
+# fast build rule for target.
+run_tests_map_server_edit/fast:
+	$(MAKE) -f map_server_edit/CMakeFiles/run_tests_map_server_edit.dir/build.make map_server_edit/CMakeFiles/run_tests_map_server_edit.dir/build
+.PHONY : run_tests_map_server_edit/fast
+
+#=============================================================================
+# Target rules for targets named run_tests_map_server_edit_gtest
+
+# Build rule for target.
+run_tests_map_server_edit_gtest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 run_tests_map_server_edit_gtest
+.PHONY : run_tests_map_server_edit_gtest
+
+# fast build rule for target.
+run_tests_map_server_edit_gtest/fast:
+	$(MAKE) -f map_server_edit/CMakeFiles/run_tests_map_server_edit_gtest.dir/build.make map_server_edit/CMakeFiles/run_tests_map_server_edit_gtest.dir/build
+.PHONY : run_tests_map_server_edit_gtest/fast
+
+#=============================================================================
+# Target rules for targets named run_tests_map_server_edit_gtest_map_server_edit_utest
+
+# Build rule for target.
+run_tests_map_server_edit_gtest_map_server_edit_utest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 run_tests_map_server_edit_gtest_map_server_edit_utest
+.PHONY : run_tests_map_server_edit_gtest_map_server_edit_utest
+
+# fast build rule for target.
+run_tests_map_server_edit_gtest_map_server_edit_utest/fast:
+	$(MAKE) -f map_server_edit/CMakeFiles/run_tests_map_server_edit_gtest_map_server_edit_utest.dir/build.make map_server_edit/CMakeFiles/run_tests_map_server_edit_gtest_map_server_edit_utest.dir/build
+.PHONY : run_tests_map_server_edit_gtest_map_server_edit_utest/fast
+
+#=============================================================================
+# Target rules for targets named run_tests_map_server_edit_rostest
+
+# Build rule for target.
+run_tests_map_server_edit_rostest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 run_tests_map_server_edit_rostest
+.PHONY : run_tests_map_server_edit_rostest
+
+# fast build rule for target.
+run_tests_map_server_edit_rostest/fast:
+	$(MAKE) -f map_server_edit/CMakeFiles/run_tests_map_server_edit_rostest.dir/build.make map_server_edit/CMakeFiles/run_tests_map_server_edit_rostest.dir/build
+.PHONY : run_tests_map_server_edit_rostest/fast
+
+#=============================================================================
+# Target rules for targets named run_tests_map_server_edit_rostest_test_rtest.xml
+
+# Build rule for target.
+run_tests_map_server_edit_rostest_test_rtest.xml: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 run_tests_map_server_edit_rostest_test_rtest.xml
+.PHONY : run_tests_map_server_edit_rostest_test_rtest.xml
+
+# fast build rule for target.
+run_tests_map_server_edit_rostest_test_rtest.xml/fast:
+	$(MAKE) -f map_server_edit/CMakeFiles/run_tests_map_server_edit_rostest_test_rtest.xml.dir/build.make map_server_edit/CMakeFiles/run_tests_map_server_edit_rostest_test_rtest.xml.dir/build
+.PHONY : run_tests_map_server_edit_rostest_test_rtest.xml/fast
+
+#=============================================================================
 # Target rules for targets named control_msgs_generate_messages_cpp
 
 # Build rule for target.
@@ -2423,6 +2631,19 @@ move_pick: cmake_check_build_system
 move_pick/fast:
 	$(MAKE) -f mobile_manipulation/CMakeFiles/move_pick.dir/build.make mobile_manipulation/CMakeFiles/move_pick.dir/build
 .PHONY : move_pick/fast
+
+#=============================================================================
+# Target rules for targets named nav_goal_publisher
+
+# Build rule for target.
+nav_goal_publisher: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 nav_goal_publisher
+.PHONY : nav_goal_publisher
+
+# fast build rule for target.
+nav_goal_publisher/fast:
+	$(MAKE) -f mobile_manipulation/CMakeFiles/nav_goal_publisher.dir/build.make mobile_manipulation/CMakeFiles/nav_goal_publisher.dir/build
+.PHONY : nav_goal_publisher/fast
 
 #=============================================================================
 # Target rules for targets named teleop_manip
@@ -3069,6 +3290,22 @@ help:
 	@echo "... kinect2_calibration"
 	@echo "... additional_files_kinect2_viewer"
 	@echo "... kinect2_viewer"
+	@echo "... _run_tests_map_server_edit"
+	@echo "... _run_tests_map_server_edit_gtest"
+	@echo "... _run_tests_map_server_edit_gtest_map_server_edit_utest"
+	@echo "... _run_tests_map_server_edit_rostest"
+	@echo "... _run_tests_map_server_edit_rostest_test_rtest.xml"
+	@echo "... clean_test_results_map_server_edit"
+	@echo "... map_server_edit"
+	@echo "... map_server_edit-map_saver_edit"
+	@echo "... map_server_edit_image_loader"
+	@echo "... map_server_edit_utest"
+	@echo "... rtest"
+	@echo "... run_tests_map_server_edit"
+	@echo "... run_tests_map_server_edit_gtest"
+	@echo "... run_tests_map_server_edit_gtest_map_server_edit_utest"
+	@echo "... run_tests_map_server_edit_rostest"
+	@echo "... run_tests_map_server_edit_rostest_test_rtest.xml"
 	@echo "... control_msgs_generate_messages_cpp"
 	@echo "... control_msgs_generate_messages_lisp"
 	@echo "... control_msgs_generate_messages_py"
@@ -3080,6 +3317,7 @@ help:
 	@echo "... mobile_manipulation_genlisp"
 	@echo "... mobile_manipulation_genpy"
 	@echo "... move_pick"
+	@echo "... nav_goal_publisher"
 	@echo "... teleop_manip"
 	@echo "... trajectory_msgs_generate_messages_cpp"
 	@echo "... trajectory_msgs_generate_messages_lisp"

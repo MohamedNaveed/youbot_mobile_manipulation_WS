@@ -304,6 +304,20 @@ move_pick/fast:
 .PHONY : move_pick/fast
 
 # Convenience name for target.
+mobile_manipulation/CMakeFiles/nav_goal_publisher.dir/rule:
+	cd /home/ros/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mobile_manipulation/CMakeFiles/nav_goal_publisher.dir/rule
+.PHONY : mobile_manipulation/CMakeFiles/nav_goal_publisher.dir/rule
+
+# Convenience name for target.
+nav_goal_publisher: mobile_manipulation/CMakeFiles/nav_goal_publisher.dir/rule
+.PHONY : nav_goal_publisher
+
+# fast build rule for target.
+nav_goal_publisher/fast:
+	cd /home/ros/catkin_ws/build && $(MAKE) -f mobile_manipulation/CMakeFiles/nav_goal_publisher.dir/build.make mobile_manipulation/CMakeFiles/nav_goal_publisher.dir/build
+.PHONY : nav_goal_publisher/fast
+
+# Convenience name for target.
 mobile_manipulation/CMakeFiles/teleop_manip.dir/rule:
 	cd /home/ros/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mobile_manipulation/CMakeFiles/teleop_manip.dir/rule
 .PHONY : mobile_manipulation/CMakeFiles/teleop_manip.dir/rule
@@ -383,6 +397,30 @@ src/move_pick.cpp.s:
 	cd /home/ros/catkin_ws/build && $(MAKE) -f mobile_manipulation/CMakeFiles/move_pick.dir/build.make mobile_manipulation/CMakeFiles/move_pick.dir/src/move_pick.cpp.s
 .PHONY : src/move_pick.cpp.s
 
+src/nav_goal_publisher.o: src/nav_goal_publisher.cpp.o
+.PHONY : src/nav_goal_publisher.o
+
+# target to build an object file
+src/nav_goal_publisher.cpp.o:
+	cd /home/ros/catkin_ws/build && $(MAKE) -f mobile_manipulation/CMakeFiles/nav_goal_publisher.dir/build.make mobile_manipulation/CMakeFiles/nav_goal_publisher.dir/src/nav_goal_publisher.cpp.o
+.PHONY : src/nav_goal_publisher.cpp.o
+
+src/nav_goal_publisher.i: src/nav_goal_publisher.cpp.i
+.PHONY : src/nav_goal_publisher.i
+
+# target to preprocess a source file
+src/nav_goal_publisher.cpp.i:
+	cd /home/ros/catkin_ws/build && $(MAKE) -f mobile_manipulation/CMakeFiles/nav_goal_publisher.dir/build.make mobile_manipulation/CMakeFiles/nav_goal_publisher.dir/src/nav_goal_publisher.cpp.i
+.PHONY : src/nav_goal_publisher.cpp.i
+
+src/nav_goal_publisher.s: src/nav_goal_publisher.cpp.s
+.PHONY : src/nav_goal_publisher.s
+
+# target to generate assembly for a file
+src/nav_goal_publisher.cpp.s:
+	cd /home/ros/catkin_ws/build && $(MAKE) -f mobile_manipulation/CMakeFiles/nav_goal_publisher.dir/build.make mobile_manipulation/CMakeFiles/nav_goal_publisher.dir/src/nav_goal_publisher.cpp.s
+.PHONY : src/nav_goal_publisher.cpp.s
+
 src/teleop_manip.o: src/teleop_manip.cpp.o
 .PHONY : src/teleop_manip.o
 
@@ -429,6 +467,7 @@ help:
 	@echo "... mobile_manipulation_genlisp"
 	@echo "... mobile_manipulation_genpy"
 	@echo "... move_pick"
+	@echo "... nav_goal_publisher"
 	@echo "... rebuild_cache"
 	@echo "... teleop_manip"
 	@echo "... test"
@@ -438,6 +477,9 @@ help:
 	@echo "... src/move_pick.o"
 	@echo "... src/move_pick.i"
 	@echo "... src/move_pick.s"
+	@echo "... src/nav_goal_publisher.o"
+	@echo "... src/nav_goal_publisher.i"
+	@echo "... src/nav_goal_publisher.s"
 	@echo "... src/teleop_manip.o"
 	@echo "... src/teleop_manip.i"
 	@echo "... src/teleop_manip.s"

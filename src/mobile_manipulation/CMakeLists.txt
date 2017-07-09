@@ -60,7 +60,7 @@ find_package(catkin REQUIRED COMPONENTS
 generate_messages(
 	DEPENDENCIES
 	std_msgs
-		geometry_msgs		
+		geometry_msgs
 
 )
 ## Generate services in the 'srv' folder
@@ -147,6 +147,7 @@ include_directories(
 # add_executable(${PROJECT_NAME}_node src/mobile_manipulation_node.cpp)
 add_executable(teleop_manip src/teleop_manip.cpp)
 add_executable(move_pick src/move_pick.cpp)
+add_executable(nav_goal_publisher src/nav_goal_publisher.cpp)
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
 ## target back to the shorter version for ease of user use
@@ -163,6 +164,7 @@ add_executable(move_pick src/move_pick.cpp)
 # )
 target_link_libraries(teleop_manip ${catkin_LIBRARIES})
 target_link_libraries(move_pick ${catkin_LIBRARIES})
+target_link_libraries(nav_goal_publisher ${catkin_LIBRARIES})
 #############
 ## Install ##
 #############
