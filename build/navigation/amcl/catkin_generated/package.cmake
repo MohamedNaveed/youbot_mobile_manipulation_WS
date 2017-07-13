@@ -1,5 +1,5 @@
 set(_CATKIN_CURRENT_PACKAGE "amcl")
-set(amcl_VERSION "1.14.0")
+set(amcl_VERSION "1.12.13")
 set(amcl_MAINTAINER "David V. Lu!! <davidvlu@gmail.com>, Michael Ferguson <mferguson@fetchrobotics.com>")
 set(amcl_PACKAGE_FORMAT "1")
 set(amcl_BUILD_DEPENDS "rosbag" "dynamic_reconfigure" "message_filters" "nav_msgs" "roscpp" "rostest" "std_srvs" "tf")

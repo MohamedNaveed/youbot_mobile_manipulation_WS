@@ -5,4 +5,4 @@ PROJECT_CATKIN_DEPENDS = "roscpp;dynamic_reconfigure;message_generation;tf;plugi
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "-lbase_local_planner;-ltrajectory_planner_ros".split(';') if "-lbase_local_planner;-ltrajectory_planner_ros" != "" else []
 PROJECT_NAME = "base_local_planner"
 PROJECT_SPACE_DIR = "/home/ros/catkin_ws/devel"
-PROJECT_VERSION = "1.14.0"
+PROJECT_VERSION = "1.12.13"

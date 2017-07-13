@@ -5,4 +5,4 @@ PROJECT_CATKIN_DEPENDS = "roscpp;pluginlib".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "-lrotate_recovery".split(';') if "-lrotate_recovery" != "" else []
 PROJECT_NAME = "rotate_recovery"
 PROJECT_SPACE_DIR = "/home/ros/catkin_ws/devel"
-PROJECT_VERSION = "1.14.0"
+PROJECT_VERSION = "1.12.13"

@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(costmap_2d_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "/home/ros/catkin_ws/devel/include;/home/ros/catkin_ws/src/navigation/costmap_2d/include;/usr/include/pcl-1.7;/usr/include/eigen3;/usr/include;/usr/include/ni;/usr/include/vtk-5.8 " STREQUAL " ")
+if(NOT "/home/ros/catkin_ws/devel/include;/home/ros/catkin_ws/src/navigation/costmap_2d/include;/usr/include/eigen3;/usr/include/pcl-1.7;/usr/include;/usr/include/ni;/usr/include/vtk-5.8 " STREQUAL " ")
   set(costmap_2d_INCLUDE_DIRS "")
-  set(_include_dirs "/home/ros/catkin_ws/devel/include;/home/ros/catkin_ws/src/navigation/costmap_2d/include;/usr/include/pcl-1.7;/usr/include/eigen3;/usr/include;/usr/include/ni;/usr/include/vtk-5.8")
+  set(_include_dirs "/home/ros/catkin_ws/devel/include;/home/ros/catkin_ws/src/navigation/costmap_2d/include;/usr/include/eigen3;/usr/include/pcl-1.7;/usr/include;/usr/include/ni;/usr/include/vtk-5.8")
   foreach(idir ${_include_dirs})
     if(IS_ABSOLUTE ${idir} AND IS_DIRECTORY ${idir})
       set(include ${idir})
@@ -153,7 +153,7 @@ foreach(t ${costmap_2d_EXPORTED_TARGETS})
   endif()
 endforeach()
 
-set(depends "dynamic_reconfigure;geometry_msgs;laser_geometry;map_msgs;message_filters;message_runtime;nav_msgs;pcl_ros;pluginlib;roscpp;sensor_msgs;std_msgs;tf;visualization_msgs;voxel_grid")
+set(depends "dynamic_reconfigure;geometry_msgs;laser_geometry;map_msgs;message_filters;message_runtime;nav_msgs;pcl_ros;pluginlib;roscpp;sensor_msgs;std_msgs;tf;voxel_grid")
 foreach(depend ${depends})
   string(REPLACE " " ";" depend_list ${depend})
   # the package name of the dependency must be kept in a unique variable so that it is not overwritten in recursive calls

@@ -5,4 +5,4 @@ PROJECT_CATKIN_DEPENDS = "costmap_2d;nav_core;pluginlib;roscpp;tf".replace(';', 
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "-lclear_costmap_recovery".split(';') if "-lclear_costmap_recovery" != "" else []
 PROJECT_NAME = "clear_costmap_recovery"
 PROJECT_SPACE_DIR = "/home/ros/catkin_ws/install"
-PROJECT_VERSION = "1.14.0"
+PROJECT_VERSION = "1.12.13"

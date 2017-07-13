@@ -5,4 +5,4 @@ PROJECT_CATKIN_DEPENDS = "nav_core;roscpp;pluginlib".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "-lnavfn".split(';') if "-lnavfn" != "" else []
 PROJECT_NAME = "navfn"
 PROJECT_SPACE_DIR = "/home/ros/catkin_ws/devel"
-PROJECT_VERSION = "1.14.0"
+PROJECT_VERSION = "1.12.13"

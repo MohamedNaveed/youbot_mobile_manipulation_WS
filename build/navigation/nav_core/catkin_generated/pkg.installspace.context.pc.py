@@ -5,4 +5,4 @@ PROJECT_CATKIN_DEPENDS = "std_msgs;geometry_msgs;tf;costmap_2d".replace(';', ' '
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "".split(';') if "" != "" else []
 PROJECT_NAME = "nav_core"
 PROJECT_SPACE_DIR = "/home/ros/catkin_ws/install"
-PROJECT_VERSION = "1.14.0"
+PROJECT_VERSION = "1.12.13"

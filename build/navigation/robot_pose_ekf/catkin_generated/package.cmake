@@ -1,5 +1,5 @@
 set(_CATKIN_CURRENT_PACKAGE "robot_pose_ekf")
-set(robot_pose_ekf_VERSION "1.14.0")
+set(robot_pose_ekf_VERSION "1.12.13")
 set(robot_pose_ekf_MAINTAINER "David V. Lu!! <davidvlu@gmail.com>, Michael Ferguson <mferguson@fetchrobotics.com>")
 set(robot_pose_ekf_PACKAGE_FORMAT "1")
 set(robot_pose_ekf_BUILD_DEPENDS "roscpp" "rostest" "bfl" "std_msgs" "geometry_msgs" "sensor_msgs" "nav_msgs" "tf")

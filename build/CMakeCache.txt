@@ -1450,7 +1450,7 @@ _CATKIN_GTEST_INCLUDE:FILEPATH=/usr/include/gtest/gtest.h
 _CATKIN_GTEST_SRC:FILEPATH=/usr/src/gtest/src/gtest.cc
 
 //Path to a file.
-_file_name:FILEPATH=/home/ros/catkin_ws/src/map_server_edit/test/rtest.xml
+_file_name:FILEPATH=/home/ros/catkin_ws/src/navigation/clear_costmap_recovery/test/clear_tests.launch
 
 //The directory containing a CMake configuration file for actionlib.
 actionlib_DIR:PATH=/opt/ros/indigo/share/actionlib/cmake
@@ -1626,6 +1626,9 @@ fake_localization_BINARY_DIR:STATIC=/home/ros/catkin_ws/build/navigation/fake_lo
 //Value Computed by CMake
 fake_localization_SOURCE_DIR:STATIC=/home/ros/catkin_ws/src/navigation/fake_localization
 
+//The directory containing a CMake configuration file for filters.
+filters_DIR:PATH=/opt/ros/indigo/share/filters/cmake
+
 //Dependencies for the target
 filters_ectomodule_LIB_DEPENDS:STATIC=general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/usr/lib/x86_64-linux-gnu/libboost_serialization.so;general;/usr/lib/x86_64-linux-gnu/libpython2.7.so;general;/opt/ros/indigo/lib/libecto.so;general;/usr/lib/x86_64-linux-gnu/libpython2.7.so;general;opencv_videostab;general;opencv_video;general;opencv_superres;general;opencv_stitching;general;opencv_photo;general;opencv_ocl;general;opencv_objdetect;general;opencv_ml;general;opencv_legacy;general;opencv_imgproc;general;opencv_highgui;general;opencv_gpu;general;opencv_flann;general;opencv_features2d;general;opencv_core;general;opencv_contrib;general;opencv_calib3d;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/usr/lib/x86_64-linux-gnu/libboost_serialization.so;
 
@@ -1705,6 +1708,9 @@ iai_kinect2_SOURCE_DIR:STATIC=/home/ros/catkin_ws/src/iai_kinect2/iai_kinect2
 //The directory containing a CMake configuration file for image_geometry.
 image_geometry_DIR:PATH=/opt/ros/indigo/share/image_geometry/cmake
 
+//Dependencies for the target
+image_loader_LIB_DEPENDS:STATIC=general;SDL;general;SDL_image;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;
+
 //The directory containing a CMake configuration file for image_transport.
 image_transport_DIR:PATH=/opt/ros/indigo/share/image_transport/cmake
 
@@ -1768,6 +1774,12 @@ kinect2_viewer_BINARY_DIR:STATIC=/home/ros/catkin_ws/build/iai_kinect2/kinect2_v
 //Value Computed by CMake
 kinect2_viewer_SOURCE_DIR:STATIC=/home/ros/catkin_ws/src/iai_kinect2/kinect2_viewer
 
+//Value Computed by CMake
+laser_assembler_BINARY_DIR:STATIC=/home/ros/catkin_ws/build/laser_assembler
+
+//Value Computed by CMake
+laser_assembler_SOURCE_DIR:STATIC=/home/ros/catkin_ws/src/laser_assembler
+
 //The directory containing a CMake configuration file for laser_geometry.
 laser_geometry_DIR:PATH=/opt/ros/indigo/share/laser_geometry/cmake
 
@@ -1822,11 +1834,20 @@ mobile_manipulation_SOURCE_DIR:STATIC=/home/ros/catkin_ws/src/mobile_manipulatio
 //Value Computed by CMake
 move_base_BINARY_DIR:STATIC=/home/ros/catkin_ws/build/navigation/move_base
 
+//Dependencies for the target
+move_base_LIB_DEPENDS:STATIC=general;costmap_2d;general;layers;general;/opt/ros/indigo/lib/liblaser_geometry.so;general;/opt/ros/indigo/lib/libpcl_ros_filters.so;general;/opt/ros/indigo/lib/libpcl_ros_io.so;general;/opt/ros/indigo/lib/libpcl_ros_tf.so;optimized;/usr/lib/libpcl_common.so;debug;/usr/lib/libpcl_common.so;optimized;/usr/lib/libpcl_octree.so;debug;/usr/lib/libpcl_octree.so;optimized;/usr/lib/libpcl_io.so;debug;/usr/lib/libpcl_io.so;optimized;/usr/lib/libpcl_kdtree.so;debug;/usr/lib/libpcl_kdtree.so;optimized;/usr/lib/libpcl_search.so;debug;/usr/lib/libpcl_search.so;optimized;/usr/lib/libpcl_sample_consensus.so;debug;/usr/lib/libpcl_sample_consensus.so;optimized;/usr/lib/libpcl_filters.so;debug;/usr/lib/libpcl_filters.so;optimized;/usr/lib/libpcl_features.so;debug;/usr/lib/libpcl_features.so;optimized;/usr/lib/libpcl_keypoints.so;debug;/usr/lib/libpcl_keypoints.so;optimized;/usr/lib/libpcl_segmentation.so;debug;/usr/lib/libpcl_segmentation.so;optimized;/usr/lib/libpcl_visualization.so;debug;/usr/lib/libpcl_visualization.so;optimized;/usr/lib/libpcl_outofcore.so;debug;/usr/lib/libpcl_outofcore.so;optimized;/usr/lib/libpcl_registration.so;debug;/usr/lib/libpcl_registration.so;optimized;/usr/lib/libpcl_recognition.so;debug;/usr/lib/libpcl_recognition.so;optimized;/usr/lib/libpcl_surface.so;debug;/usr/lib/libpcl_surface.so;optimized;/usr/lib/libpcl_people.so;debug;/usr/lib/libpcl_people.so;optimized;/usr/lib/libpcl_tracking.so;debug;/usr/lib/libpcl_tracking.so;optimized;/usr/lib/libpcl_apps.so;debug;/usr/lib/libpcl_apps.so;general;/usr/lib/x86_64-linux-gnu/libboost_iostreams.so;general;/usr/lib/x86_64-linux-gnu/libboost_serialization.so;optimized;/usr/lib/x86_64-linux-gnu/libqhull.so;debug;/usr/lib/x86_64-linux-gnu/libqhull.so;general;/usr/lib/libOpenNI.so;optimized;/usr/lib/x86_64-linux-gnu/libflann_cpp_s.a;debug;/usr/lib/x86_64-linux-gnu/libflann_cpp_s.a;general;/usr/lib/libvtkCommon.so.5.8.0;general;/usr/lib/libvtkRendering.so.5.8.0;general;/usr/lib/libvtkHybrid.so.5.8.0;general;/usr/lib/libvtkCharts.so.5.8.0;general;/opt/ros/indigo/lib/libdynamic_reconfigure_config_init_mutex.so;general;/opt/ros/indigo/lib/libnodeletlib.so;general;/opt/ros/indigo/lib/libbondcpp.so;general;/usr/lib/x86_64-linux-gnu/libuuid.so;general;/opt/ros/indigo/lib/librosbag.so;general;/opt/ros/indigo/lib/librosbag_storage.so;general;/opt/ros/indigo/lib/libroslz4.so;general;/usr/lib/x86_64-linux-gnu/liblz4.so;general;/opt/ros/indigo/lib/libtopic_tools.so;general;/opt/ros/indigo/lib/libclass_loader.so;general;/usr/lib/libPocoFoundation.so;general;/usr/lib/x86_64-linux-gnu/libdl.so;general;/opt/ros/indigo/lib/libroslib.so;general;/opt/ros/indigo/lib/librospack.so;general;/usr/lib/x86_64-linux-gnu/libpython2.7.so;general;/usr/lib/x86_64-linux-gnu/libboost_program_options.so;general;/usr/lib/x86_64-linux-gnu/libtinyxml.so;general;voxel_grid;general;/opt/ros/indigo/lib/libtf.so;general;/opt/ros/indigo/lib/libtf2_ros.so;general;/opt/ros/indigo/lib/libactionlib.so;general;/opt/ros/indigo/lib/libmessage_filters.so;general;/opt/ros/indigo/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_signals.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/opt/ros/indigo/lib/libxmlrpcpp.so;general;/opt/ros/indigo/lib/libtf2.so;general;/opt/ros/indigo/lib/libroscpp_serialization.so;general;/opt/ros/indigo/lib/librosconsole.so;general;/opt/ros/indigo/lib/librosconsole_log4cxx.so;general;/opt/ros/indigo/lib/librosconsole_backend_interface.so;general;/usr/lib/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/indigo/lib/librostime.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/opt/ros/indigo/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so;
+
 //Value Computed by CMake
 move_base_SOURCE_DIR:STATIC=/home/ros/catkin_ws/src/navigation/move_base
 
+//Value Computed by CMake
+move_base_msgs_BINARY_DIR:STATIC=/home/ros/catkin_ws/build/navigation/move_base_msgs
+
 //The directory containing a CMake configuration file for move_base_msgs.
-move_base_msgs_DIR:PATH=move_base_msgs_DIR-NOTFOUND
+move_base_msgs_DIR:PATH=/home/ros/catkin_ws/devel/share/move_base_msgs/cmake
+
+//Value Computed by CMake
+move_base_msgs_SOURCE_DIR:STATIC=/home/ros/catkin_ws/src/navigation/move_base_msgs
 
 //Value Computed by CMake
 move_slow_and_clear_BINARY_DIR:STATIC=/home/ros/catkin_ws/build/navigation/move_slow_and_clear
@@ -2353,26 +2374,36 @@ ASSIMP_assimp_INCLUDEDIR:INTERNAL=
 ASSIMP_assimp_LIBDIR:INTERNAL=
 ASSIMP_assimp_PREFIX:INTERNAL=
 ASSIMP_assimp_VERSION:INTERNAL=
-BFL_CFLAGS:INTERNAL=
+BFL_CFLAGS:INTERNAL=-I/opt/ros/indigo/include/bfl;-I
 BFL_CFLAGS_I:INTERNAL=
 BFL_CFLAGS_OTHER:INTERNAL=
-BFL_FOUND:INTERNAL=
-BFL_INCLUDEDIR:INTERNAL=
-BFL_LIBDIR:INTERNAL=
+BFL_FOUND:INTERNAL=1
+BFL_INCLUDEDIR:INTERNAL=/opt/ros/indigo/include/bfl
+BFL_INCLUDE_DIRS:INTERNAL=/opt/ros/indigo/include/bfl
+BFL_LDFLAGS:INTERNAL=-L/opt/ros/indigo/lib;-lorocos-bfl
+BFL_LDFLAGS_OTHER:INTERNAL=
+BFL_LIBDIR:INTERNAL=/opt/ros/indigo/lib
+BFL_LIBRARIES:INTERNAL=orocos-bfl
+BFL_LIBRARY_DIRS:INTERNAL=/opt/ros/indigo/lib
 BFL_LIBS:INTERNAL=
 BFL_LIBS_L:INTERNAL=
 BFL_LIBS_OTHER:INTERNAL=
 BFL_LIBS_PATHS:INTERNAL=
-BFL_PREFIX:INTERNAL=
-BFL_STATIC_CFLAGS:INTERNAL=
+BFL_PREFIX:INTERNAL=/opt/ros/indigo
+BFL_STATIC_CFLAGS:INTERNAL=-I/opt/ros/indigo/include/bfl;-I
 BFL_STATIC_CFLAGS_I:INTERNAL=
 BFL_STATIC_CFLAGS_OTHER:INTERNAL=
+BFL_STATIC_INCLUDE_DIRS:INTERNAL=/opt/ros/indigo/include/bfl
+BFL_STATIC_LDFLAGS:INTERNAL=-L/opt/ros/indigo/lib;-lorocos-bfl
+BFL_STATIC_LDFLAGS_OTHER:INTERNAL=
 BFL_STATIC_LIBDIR:INTERNAL=
+BFL_STATIC_LIBRARIES:INTERNAL=orocos-bfl
+BFL_STATIC_LIBRARY_DIRS:INTERNAL=/opt/ros/indigo/lib
 BFL_STATIC_LIBS:INTERNAL=
 BFL_STATIC_LIBS_L:INTERNAL=
 BFL_STATIC_LIBS_OTHER:INTERNAL=
 BFL_STATIC_LIBS_PATHS:INTERNAL=
-BFL_VERSION:INTERNAL=
+BFL_VERSION:INTERNAL=0.7.0
 BFL_orocos-bfl_INCLUDEDIR:INTERNAL=
 BFL_orocos-bfl_LIBDIR:INTERNAL=
 BFL_orocos-bfl_PREFIX:INTERNAL=
@@ -2526,7 +2557,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=65
+CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=84
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -2698,6 +2729,40 @@ GTEST_MAIN_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
 NAVFN_HAVE_FLTK:INTERNAL=1
 //Have include pgm.h
 NAVFN_HAVE_NETPBM:INTERNAL=
+NEW_YAMLCPP_CFLAGS:INTERNAL=
+NEW_YAMLCPP_CFLAGS_I:INTERNAL=
+NEW_YAMLCPP_CFLAGS_OTHER:INTERNAL=
+NEW_YAMLCPP_FOUND:INTERNAL=1
+NEW_YAMLCPP_INCLUDEDIR:INTERNAL=/usr/include
+NEW_YAMLCPP_INCLUDE_DIRS:INTERNAL=
+NEW_YAMLCPP_LDFLAGS:INTERNAL=-lyaml-cpp
+NEW_YAMLCPP_LDFLAGS_OTHER:INTERNAL=
+NEW_YAMLCPP_LIBDIR:INTERNAL=
+NEW_YAMLCPP_LIBRARIES:INTERNAL=yaml-cpp
+NEW_YAMLCPP_LIBRARY_DIRS:INTERNAL=
+NEW_YAMLCPP_LIBS:INTERNAL=
+NEW_YAMLCPP_LIBS_L:INTERNAL=
+NEW_YAMLCPP_LIBS_OTHER:INTERNAL=
+NEW_YAMLCPP_LIBS_PATHS:INTERNAL=
+NEW_YAMLCPP_PREFIX:INTERNAL=/usr
+NEW_YAMLCPP_STATIC_CFLAGS:INTERNAL=
+NEW_YAMLCPP_STATIC_CFLAGS_I:INTERNAL=
+NEW_YAMLCPP_STATIC_CFLAGS_OTHER:INTERNAL=
+NEW_YAMLCPP_STATIC_INCLUDE_DIRS:INTERNAL=
+NEW_YAMLCPP_STATIC_LDFLAGS:INTERNAL=-lyaml-cpp
+NEW_YAMLCPP_STATIC_LDFLAGS_OTHER:INTERNAL=
+NEW_YAMLCPP_STATIC_LIBDIR:INTERNAL=
+NEW_YAMLCPP_STATIC_LIBRARIES:INTERNAL=yaml-cpp
+NEW_YAMLCPP_STATIC_LIBRARY_DIRS:INTERNAL=
+NEW_YAMLCPP_STATIC_LIBS:INTERNAL=
+NEW_YAMLCPP_STATIC_LIBS_L:INTERNAL=
+NEW_YAMLCPP_STATIC_LIBS_OTHER:INTERNAL=
+NEW_YAMLCPP_STATIC_LIBS_PATHS:INTERNAL=
+NEW_YAMLCPP_VERSION:INTERNAL=0.5.1
+NEW_YAMLCPP_yaml-cpp_INCLUDEDIR:INTERNAL=
+NEW_YAMLCPP_yaml-cpp_LIBDIR:INTERNAL=
+NEW_YAMLCPP_yaml-cpp_PREFIX:INTERNAL=
+NEW_YAMLCPP_yaml-cpp_VERSION:INTERNAL=
 //Have symbol CL_VERSION_1_0
 OPENCL_VERSION_1_0:INTERNAL=
 //Have symbol CL_VERSION_1_1
@@ -3330,7 +3395,7 @@ Q_WS_X11:INTERNAL=1
 SDL_IMAGE_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: SDL_IMAGE_LIBRARY
 SDL_IMAGE_LIBRARY-ADVANCED:INTERNAL=1
-SDL_LIBRARY_TEMP:INTERNAL=/usr/lib/x86_64-linux-gnu/libSDLmain.a;/usr/lib/x86_64-linux-gnu/libSDL.so;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread
+SDL_LIBRARY_TEMP:INTERNAL=/usr/lib/x86_64-linux-gnu/libSDLmain.a;/usr/lib/x86_64-linux-gnu/libSDL.so;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread
 //File containing master sphinx projects list
 SPHINX_LIST:INTERNAL=/home/ros/catkin_ws/build/CMakeFiles/sphinx_projects.list
 //ADVANCED property for variable: V4R_3RDPARTY_LIB_DIR_DBG
@@ -3501,6 +3566,10 @@ YAMLCPP_yaml-cpp_INCLUDEDIR:INTERNAL=
 YAMLCPP_yaml-cpp_LIBDIR:INTERNAL=
 YAMLCPP_yaml-cpp_PREFIX:INTERNAL=
 YAMLCPP_yaml-cpp_VERSION:INTERNAL=
+//Last used BOOST_INCLUDEDIR value.
+_BOOST_INCLUDEDIR_LAST:INTERNAL=/usr/include
+//Last used Boost_ADDITIONAL_VERSIONS value.
+_Boost_ADDITIONAL_VERSIONS_LAST:INTERNAL=1.47;1.47.0
 //Components requested for this build tree.
 _Boost_COMPONENTS_SEARCHED:INTERNAL=date_time;filesystem;iostreams;python;regex;serialization;signals;system;thread
 //Last used Boost_INCLUDE_DIR value.
@@ -3511,6 +3580,7 @@ _Boost_LIBRARY_DIR_LAST:INTERNAL=/usr/lib/x86_64-linux-gnu
 _Boost_USE_MULTITHREADED_LAST:INTERNAL=TRUE
 __pkg_config_checked_ASSIMP:INTERNAL=1
 __pkg_config_checked_BFL:INTERNAL=1
+__pkg_config_checked_NEW_YAMLCPP:INTERNAL=1
 __pkg_config_checked_PC_EIGEN:INTERNAL=1
 __pkg_config_checked_PC_FLANN:INTERNAL=1
 __pkg_config_checked_PC_OPENNI:INTERNAL=1

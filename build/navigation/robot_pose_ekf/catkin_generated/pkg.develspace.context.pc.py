@@ -5,4 +5,4 @@ PROJECT_CATKIN_DEPENDS = "roscpp".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "".split(';') if "" != "" else []
 PROJECT_NAME = "robot_pose_ekf"
 PROJECT_SPACE_DIR = "/home/ros/catkin_ws/devel"
-PROJECT_VERSION = "1.14.0"
+PROJECT_VERSION = "1.12.13"

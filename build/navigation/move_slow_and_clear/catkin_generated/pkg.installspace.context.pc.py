@@ -5,4 +5,4 @@ PROJECT_CATKIN_DEPENDS = "roscpp;pluginlib;nav_core".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "-lmove_slow_and_clear".split(';') if "-lmove_slow_and_clear" != "" else []
 PROJECT_NAME = "move_slow_and_clear"
 PROJECT_SPACE_DIR = "/home/ros/catkin_ws/install"
-PROJECT_VERSION = "1.14.0"
+PROJECT_VERSION = "1.12.13"

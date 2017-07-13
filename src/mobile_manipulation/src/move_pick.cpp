@@ -166,20 +166,24 @@ int main(int argc, char** argv)
 
   if(T_obj_J2(0,3)>-.22 && T_obj_J2(1,3)>.20)//prevent collision with ground and lidar
   {
-    move_manip_js(time_m, step_m, rho3, T_obj_J2(0,3)+.05*sin(-Beta), Beta, rho2-.05*cos(-Beta), rad(rho1), Theta_5);//move arm to goal in desired time give data in m //.1 added to compensate for height of wheel kept below
+    move_manip_js(time_m, step_m, rho3, T_obj_J2(0,3)+.07*sin(-Beta), Beta, rho2-.07*cos(-Beta), rad(rho1), Theta_5);//move arm to goal in desired time give data in m //.1 added to compensate for height of wheel kept below
     //z and rho2 are offset to stop at distance from object -Theta_5-0.55
     ros::Duration(2).sleep();
     cout<<"Moving in CS"<<endl;
     move_manip_cs(2, 2*200, rho3, T_obj_J2(0,3), Beta, rho2, rad(rho1), Theta_5);
     //ros::Duration(1).sleep();
     close_gripper();
-    ros::Duration(2).sleep();
+    ros::Duration(4).sleep();
   }
   else
     cout<<"Warning: Arm collision predicted!"<<endl;
   transform_frame_3();
   cout<<"Range_out:"<<range_out<<endl;
   cout<<"Theta 5:"<<Theta_5<<endl;
+
+  moveArm(rad(0), rad(-64), rad(145), rad(-101), rad(3));
+	ros::Duration(3).sleep();//home
+
   while(ros::ok())
   {
     br.sendTransform(tf::StampedTransform(transform1, ros::Time::now(),"kinect2_rgb_optical_frame","object"));

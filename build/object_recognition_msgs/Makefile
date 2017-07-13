@@ -346,90 +346,6 @@ _object_recognition_msgs_generate_messages_check_deps_TableArray/fast:
 .PHONY : _object_recognition_msgs_generate_messages_check_deps_TableArray/fast
 
 # Convenience name for target.
-object_recognition_msgs/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/rule:
-	cd /home/ros/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 object_recognition_msgs/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/rule
-.PHONY : object_recognition_msgs/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-actionlib_msgs_generate_messages_cpp: object_recognition_msgs/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/rule
-.PHONY : actionlib_msgs_generate_messages_cpp
-
-# fast build rule for target.
-actionlib_msgs_generate_messages_cpp/fast:
-	cd /home/ros/catkin_ws/build && $(MAKE) -f object_recognition_msgs/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/build.make object_recognition_msgs/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/build
-.PHONY : actionlib_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-object_recognition_msgs/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule:
-	cd /home/ros/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 object_recognition_msgs/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule
-.PHONY : object_recognition_msgs/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-actionlib_msgs_generate_messages_lisp: object_recognition_msgs/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule
-.PHONY : actionlib_msgs_generate_messages_lisp
-
-# fast build rule for target.
-actionlib_msgs_generate_messages_lisp/fast:
-	cd /home/ros/catkin_ws/build && $(MAKE) -f object_recognition_msgs/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/build.make object_recognition_msgs/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/build
-.PHONY : actionlib_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-object_recognition_msgs/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule:
-	cd /home/ros/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 object_recognition_msgs/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule
-.PHONY : object_recognition_msgs/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-actionlib_msgs_generate_messages_py: object_recognition_msgs/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule
-.PHONY : actionlib_msgs_generate_messages_py
-
-# fast build rule for target.
-actionlib_msgs_generate_messages_py/fast:
-	cd /home/ros/catkin_ws/build && $(MAKE) -f object_recognition_msgs/CMakeFiles/actionlib_msgs_generate_messages_py.dir/build.make object_recognition_msgs/CMakeFiles/actionlib_msgs_generate_messages_py.dir/build
-.PHONY : actionlib_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-object_recognition_msgs/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule:
-	cd /home/ros/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 object_recognition_msgs/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
-.PHONY : object_recognition_msgs/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-geometry_msgs_generate_messages_cpp: object_recognition_msgs/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
-.PHONY : geometry_msgs_generate_messages_cpp
-
-# fast build rule for target.
-geometry_msgs_generate_messages_cpp/fast:
-	cd /home/ros/catkin_ws/build && $(MAKE) -f object_recognition_msgs/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make object_recognition_msgs/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
-.PHONY : geometry_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-object_recognition_msgs/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule:
-	cd /home/ros/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 object_recognition_msgs/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
-.PHONY : object_recognition_msgs/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-geometry_msgs_generate_messages_lisp: object_recognition_msgs/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
-.PHONY : geometry_msgs_generate_messages_lisp
-
-# fast build rule for target.
-geometry_msgs_generate_messages_lisp/fast:
-	cd /home/ros/catkin_ws/build && $(MAKE) -f object_recognition_msgs/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make object_recognition_msgs/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build
-.PHONY : geometry_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-object_recognition_msgs/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule:
-	cd /home/ros/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 object_recognition_msgs/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
-.PHONY : object_recognition_msgs/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-geometry_msgs_generate_messages_py: object_recognition_msgs/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
-.PHONY : geometry_msgs_generate_messages_py
-
-# fast build rule for target.
-geometry_msgs_generate_messages_py/fast:
-	cd /home/ros/catkin_ws/build && $(MAKE) -f object_recognition_msgs/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make object_recognition_msgs/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
-.PHONY : geometry_msgs_generate_messages_py/fast
-
-# Convenience name for target.
 object_recognition_msgs/CMakeFiles/object_recognition_msgs_gencpp.dir/rule:
 	cd /home/ros/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 object_recognition_msgs/CMakeFiles/object_recognition_msgs_gencpp.dir/rule
 .PHONY : object_recognition_msgs/CMakeFiles/object_recognition_msgs_gencpp.dir/rule
@@ -611,48 +527,6 @@ shape_msgs_generate_messages_py/fast:
 	cd /home/ros/catkin_ws/build && $(MAKE) -f object_recognition_msgs/CMakeFiles/shape_msgs_generate_messages_py.dir/build.make object_recognition_msgs/CMakeFiles/shape_msgs_generate_messages_py.dir/build
 .PHONY : shape_msgs_generate_messages_py/fast
 
-# Convenience name for target.
-object_recognition_msgs/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule:
-	cd /home/ros/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 object_recognition_msgs/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-.PHONY : object_recognition_msgs/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_cpp: object_recognition_msgs/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-.PHONY : std_msgs_generate_messages_cpp
-
-# fast build rule for target.
-std_msgs_generate_messages_cpp/fast:
-	cd /home/ros/catkin_ws/build && $(MAKE) -f object_recognition_msgs/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make object_recognition_msgs/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
-.PHONY : std_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-object_recognition_msgs/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule:
-	cd /home/ros/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 object_recognition_msgs/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-.PHONY : object_recognition_msgs/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_lisp: object_recognition_msgs/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-.PHONY : std_msgs_generate_messages_lisp
-
-# fast build rule for target.
-std_msgs_generate_messages_lisp/fast:
-	cd /home/ros/catkin_ws/build && $(MAKE) -f object_recognition_msgs/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make object_recognition_msgs/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
-.PHONY : std_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-object_recognition_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/rule:
-	cd /home/ros/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 object_recognition_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-.PHONY : object_recognition_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_py: object_recognition_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-.PHONY : std_msgs_generate_messages_py
-
-# fast build rule for target.
-std_msgs_generate_messages_py/fast:
-	cd /home/ros/catkin_ws/build && $(MAKE) -f object_recognition_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/build.make object_recognition_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/build
-.PHONY : std_msgs_generate_messages_py/fast
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -673,13 +547,7 @@ help:
 	@echo "... _object_recognition_msgs_generate_messages_check_deps_RecognizedObjectArray"
 	@echo "... _object_recognition_msgs_generate_messages_check_deps_Table"
 	@echo "... _object_recognition_msgs_generate_messages_check_deps_TableArray"
-	@echo "... actionlib_msgs_generate_messages_cpp"
-	@echo "... actionlib_msgs_generate_messages_lisp"
-	@echo "... actionlib_msgs_generate_messages_py"
 	@echo "... edit_cache"
-	@echo "... geometry_msgs_generate_messages_cpp"
-	@echo "... geometry_msgs_generate_messages_lisp"
-	@echo "... geometry_msgs_generate_messages_py"
 	@echo "... install"
 	@echo "... install/local"
 	@echo "... install/strip"
@@ -698,9 +566,6 @@ help:
 	@echo "... shape_msgs_generate_messages_cpp"
 	@echo "... shape_msgs_generate_messages_lisp"
 	@echo "... shape_msgs_generate_messages_py"
-	@echo "... std_msgs_generate_messages_cpp"
-	@echo "... std_msgs_generate_messages_lisp"
-	@echo "... std_msgs_generate_messages_py"
 	@echo "... test"
 .PHONY : help
 

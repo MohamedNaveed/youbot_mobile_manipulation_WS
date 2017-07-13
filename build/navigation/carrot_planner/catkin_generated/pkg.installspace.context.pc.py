@@ -5,4 +5,4 @@ PROJECT_CATKIN_DEPENDS = "roscpp;pluginlib;costmap_2d;base_local_planner;nav_cor
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "-lcarrot_planner".split(';') if "-lcarrot_planner" != "" else []
 PROJECT_NAME = "carrot_planner"
 PROJECT_SPACE_DIR = "/home/ros/catkin_ws/install"
-PROJECT_VERSION = "1.14.0"
+PROJECT_VERSION = "1.12.13"

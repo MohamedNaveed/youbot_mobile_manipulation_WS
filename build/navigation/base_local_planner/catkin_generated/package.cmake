@@ -1,5 +1,5 @@
 set(_CATKIN_CURRENT_PACKAGE "base_local_planner")
-set(base_local_planner_VERSION "1.14.0")
+set(base_local_planner_VERSION "1.12.13")
 set(base_local_planner_MAINTAINER "David V. Lu!! <davidvlu@gmail.com>, Michael Ferguson <mferguson@fetchrobotics.com>")
 set(base_local_planner_PACKAGE_FORMAT "1")
 set(base_local_planner_BUILD_DEPENDS "cmake_modules" "std_msgs" "nav_msgs" "rosconsole" "roscpp" "tf" "rospy" "pluginlib" "costmap_2d" "voxel_grid" "angles" "visualization_msgs" "geometry_msgs" "nav_core" "pcl_conversions" "pcl_ros" "eigen" "dynamic_reconfigure" "message_generation")

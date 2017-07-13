@@ -1,5 +1,5 @@
 set(_CATKIN_CURRENT_PACKAGE "navfn")
-set(navfn_VERSION "1.14.0")
+set(navfn_VERSION "1.12.13")
 set(navfn_MAINTAINER "David V. Lu!! <davidvlu@gmail.com>, Michael Ferguson <mferguson@fetchrobotics.com>")
 set(navfn_PACKAGE_FORMAT "1")
 set(navfn_BUILD_DEPENDS "cmake_modules" "costmap_2d" "geometry_msgs" "message_generation" "nav_core" "nav_msgs" "netpbm" "pcl_conversions" "pcl_ros" "pluginlib" "rosconsole" "roscpp" "tf" "visualization_msgs")

@@ -1,0 +1,8 @@
+prefix=/home/ros/catkin_ws/install
+
+Name: laser_assembler
+Description: Description of laser_assembler
+Version: 1.7.4
+Cflags: -I/home/ros/catkin_ws/install/include
+Libs: -L/home/ros/catkin_ws/install/lib 
+Requires: tf sensor_msgs message_filters roscpp laser_geometry filters message_runtime

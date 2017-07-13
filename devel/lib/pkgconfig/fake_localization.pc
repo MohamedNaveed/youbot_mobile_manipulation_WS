@@ -2,7 +2,7 @@ prefix=/home/ros/catkin_ws/devel
 
 Name: fake_localization
 Description: Description of fake_localization
-Version: 1.14.0
+Version: 1.12.13
 Cflags: 
 Libs: -L/home/ros/catkin_ws/devel/lib 
 Requires: roscpp rospy

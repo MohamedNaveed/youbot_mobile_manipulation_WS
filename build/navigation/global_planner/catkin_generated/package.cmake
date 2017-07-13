@@ -1,5 +1,5 @@
 set(_CATKIN_CURRENT_PACKAGE "global_planner")
-set(global_planner_VERSION "1.14.0")
+set(global_planner_VERSION "1.12.13")
 set(global_planner_MAINTAINER "David V. Lu!! <davidvlu@gmail.com>, Michael Ferguson <mferguson@fetchrobotics.com>")
 set(global_planner_PACKAGE_FORMAT "1")
 set(global_planner_BUILD_DEPENDS "angles" "costmap_2d" "dynamic_reconfigure" "geometry_msgs" "nav_core" "nav_msgs" "navfn" "pluginlib" "roscpp" "tf")
