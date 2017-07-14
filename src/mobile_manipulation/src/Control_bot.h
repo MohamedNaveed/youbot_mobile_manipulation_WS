@@ -54,7 +54,8 @@ void move_base_ml(double time, double step, double x, double y, double phi)
 	cout<<"x:"<<x<<" y:"<<y<<" phi:"<<phi<<endl;
 	MatrixXd data=MatrixXd::Zero(step+1,12);
   double dt=time/step;
-  call_odom(1/dt);
+  while(detect_odom==0)
+    call_odom(1/dt);
   phi_present=find_phi_present();
 	data=move_base_ml_data(time, step, x, y, phi, x_present, y_present, phi_present);
 
@@ -87,11 +88,14 @@ void move_base_ml(double time, double step, double x, double y, double phi)
 			 //	cout<<"x:"<<data(i,1)<<" xdot:"<<data(i,2)<<endl;
       //  cout<<"y:"<<data(i,5)<<" ydot:"<<data(i,6)<<endl;
 				publish_data(x_error, y_error, phi_error);
-        movePlatform(rf(data(i,2)+x_dot),rf(data(i,6)+y_dot),rf(data(i,10)+phi_dot));
+        if(abs(rf(data(i,2)+x_dot))<.3 && abs(rf(data(i,6)+y_dot))<.3)
+          movePlatform(rf(data(i,2)+x_dot),rf(data(i,6)+y_dot),rf(data(i,10)+phi_dot));
+        else
+          cout<<"Speed exceeded"<<endl;
 				x_error_old=x_error;
         y_error_old=y_error;
         phi_error_old=phi_error;
-        //ros::Duration(dt).sleep();
+        //ros::Duration(dt).sleep();//not necessary call_odom gives necessary delay
      }
 }
 

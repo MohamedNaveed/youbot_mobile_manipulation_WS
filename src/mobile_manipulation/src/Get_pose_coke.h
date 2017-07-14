@@ -12,9 +12,6 @@ void get_pose_coke()
 
 	ros::Rate r(rate);
 
-	moveArm(rad(0), rad(-64), rad(145), rad(-101), rad(3));//move arm to home position
-	ros::Duration(0.5).sleep();
-
 	double temp_pose_lin_x=0,temp_pose_lin_y=0,temp_pose_lin_z=0;
 	int numb=1;//number of pose data to collect for taking average
 	int i=0;

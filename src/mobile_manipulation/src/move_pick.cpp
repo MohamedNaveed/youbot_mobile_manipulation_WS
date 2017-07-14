@@ -39,6 +39,7 @@ using namespace Eigen;//eigen namespace
 #include "Transform_k2J2.h"//function to transform object pose from kinect frame to youbot joint frame
 #include "Transform.h"
 #include "Get_pose_coke.h"//functions to give pose of objectsget in youbot frame
+#include "nav_goal_publisher.h"//navigation goal publisher
 
 void home_position()
 {
@@ -78,16 +79,42 @@ void transform_frame_3()
   transform3.setOrigin(tf::Vector3(.228,0,-.034));
 }
 
+
+void navigation()
+{
+  double theta_goal=0, check_rate=1;
+  rot_nav_goal=Rot_z_3(theta_goal);
+  Eigen::Quaterniond q_goal(rot_nav_goal);
+  publish_goal(0, 0, 0, q_goal.w(), q_goal.x(), q_goal.y(), q_goal.z());//point O origin
+  ros::Duration(30).sleep();
+  cout<<"at origin"<<endl;
+  ros::Rate r(check_rate);
+
+  while(detect==0)//checks if object is detected or not
+  {
+    theta_goal+=.785;
+    cout<<"theta_goal:"<<theta_goal<<endl;
+    rot_nav_goal=Rot_z_3(theta_goal);
+    Eigen::Quaterniond q_goal(rot_nav_goal);
+    // publish_goal(0, 0, 0, q_goal.w(), q_goal.x(), q_goal.y(), q_goal.z());//point O origin
+    move_base_ml(8, 8*200, 0, 0, theta_goal);
+    r.sleep();
+		ros::spinOnce();
+    if(theta_goal>=3.14)
+    {
+      cout<<"no object found"<<endl;
+      break;
+    }
+    if(detect==1)
+      cout<<"object found!"<<endl;
+  }
+
+}
 int main(int argc, char** argv)
 {
   double roll=0,pitch=0,yaw=0, rho2=0, rho3=0, Beta, Theta, Theta_5; //rho1 - redundancy
 	double L=.033;//distance between J1 and J2 along x
 	double M=.061;//distance between Wheel axis and J1 along x
-
-
-  // double x_error, x_dot,sum_x_error,dif_x_error, x_error_old;
-  //
-  // double Kp=1, Ki=0, Kd=0;
 
 	ros::init(argc, argv, "my_tf_broadcaster");
 	static tf::TransformBroadcaster br;
@@ -100,7 +127,8 @@ int main(int argc, char** argv)
 	//Getting pose
 	home_position(); // moving arm to home position
   //ros::Duration(10).sleep();
-
+  //goal_publisher();
+  //navigation();//comment if navigation is not needed
   get_pose_coke();
 	cout<<"Received pose x :"<<pose_lin_x<<" y:"<<pose_lin_y<<" z:"<<pose_lin_z<<endl;
 	cout<<"Orient"<<" W:"<<pose_ang_w<<" X:"<<pose_ang_x<<" Y:"<<pose_ang_y<<" Z:"<<pose_ang_z<<endl;
@@ -164,7 +192,7 @@ int main(int argc, char** argv)
   //ros::Duration(5).sleep();
   cout<<" Object goal wrt J2:"<<T_obj_J2(0,3)<<endl;
 
-  if(T_obj_J2(0,3)>-.22 && T_obj_J2(1,3)>.20)//prevent collision with ground and lidar
+  if(T_obj_J2(0,3)>-.24 && T_obj_J2(1,3)>.20)//prevent collision with ground and lidar
   {
     move_manip_js(time_m, step_m, rho3, T_obj_J2(0,3)+.07*sin(-Beta), Beta, rho2-.07*cos(-Beta), rad(rho1), Theta_5);//move arm to goal in desired time give data in m //.1 added to compensate for height of wheel kept below
     //z and rho2 are offset to stop at distance from object -Theta_5-0.55

@@ -20,6 +20,7 @@ mobile_manipulation/CMakeFiles/move_pick.dir/src/move_pick.cpp.o
  /home/ros/catkin_ws/src/mobile_manipulation/src/YouBot_odom_subscriber.h
  /home/ros/catkin_ws/src/mobile_manipulation/src/YouBot_publisher.h
  /home/ros/catkin_ws/src/mobile_manipulation/src/move_pick.cpp
+ /home/ros/catkin_ws/src/mobile_manipulation/src/nav_goal_publisher.h
  /opt/ros/indigo/include/XmlRpcDecl.h
  /opt/ros/indigo/include/XmlRpcValue.h
  /opt/ros/indigo/include/brics_actuator/JointPositions.h

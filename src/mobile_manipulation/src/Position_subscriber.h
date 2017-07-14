@@ -7,7 +7,7 @@ June 2017
 
 using namespace std;
 
-double x_present, y_present, phi_present_w,phi_present_x,phi_present_y,phi_present_z;
+double x_present, y_present, phi_present_w,phi_present_x,phi_present_y,phi_present_z, detect_odom=0;
 ros::Subscriber ObjOdomSubscriber;
 
 void Odom_data_callback(const nav_msgs::Odometry::ConstPtr& msg)
@@ -18,6 +18,7 @@ void Odom_data_callback(const nav_msgs::Odometry::ConstPtr& msg)
   phi_present_x=msg->pose.pose.orientation.x;
   phi_present_y=msg->pose.pose.orientation.y;
   phi_present_z=msg->pose.pose.orientation.z;
+  detect_odom=1;
   //cout<<"Odom called"<<endl;
 }
 

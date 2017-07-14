@@ -175,6 +175,20 @@ Transform.h
 /home/ros/catkin_ws/src/mobile_manipulation/src/Transform.h
 Get_pose_coke.h
 /home/ros/catkin_ws/src/mobile_manipulation/src/Get_pose_coke.h
+nav_goal_publisher.h
+/home/ros/catkin_ws/src/mobile_manipulation/src/nav_goal_publisher.h
+
+/home/ros/catkin_ws/src/mobile_manipulation/src/nav_goal_publisher.h
+iostream
+-
+ros/ros.h
+/home/ros/catkin_ws/src/mobile_manipulation/src/ros/ros.h
+eigen3/Eigen/Geometry
+-
+eigen3/Eigen/Dense
+-
+geometry_msgs/PoseStamped.h
+-
 
 /opt/ros/indigo/include/XmlRpcDecl.h
 ros/macros.h

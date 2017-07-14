@@ -65,14 +65,14 @@ void kinect_to_bot_transform()
   // double rot_z=rad(-90);
 	double trans_x=-0.320;
 	double trans_y=-0.080;
-	double trans_z=0.738;
+	double trans_z=0.758;
 
 	Matrix4d Tw2k_trans= Matrix4d::Identity();//transformation matrix for tranlation from kinect to bot coordinate frame
   Tw2k_trans=Translate(trans_x, trans_y, trans_z);
 
   T_obj_wheelaxis =Tw2k_trans*Rot_z(rad(-90))*Rot_x(rad(-122))*T_obj_kinect;
 
-  cout<<"The Transformation from kinect to wheel axis is"<<T_obj_wheelaxis<<endl;
+  //cout<<"The Transformation from kinect to wheel axis is"<<T_obj_wheelaxis<<endl;
 
 }
 
@@ -90,7 +90,7 @@ void bot_to_J1_transform()
 	origin Joint1;
 	Joint1.x=-.061; Joint1.y=0; Joint1.z=.195;//wrt wheel axis frame
 	T_obj_J1= Translate(-Joint1.x, -Joint1.y, Joint1.z)*Rot_x(rad(180))*T_obj_wheelaxis; //bot_to_J1_transform
-	cout<<"T_obj_J1:"<<T_obj_J1<<endl;
+	//cout<<"T_obj_J1:"<<T_obj_J1<<endl;
 
 }
 
@@ -121,7 +121,7 @@ Vector3d transform_k_J2(double x, double y, double z, double q_w, double q_x, do
 	T_obj_kinect.col(3)<<x,y,z;
 	T_obj_kinect.conservativeResize(T_obj_kinect.rows()+1,T_obj_kinect.cols());
 	T_obj_kinect.row(3)<<0,0,0,1;
-	cout<<"Transformation:"<<T_obj_kinect<<endl;
+	//cout<<"Transformation:"<<T_obj_kinect<<endl;
 
 	kinect_to_bot_transform();
 	bot_to_J1_transform();

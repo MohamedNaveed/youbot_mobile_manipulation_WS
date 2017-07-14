@@ -19,6 +19,7 @@ mobile_manipulation/CMakeFiles/move_pick.dir/src/move_pick.cpp.o: /home/ros/catk
 mobile_manipulation/CMakeFiles/move_pick.dir/src/move_pick.cpp.o: /home/ros/catkin_ws/src/mobile_manipulation/src/YouBot_odom_subscriber.h
 mobile_manipulation/CMakeFiles/move_pick.dir/src/move_pick.cpp.o: /home/ros/catkin_ws/src/mobile_manipulation/src/YouBot_publisher.h
 mobile_manipulation/CMakeFiles/move_pick.dir/src/move_pick.cpp.o: /home/ros/catkin_ws/src/mobile_manipulation/src/move_pick.cpp
+mobile_manipulation/CMakeFiles/move_pick.dir/src/move_pick.cpp.o: /home/ros/catkin_ws/src/mobile_manipulation/src/nav_goal_publisher.h
 mobile_manipulation/CMakeFiles/move_pick.dir/src/move_pick.cpp.o: /opt/ros/indigo/include/XmlRpcDecl.h
 mobile_manipulation/CMakeFiles/move_pick.dir/src/move_pick.cpp.o: /opt/ros/indigo/include/XmlRpcValue.h
 mobile_manipulation/CMakeFiles/move_pick.dir/src/move_pick.cpp.o: /opt/ros/indigo/include/brics_actuator/JointPositions.h
