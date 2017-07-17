@@ -7,6 +7,12 @@ June 2017
 #include "Position_subscriber.h"
 #include <geometry_msgs/Pose2D.h>//required to publish Pose2D messages
 #include "Position_publisher.h"
+
+double Kp_x=0, Ki_x=0, Kd_x=0;
+double Kp_y=0, Ki_y=0.0, Kd_y=0;
+double Kp_phi=0, Ki_phi=0, Kd_phi=0;
+double dt;
+double phi_present;
 void call_odom(double rate)
 {
   ros::Rate odom_rate(rate);//rate at which data is being published
@@ -46,17 +52,17 @@ void move_base_ml(double time, double step, double x, double y, double phi)
 	double x_error, x_dot,sum_x_error,dif_x_error, x_error_old;
   double y_error, y_dot,sum_y_error,dif_y_error, y_error_old;
   double phi_error, phi_dot, sum_phi_error, dif_phi_error, phi_error_old;
-  double phi_present;
-  double Kp_x=1, Ki_x=0, Kd_x=0;
-  double Kp_y=1, Ki_y=0.01, Kd_y=0;
-  double Kp_phi=0.5, Ki_phi=0, Kd_phi=0;
+
+
 	cout<<"move_base_ml called..."<<endl;
 	cout<<"x:"<<x<<" y:"<<y<<" phi:"<<phi<<endl;
 	MatrixXd data=MatrixXd::Zero(step+1,12);
-  double dt=time/step;
+  dt=time/step;
+  detect_odom=0;
   while(detect_odom==0)
-    call_odom(1/dt);
+  {call_odom(1/dt);}
   phi_present=find_phi_present();
+  cout<<"x present:"<<x_present<<" y present:"<<y_present<<" phi present:"<<phi_present<<endl;
 	data=move_base_ml_data(time, step, x, y, phi, x_present, y_present, phi_present);
 
 	cout<<"moving base"<<endl;
@@ -64,7 +70,9 @@ void move_base_ml(double time, double step, double x, double y, double phi)
 
 	for(int i=0; i<=step; i++)
      {
-			 	call_odom(1/dt);
+        detect_odom=0;
+        //while(detect_odom==0)
+        call_odom(1/dt);
         phi_present=find_phi_present();//orientation is in quaternion, this function converts it to angle
 				if(i>0)//to prevent data(-1, x) when i=0
         {
@@ -83,15 +91,39 @@ void move_base_ml(double time, double step, double x, double y, double phi)
         y_dot=Kp_y*y_error + Ki_y*sum_y_error + Kd_y*dif_x_error;
         phi_dot=Kp_phi*phi_error +  Ki_phi*sum_phi_error + Kd_phi*dif_phi_error;
 
-        //cout<<"PID x_dot:"<<x_dot<<"x error:"<<x_error<<endl;
-        //cout<<"PID y_dot:"<<y_dot<<"y error:"<<y_error<<endl;
+        cout<<" phi present:"<<phi_present<<endl;
+        // cout<<"PID x_dot:"<<x_dot<<endl;
+        // cout<<"PID y_dot:"<<y_dot<<endl;
+        // cout<<"PID phi_dot:"<<phi_dot<<endl;
+
+        if(x_dot>.3)
+          x_dot=.3;
+        else if(x_dot<-.3)
+          x_dot=-.3;
+        if(y_dot>.3)
+            y_dot=.3;
+        else if(y_dot<-.3)
+            y_dot=-.3;
+        if(phi_dot>.52)
+            phi_dot=.52;
+        else if(phi_dot<-.52)
+            phi_dot=-.52;
 			 //	cout<<"x:"<<data(i,1)<<" xdot:"<<data(i,2)<<endl;
       //  cout<<"y:"<<data(i,5)<<" ydot:"<<data(i,6)<<endl;
 				publish_data(x_error, y_error, phi_error);
-        if(abs(rf(data(i,2)+x_dot))<.3 && abs(rf(data(i,6)+y_dot))<.3)
+        if(abs(rf(data(i,2)+x_dot))<.5 && abs(rf(data(i,6)+y_dot))<.5 && abs(rf(data(i,10)+phi_dot))<1)
+        {
+          cout<<"moving:"<<rf(data(i,10)+phi_dot)<<endl;
           movePlatform(rf(data(i,2)+x_dot),rf(data(i,6)+y_dot),rf(data(i,10)+phi_dot));
+        }
         else
+        {
+          cout<<"x present:"<<x_present<<" y present:"<<y_present<<" phi present:"<<phi_present<<endl;
           cout<<"Speed exceeded"<<endl;
+          movePlatform(0,0,0);
+          while(ros::ok());
+            //cout<<"Halted"<<endl;
+        }
 				x_error_old=x_error;
         y_error_old=y_error;
         phi_error_old=phi_error;

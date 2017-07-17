@@ -79,28 +79,48 @@ void transform_frame_3()
   transform3.setOrigin(tf::Vector3(.228,0,-.034));
 }
 
+void delay(double s)
+{
+  for(double j=0;j<s*10000;j++)
+    for(double k=0;k<s*10000;k++);
+}
 
 void navigation()
 {
   double theta_goal=0, check_rate=1;
+  int iter=0;
   rot_nav_goal=Rot_z_3(theta_goal);
   Eigen::Quaterniond q_goal(rot_nav_goal);
   publish_goal(0, 0, 0, q_goal.w(), q_goal.x(), q_goal.y(), q_goal.z());//point O origin
   ros::Duration(30).sleep();
   cout<<"at origin"<<endl;
-  ros::Rate r(check_rate);
-
+  //ros::Rate r(check_rate);
+  detect_odom=0;
+  while(detect_odom==0)
+  {call_odom(.1);}
+  phi_present=find_phi_present();
+  cout<<"Phi present:"<<phi_present<<endl;
+  detect=0;
   while(detect==0)//checks if object is detected or not
   {
-    theta_goal+=.785;
+    theta_goal+=.524;//30 degrees each.
     cout<<"theta_goal:"<<theta_goal<<endl;
-    rot_nav_goal=Rot_z_3(theta_goal);
-    Eigen::Quaterniond q_goal(rot_nav_goal);
-    // publish_goal(0, 0, 0, q_goal.w(), q_goal.x(), q_goal.y(), q_goal.z());//point O origin
-    move_base_ml(8, 8*200, 0, 0, theta_goal);
-    r.sleep();
-		ros::spinOnce();
-    if(theta_goal>=3.14)
+    movePlatform(0,0,.6);
+    delay(2);
+    movePlatform(0,0,0);
+
+  //   rot_nav_goal=Rot_z_3(theta_goal);
+  //   Eigen::Quaterniond q_goal(rot_nav_goal);
+  //publish_goal(0, 0, 0, q_goal.w(), q_goal.x(), q_goal.y(), q_goal.z());//point O origin
+  //move_base_ml(10, 10*200, 0, 0, theta_goal);
+
+  //   r.sleep();
+    for(iter=0;iter<100;iter++)
+    {
+	     ros::spinOnce();//check hundred times
+       ros::Duration(.05).sleep();
+    }
+    if(theta_goal>=9)//8 so that it covers at least 360. Given for error free rotation since delay is not reliable
     {
       cout<<"no object found"<<endl;
       break;
@@ -115,8 +135,8 @@ int main(int argc, char** argv)
   double roll=0,pitch=0,yaw=0, rho2=0, rho3=0, Beta, Theta, Theta_5; //rho1 - redundancy
 	double L=.033;//distance between J1 and J2 along x
 	double M=.061;//distance between Wheel axis and J1 along x
-
-	ros::init(argc, argv, "my_tf_broadcaster");
+  int check_pose=0;
+	ros::init(argc, argv, "mobile_manipulation");
 	static tf::TransformBroadcaster br;
 	youbot_publisher();
   pose_subscriber();
@@ -124,14 +144,17 @@ int main(int argc, char** argv)
   position_publisher();
 	confg set;
 
-	//Getting pose
+
 	home_position(); // moving arm to home position
   //ros::Duration(10).sleep();
-  //goal_publisher();
-  //navigation();//comment if navigation is not needed
-  get_pose_coke();
+  goal_publisher();
+  navigation();//comment if navigation is not needed
+  cout<<"I came out"<<endl;
+  while(check_pose<1)
+  {
+  get_pose_coke();//Getting pose
 	cout<<"Received pose x :"<<pose_lin_x<<" y:"<<pose_lin_y<<" z:"<<pose_lin_z<<endl;
-	cout<<"Orient"<<" W:"<<pose_ang_w<<" X:"<<pose_ang_x<<" Y:"<<pose_ang_y<<" Z:"<<pose_ang_z<<endl;
+	//cout<<"Orient"<<" W:"<<pose_ang_w<<" X:"<<pose_ang_x<<" Y:"<<pose_ang_y<<" Z:"<<pose_ang_z<<endl;
   //check_IK();
   ros::Duration(2).sleep();
 
@@ -179,10 +202,16 @@ int main(int argc, char** argv)
   double step_max=max(step_x,step_y);
 
   cout<<"moving youbot platform..."<<endl;
+  // Kp_x=1, Ki_x=0, Kd_x=0;
+  // Kp_y=1, Ki_y=0.01, Kd_y=0;
+  // Kp_phi=0.5, Ki_phi=0, Kd_phi=0;
+
   move_base_ml(time_max, step_max, x_goal, y_goal, 0);
   movePlatform(0,0,0);//the final x_dot , y_dot might be a non-zero value
+  check_pose++;
 
   transform2.setOrigin(tf::Vector3(T_obj_wheelaxis(0,3)-x_goal,T_obj_wheelaxis(1,3)-y_goal,T_obj_wheelaxis(2,3)));
+  }
   double time_m=5, step_m=200*time_m;
   cout<<"matrix is "<<T_obj_J2<<" Given z :"<<T_obj_J2(0,3)<<endl;
   Theta_5=acos(T_obj_wheelaxis(2,2));
@@ -192,7 +221,7 @@ int main(int argc, char** argv)
   //ros::Duration(5).sleep();
   cout<<" Object goal wrt J2:"<<T_obj_J2(0,3)<<endl;
 
-  if(T_obj_J2(0,3)>-.24 && T_obj_J2(1,3)>.20)//prevent collision with ground and lidar
+  if(T_obj_J2(0,3)>-.24 && T_obj_J2(1,3)>.24)//prevent collision with ground and lidar
   {
     move_manip_js(time_m, step_m, rho3, T_obj_J2(0,3)+.07*sin(-Beta), Beta, rho2-.07*cos(-Beta), rad(rho1), Theta_5);//move arm to goal in desired time give data in m //.1 added to compensate for height of wheel kept below
     //z and rho2 are offset to stop at distance from object -Theta_5-0.55

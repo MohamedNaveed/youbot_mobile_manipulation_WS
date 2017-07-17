@@ -63,7 +63,7 @@ void kinect_to_bot_transform()
 {
   // double rot_x=rad(-135);
   // double rot_z=rad(-90);
-	double trans_x=-0.320;
+	double trans_x=-0.310;
 	double trans_y=-0.080;
 	double trans_z=0.758;
 
@@ -100,7 +100,7 @@ void J1_to_J2_transform()
 	Joint2.x=.033*cos(rad(rho1)); Joint2.y=.033*sin(rad(rho1)); Joint2.z=0;//wrt Joint 1 frame
 	T_obj_J2= Translate(-Joint2.z, -Joint2.x, -Joint2.y)*Rot_z(rad(90))*Rot_x(rad(-90))*Rot_z(rad(rho1))*T_obj_J1;
 	//J1_to_J2_transform //for better understanding look at at the translate matrix as mere values than reprsenting as Joint.x,y,z.
-	cout<<"T_obj_J2:"<<T_obj_J2<<endl;
+	//cout<<"T_obj_J2:"<<T_obj_J2<<endl;
 }
 
 Vector3d transform_k_J2(double x, double y, double z, double q_w, double q_x, double q_y, double q_z)

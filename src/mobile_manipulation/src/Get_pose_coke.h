@@ -15,7 +15,7 @@ void get_pose_coke()
 	double temp_pose_lin_x=0,temp_pose_lin_y=0,temp_pose_lin_z=0;
 	int numb=1;//number of pose data to collect for taking average
 	int i=0;
-
+	detect=0;
 	Vector3d transformed_pose=Vector3d::Zero();
 
 	while(i<numb)

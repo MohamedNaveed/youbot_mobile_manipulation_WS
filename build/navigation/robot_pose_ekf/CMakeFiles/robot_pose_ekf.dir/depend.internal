@@ -4,64 +4,12 @@
 navigation/robot_pose_ekf/CMakeFiles/robot_pose_ekf.dir/src/nonlinearanalyticconditionalgaussianodo.cpp.o
  /home/ros/catkin_ws/src/navigation/robot_pose_ekf/include/robot_pose_ekf/nonlinearanalyticconditionalgaussianodo.h
  /home/ros/catkin_ws/src/navigation/robot_pose_ekf/src/nonlinearanalyticconditionalgaussianodo.cpp
- /opt/ros/indigo/include/bfl/bfl_constants.h
- /opt/ros/indigo/include/bfl/bfl_err.h
- /opt/ros/indigo/include/bfl/pdf/analyticconditionalgaussian.h
- /opt/ros/indigo/include/bfl/pdf/analyticconditionalgaussian_additivenoise.h
- /opt/ros/indigo/include/bfl/pdf/conditionalgaussian.h
- /opt/ros/indigo/include/bfl/pdf/conditionalpdf.h
- /opt/ros/indigo/include/bfl/pdf/gaussian.h
- /opt/ros/indigo/include/bfl/pdf/pdf.h
- /opt/ros/indigo/include/bfl/sample/sample.cpp
- /opt/ros/indigo/include/bfl/sample/sample.h
- /opt/ros/indigo/include/bfl/wrappers/config.h
- /opt/ros/indigo/include/bfl/wrappers/matrix/matrix_BOOST.h
- /opt/ros/indigo/include/bfl/wrappers/matrix/matrix_LTI.h
- /opt/ros/indigo/include/bfl/wrappers/matrix/matrix_NEWMAT.h
- /opt/ros/indigo/include/bfl/wrappers/matrix/matrix_wrapper.h
- /opt/ros/indigo/include/bfl/wrappers/matrix/vector_BOOST.h
- /opt/ros/indigo/include/bfl/wrappers/matrix/vector_LTI.h
- /opt/ros/indigo/include/bfl/wrappers/matrix/vector_NEWMAT.h
- /opt/ros/indigo/include/bfl/wrappers/matrix/vector_wrapper.h
- /opt/ros/indigo/include/bfl/wrappers/rng/rng.h
 navigation/robot_pose_ekf/CMakeFiles/robot_pose_ekf.dir/src/odom_estimation.cpp.o
  /home/ros/catkin_ws/src/navigation/robot_pose_ekf/include/robot_pose_ekf/nonlinearanalyticconditionalgaussianodo.h
  /home/ros/catkin_ws/src/navigation/robot_pose_ekf/include/robot_pose_ekf/odom_estimation.h
  /home/ros/catkin_ws/src/navigation/robot_pose_ekf/src/odom_estimation.cpp
  /opt/ros/indigo/include/XmlRpcDecl.h
  /opt/ros/indigo/include/XmlRpcValue.h
- /opt/ros/indigo/include/bfl/bfl_constants.h
- /opt/ros/indigo/include/bfl/bfl_err.h
- /opt/ros/indigo/include/bfl/filter/extendedkalmanfilter.h
- /opt/ros/indigo/include/bfl/filter/filter.cpp
- /opt/ros/indigo/include/bfl/filter/filter.h
- /opt/ros/indigo/include/bfl/filter/kalmanfilter.h
- /opt/ros/indigo/include/bfl/model/analyticmeasurementmodel_gaussianuncertainty.h
- /opt/ros/indigo/include/bfl/model/analyticsystemmodel_gaussianuncertainty.h
- /opt/ros/indigo/include/bfl/model/linearanalyticmeasurementmodel_gaussianuncertainty.h
- /opt/ros/indigo/include/bfl/model/linearanalyticsystemmodel_gaussianuncertainty.h
- /opt/ros/indigo/include/bfl/model/measurementmodel.cpp
- /opt/ros/indigo/include/bfl/model/measurementmodel.h
- /opt/ros/indigo/include/bfl/model/systemmodel.cpp
- /opt/ros/indigo/include/bfl/model/systemmodel.h
- /opt/ros/indigo/include/bfl/pdf/analyticconditionalgaussian.h
- /opt/ros/indigo/include/bfl/pdf/analyticconditionalgaussian_additivenoise.h
- /opt/ros/indigo/include/bfl/pdf/conditionalgaussian.h
- /opt/ros/indigo/include/bfl/pdf/conditionalpdf.h
- /opt/ros/indigo/include/bfl/pdf/gaussian.h
- /opt/ros/indigo/include/bfl/pdf/linearanalyticconditionalgaussian.h
- /opt/ros/indigo/include/bfl/pdf/pdf.h
- /opt/ros/indigo/include/bfl/sample/sample.cpp
- /opt/ros/indigo/include/bfl/sample/sample.h
- /opt/ros/indigo/include/bfl/wrappers/config.h
- /opt/ros/indigo/include/bfl/wrappers/matrix/matrix_BOOST.h
- /opt/ros/indigo/include/bfl/wrappers/matrix/matrix_LTI.h
- /opt/ros/indigo/include/bfl/wrappers/matrix/matrix_NEWMAT.h
- /opt/ros/indigo/include/bfl/wrappers/matrix/matrix_wrapper.h
- /opt/ros/indigo/include/bfl/wrappers/matrix/vector_BOOST.h
- /opt/ros/indigo/include/bfl/wrappers/matrix/vector_LTI.h
- /opt/ros/indigo/include/bfl/wrappers/matrix/vector_NEWMAT.h
- /opt/ros/indigo/include/bfl/wrappers/matrix/vector_wrapper.h
  /opt/ros/indigo/include/geometry_msgs/Point.h
  /opt/ros/indigo/include/geometry_msgs/PointStamped.h
  /opt/ros/indigo/include/geometry_msgs/Pose.h
@@ -165,38 +113,6 @@ navigation/robot_pose_ekf/CMakeFiles/robot_pose_ekf.dir/src/odom_estimation_node
  /home/ros/catkin_ws/src/navigation/robot_pose_ekf/src/odom_estimation_node.cpp
  /opt/ros/indigo/include/XmlRpcDecl.h
  /opt/ros/indigo/include/XmlRpcValue.h
- /opt/ros/indigo/include/bfl/bfl_constants.h
- /opt/ros/indigo/include/bfl/bfl_err.h
- /opt/ros/indigo/include/bfl/filter/extendedkalmanfilter.h
- /opt/ros/indigo/include/bfl/filter/filter.cpp
- /opt/ros/indigo/include/bfl/filter/filter.h
- /opt/ros/indigo/include/bfl/filter/kalmanfilter.h
- /opt/ros/indigo/include/bfl/model/analyticmeasurementmodel_gaussianuncertainty.h
- /opt/ros/indigo/include/bfl/model/analyticsystemmodel_gaussianuncertainty.h
- /opt/ros/indigo/include/bfl/model/linearanalyticmeasurementmodel_gaussianuncertainty.h
- /opt/ros/indigo/include/bfl/model/linearanalyticsystemmodel_gaussianuncertainty.h
- /opt/ros/indigo/include/bfl/model/measurementmodel.cpp
- /opt/ros/indigo/include/bfl/model/measurementmodel.h
- /opt/ros/indigo/include/bfl/model/systemmodel.cpp
- /opt/ros/indigo/include/bfl/model/systemmodel.h
- /opt/ros/indigo/include/bfl/pdf/analyticconditionalgaussian.h
- /opt/ros/indigo/include/bfl/pdf/analyticconditionalgaussian_additivenoise.h
- /opt/ros/indigo/include/bfl/pdf/conditionalgaussian.h
- /opt/ros/indigo/include/bfl/pdf/conditionalpdf.h
- /opt/ros/indigo/include/bfl/pdf/gaussian.h
- /opt/ros/indigo/include/bfl/pdf/linearanalyticconditionalgaussian.h
- /opt/ros/indigo/include/bfl/pdf/pdf.h
- /opt/ros/indigo/include/bfl/sample/sample.cpp
- /opt/ros/indigo/include/bfl/sample/sample.h
- /opt/ros/indigo/include/bfl/wrappers/config.h
- /opt/ros/indigo/include/bfl/wrappers/matrix/matrix_BOOST.h
- /opt/ros/indigo/include/bfl/wrappers/matrix/matrix_LTI.h
- /opt/ros/indigo/include/bfl/wrappers/matrix/matrix_NEWMAT.h
- /opt/ros/indigo/include/bfl/wrappers/matrix/matrix_wrapper.h
- /opt/ros/indigo/include/bfl/wrappers/matrix/vector_BOOST.h
- /opt/ros/indigo/include/bfl/wrappers/matrix/vector_LTI.h
- /opt/ros/indigo/include/bfl/wrappers/matrix/vector_NEWMAT.h
- /opt/ros/indigo/include/bfl/wrappers/matrix/vector_wrapper.h
  /opt/ros/indigo/include/geometry_msgs/Point.h
  /opt/ros/indigo/include/geometry_msgs/Point32.h
  /opt/ros/indigo/include/geometry_msgs/PointStamped.h

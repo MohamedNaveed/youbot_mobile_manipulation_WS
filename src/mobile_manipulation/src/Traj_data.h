@@ -94,7 +94,7 @@ MatrixXd move_manip_js_data(double time, double step, double row3, double zg, do
 
     VectorXd initial_JA=VectorXd::Zero(5);
     initial_JA=manip.prev_JA();//Get previous joint angle value of bot arm to get intial values for trajectory
-    cout<<"pho2 before set goal:"<<row2<<endl;
+    //cout<<"pho2 before set goal:"<<row2<<endl;
     manip.set_goal(row3,zg,beta,row2);//Set goal data to find theta 2, 3 and 4
     manip.store_goal(zg,beta,row2);//Set goal data to find theta 2, 3 and 4
 
@@ -226,7 +226,7 @@ MatrixXd move_manip_cs_data(double time, double step, double row3, double zg, do
         all_data(i,2)=th3;
         all_data(i,3)=th4;
         all_data(i,4)=th5;
-        cout<<"th2:"<<th2<<" th3:"<<th3<<" th4:"<< th4<<" "<< endl;
+        //cout<<"th2:"<<th2<<" th3:"<<th3<<" th4:"<< th4<<" "<< endl;
 
         temp_th2=th2;
         temp_th3=th3;

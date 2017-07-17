@@ -72,9 +72,8 @@ void confg::set_goal(int r3, double z, double b, double r2)
     beta=b,
     row2=r2;
 
-    //zg=-215;//-245;
-    //row2=row2;
-		cout<<"rho2 at set goal : "<<row2<<endl;
+    
+		//cout<<"rho2 at set goal : "<<row2<<endl;
 }
 
 void confg::store_JA(double p_th1, double p_th2, double p_th3, double p_th4, double p_th5)
