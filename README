@@ -11,3 +11,5 @@ This work details the implementation of object recognition, pose estimation,
 manipulation and navigation using Kuka Youbot, Microsoft KinectOne and LiDAR Hokuyo URG-04lx. The system uses Robot Operating System (ROS) indigo running
 in Ubuntu 14.04 and uses certain developed packages for object recognition, mapping
 and navigation.
+
+[Video](https://drive.google.com/file/d/0B0tkznbaL6LhZlQzZzR2X0RKejg/view?usp=sharing&resourcekey=0-FYg_vhkfiCCEd59DPDDqYQ)
