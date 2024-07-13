@@ -1,0 +1,15 @@
+#Mobile Manipulation on a KUKA Youbot
+
+Mobile manipulators are increasingly being used in industries and warehouse
+maintenance and extensive research is carried out to increase their accuracy and
+efficiency.
+The system we have developed is able to recognise objects, estimate the
+pose, and manipulate them irrespective of their orientation. The system is also able to
+perform simultaneous localisation and mapping (SLAM),
+navigate autonomously in the mapped environment by avoiding static and dynamic obstacles, search and
+manipulate the object in places which are defined by the user.
+This work details the implementation of object recognition, pose estimation,
+manipulation and navigation using Kuka Youbot, Microso
+ft KinectOne and LiDAR Hokuyo URG-04lx. The system uses Robot Operating System (ROS) indigo running
+in Ubuntu 14.04 and uses certain developed packages for object recognition, mapping
+and navigation
